@@ -61,22 +61,20 @@ function sample( test )
 
   for( let i = 0 ; i < found.length ; i++ )
   {
-    let file = found[ i ].relative;
-    let fileJsExt = _.path.exts( file );
-    if( fileJsExt[ 0 ] === 'browser' )
+    if( found[ i ].exts[ 0 ] === 'browser' )
     continue;
 
     ready
     .then( () =>
     {
-      test.case = file;
+      test.case = found[ i ].relative;
       startTime = _.time.now();
       return null;
     })
 
-    if( fileJsExt[ 0 ] !== 'throwing' )
+    if( found[ i ].exts[ 0 ] !== 'throwing' )
     {
-      start({ execPath : file })
+      start({ execPath : found[ i ].relative })
       .then( ( got ) =>
       {
         spentTime = _.time.spent( startTime );
@@ -90,7 +88,7 @@ function sample( test )
     }
     else
     {
-      startNotThrowing({ execPath : file })
+      startNotThrowing({ execPath : found[ i ].relative })
       .then( ( got ) =>
       {
         spentTime = _.time.spent( startTime );
