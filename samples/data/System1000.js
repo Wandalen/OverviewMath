@@ -22,10 +22,9 @@ function randomInteger( min, max )
   return Math.round( rand );
 }
 
-const dimensions = 5;
+const dimensions = 1000;
 
 const matrix = generateMatrix( dimensions, dimensions );
-console.log(matrix);
 
 for ( let i = 0; i < 100000; ++i ) {
   let row1 = randomInteger( 0, dimensions - 1 );
@@ -47,4 +46,4 @@ for ( let i = 0; i < 100000; ++i ) {
   }
 }
 
-console.log(matrix);
+module.exports = matrix;

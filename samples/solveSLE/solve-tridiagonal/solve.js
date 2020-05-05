@@ -1,4 +1,7 @@
-var triper = require('solve-periodic-tridiagonal')
+const triper = require('solve-periodic-tridiagonal');
+
+const matrix = require('../../data/System1000');
+console.log(matrix);
 
 var d = [32, 25, 3, 41]
 
