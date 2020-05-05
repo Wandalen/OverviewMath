@@ -116,7 +116,7 @@ sample.timeOut = 60000;
 var Self =
 {
 
-  name : 'Tools.Math.Sample',
+  name : 'AvesomeMath.Sample',
   silencing : 1,
   enabled : 1,
 
