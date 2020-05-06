@@ -31,6 +31,8 @@
     "tdma": "^1.0.1",
     "ubique": "^0.5.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "wTesting": "gamma"
+  },
   "keywords": []
 }
