@@ -1,10 +1,12 @@
-const triper = require('solve-periodic-tridiagonal');
+// const triper = require('solve-periodic-tridiagonal');
+// let _ = require('wmathmatrix');
 
-const matrix = require('../../data/System1000');
-console.log(matrix);
+// const matrix = require('../../data/System1000');
+// console.log(matrix);
 
-var d = [32, 25, 3, 41]
+var tdiag = require('solve-tridiagonal')
 
-triper(4, [7, -1, 2, 1], [2, 7, -3, 8], [1, 4, 2, 6], d, []);
-// => d = [ 1, 2, 3, 4 ]
-console.log(d);
+var d = [4, 25, -5]
+
+tdiag([0, -1, 2], [2, 7, -3], [1, 4, 0], d)
+// => d = [ 1, 2, 3 ]

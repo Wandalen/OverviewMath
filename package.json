@@ -20,18 +20,9 @@
     "url": "https://github.com/Artem-Bohush/AwesomeMath/issues"
   },
   "dependencies": {
-    "@tensorflow/tfjs": "^1.7.4",
-    "blasjs": "^1.0.13",
-    "mathjs": "^6.6.4",
-    "nd4js": "^1.1.0",
-    "ndarray-linear-solve": "^3.0.0",
     "solve-banded": "^1.0.4",
     "solve-periodic-tridiagonal": "^1.0.0",
     "solve-tridiagonal": "^2.0.0",
-    "t-matrix": "^1.0.6",
-    "tdma": "^1.0.1",
-    "ubique": "^0.5.1",
-    "vectorious": "^6.0.0-beta.11",
     "wmathmatrix": "^0.3.156"
   },
   "devDependencies": {},
