@@ -1,4 +1,4 @@
-( function _SolveSLE_test_s_() {
+( function _Integration_test_s_() {
 
 'use strict';
 
@@ -96,7 +96,7 @@ samples.timeOut = 60000;
 var Self =
 {
 
-  name : 'AvesomeMath.Sample',
+  name : 'AvesomeMath.Integration',
   silencing : 1,
   enabled : 1,
 
