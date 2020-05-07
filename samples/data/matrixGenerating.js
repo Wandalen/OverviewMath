@@ -1,6 +1,5 @@
-const path = require('path');
-const fs = require('fs');
-const _ = require( 'wmathmatrix' );
+const wMathmMatrix = require( 'wmathmatrix' );
+const wFiles = require( 'wFiles' );
 
 const randomInteger = require('./randomInteger');
 
@@ -56,23 +55,23 @@ let matrix;
 
 while (true)
 {
-  matrix = _.Matrix.Make([ dimensions, dimensions ])
+  matrix = wMathmMatrix.Matrix.Make([ dimensions, dimensions ])
     .copy(generateMatrix( dimensions, dimensions ));
 
   if (nonZeroDeterminant(matrix))
   break;
 }
 
-console.log();
-
-fs.writeFile(
-  path.join(__dirname, 'System1000.js'),
-  JSON.stringify(Object.values(matrix.buffer)),
-  err => 
-  {
-    if (err) 
-    throw err
-
-    console.log('New matrix created!');
-  }
-)
+wFiles.fileProvider.fileWrite({ 
+  filePath : `${__dirname}/System1000.json`, 
+  data : Object.values(matrix.buffer), 
+  encoding : 'json',
+  sync : 0
+})
+.finally( function( err, got )
+{
+  if( err )
+  throw err;
+  console.log( 'New matrix created!' );
+  return null;
+});
