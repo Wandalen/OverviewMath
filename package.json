@@ -10,7 +10,7 @@
   "main": "index.js",
   "files": [],
   "scripts": {
-    "test": ""
+    "newMatrix": "node ./samples/data/matrixGenerating.js"
   },
   "repository": {
     "type": "git",
@@ -20,9 +20,18 @@
     "url": "https://github.com/Artem-Bohush/AwesomeMath/issues"
   },
   "dependencies": {
+    "@tensorflow/tfjs": "^1.7.4",
+    "@tensorflow/tfjs-node": "^1.7.4",
+    "@tensorflow/tfjs-node-gpu": "^1.7.4",
+    "nd4js": "^1.1.0",
+    "ndarray-linear-solve": "=3.0.0",
+    "ndarray-show": "=2.0.0",
     "solve-banded": "=1.0.4",
     "solve-periodic-tridiagonal": "=1.0.0",
     "solve-tridiagonal": "=2.0.0",
+    "t-matrix": "^1.0.6",
+    "tdma": "=1.0.1",
+    "ubique": "=0.5.1",
     "wmathmatrix": "alpha"
   },
   "devDependencies": {

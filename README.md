@@ -6,8 +6,8 @@ Review of open source math modules of different kind
 | №  | Module | Binding | Solves SLE | Dependants | Node.js | Browser |
 |:---|:------:|:------------:|:----------:|:-------:|:----------:|:-------:|
 | 1 | [@tensorflow/tfjs](https://github.com/tensorflow/tfjs) | + | + | 161 | + | + |
-| 2 | [vectorious-plus](https://github.com/ukrbublik/vectorious-plus) | + | + | 0 | + | + |
-| 3 | [vectorious](https://github.com/mateogianolio/vectorious) | + | + | 8 | + | + |
+| 2 | [vectorious](https://github.com/mateogianolio/vectorious) | + | + | 8 | + | + |
+| 3 | [vectorious-plus](https://github.com/ukrbublik/vectorious-plus) | + | + | 0 | + | + |
 | 4 | [nlapack](https://github.com/nperf/nlapack) | + | + | 1 | + | - |
 | 5 | [blasjs](https://github.com/jacobbogers/blasjs) | + | + | 0 | + | + |
 | 6 | [nblas-plus](https://github.com/ukrbublik/nblas-plus) | + | + | 1 | + | - |
