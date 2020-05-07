@@ -1,64 +1,78 @@
-let _ = require( 'wmathmatrix' );
+const path = require('path');
+const fs = require('fs');
+const _ = require( 'wmathmatrix' );
 
 const randomInteger = require('./randomInteger');
 
-const matrix = _.Matrix.Make([ 5, 5 ]).copy(
-  [
-    1, 0, 0, 0, 0,
-    0, 1, 0, 0, 0,
-    0, 0, 1, 0, 0,
-    0, 0, 0, 1, 0,
-    0, 0, 0, 0, 1,
-  ]
-)
+function generateMatrix( rows, columns )
+{
+  const matrix = [];
 
-const result = matrix.determinant();
-console.log( `determinant : ${ result }` );
+  for ( let i = 0; i < rows; i++ )
+  {
+    const row = [];
+    for ( let j = 0; j < columns; j++ )
+    {
+      let value = i === j ? 1 : 0;
+      row.push( value );
+    }
+    matrix.push( row );
+  }
 
-// function generateMatrix( rows, columns )
-// {
-//   const matrix = [];
-
-//   for ( let i = 0; i < rows; i++ )
-//   {
-//     const row = [];
-//     for ( let j = 0; j < columns; j++ )
-//     {
-//       let value = i === j ? 1 : 0;
-//       row.push( value );
-//     }
-//     matrix.push( row );
-//   }
-
-//   const result = [];
-
-//   matrix.forEach(row => result.push(...row));
+  for ( let i = 0; i < 100000; ++i ) {
+    const row1 = randomInteger( 0, dimensions - 1 );
+    let row2;
   
-//   return result;
-// }
+    while ( true ) 
+    {
+      row2 = randomInteger( 0, dimensions - 1 );
+  
+      if ( row1 !== row2 ) 
+      break
+    }
+  
+    const k = Math.random() / 5;
+  
+    for ( let j = 0; j < dimensions; j++ ) 
+    {
+      matrix[row2][j] += matrix[row1][j] * k;
+    }
+  }
 
-// const dimensions = 5;
+  const result = [];
 
-// // const m = generateMatrix( dimensions, dimensions );
+  matrix.forEach(row => result.push(...row));
+  
+  return result;
+}
 
-// for ( let i = 0; i < 100000; ++i ) {
-//   let row1 = randomInteger( 0, dimensions - 1 );
-//   let row2;
+function nonZeroDeterminant(matrix)
+{
+  return true;
+}
 
-//   while ( true ) 
-//   {
-//     row2 = randomInteger( 0, dimensions - 1 );
+const dimensions = 1000;
+let matrix;
 
-//     if ( row1 !== row2 ) 
-//     break
-//   }
+while (true)
+{
+  matrix = _.Matrix.Make([ dimensions, dimensions ])
+    .copy(generateMatrix( dimensions, dimensions ));
 
-//   const k = Math.random();
+  if (nonZeroDeterminant(matrix))
+  break;
+}
 
-//   for ( let j = 0; j < dimensions; j++ ) 
-//   {
-//     matrix[row2][j] += matrix[row1][j] * k;
-//   }
-// }
+console.log();
 
-// module.exports = matrix;
+fs.writeFile(
+  path.join(__dirname, 'System1000.js'),
+  JSON.stringify(Object.values(matrix.buffer)),
+  err => 
+  {
+    if (err) 
+    throw err
+
+    console.log('New matrix created!');
+  }
+)
