@@ -21,11 +21,12 @@
   },
   "dependencies": {
     "ndarray-linear-solve": "=3.0.0",
-    "ndarray-show": "^2.0.0",
+    "ndarray-show": "=2.0.0",
     "solve-banded": "=1.0.4",
     "solve-periodic-tridiagonal": "=1.0.0",
     "solve-tridiagonal": "=2.0.0",
     "tdma": "=1.0.1",
+    "ubique": "=0.5.1",
     "wmathmatrix": "alpha"
   },
   "devDependencies": {
