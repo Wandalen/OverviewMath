@@ -1,7 +1,7 @@
 const ubique = require('ubique');
 
-const matrix = require('../../data/System1000');
 const randomInteger = require('../../data/randomInteger');
+const matrix = require('../../data/System1000');
 
 const transp = ubique.transpose;
 
