@@ -1,9 +1,11 @@
-const wMathmMatrix = require( 'wmathmatrix' );
-const wFiles = require( 'wFiles' );
+const _ = require( 'wTools' );
+require( 'wmathmatrix' );
+require( 'wFiles' );
 
+const isCorrectSystem = require('./systemChecker');
 const randomInteger = require('./randomInteger');
 
-function generateMatrix( rows, columns )
+function generateM( rows, columns )
 {
   const matrix = [];
 
@@ -40,38 +42,52 @@ function generateMatrix( rows, columns )
 
   const result = [];
 
-  matrix.forEach(row => result.push(...row));
+  matrix.forEach( row => result.push( ...row ) );
   
   return result;
 }
 
-function nonZeroDeterminant(matrix)
+function nonZeroDeterminant( matrix )
 {
+  // checking logic...
   return true;
 }
 
 const dimensions = 1000;
-let matrix;
+let M;
 
-while (true)
+while ( true )
 {
-  matrix = wMathmMatrix.Matrix.Make([ dimensions, dimensions ])
-    .copy(generateMatrix( dimensions, dimensions ));
+  M = _.Matrix.Make( [ dimensions, dimensions ] )
+    .copy(generateM( dimensions, dimensions ));
 
-  if (nonZeroDeterminant(matrix))
+  if ( nonZeroDeterminant( M ) )
   break;
 }
 
-wFiles.fileProvider.fileWrite({ 
-  filePath : `${__dirname}/System1000.json`, 
-  data : Object.values(matrix.buffer), 
-  encoding : 'json',
-  sync : 0
-})
-.finally( function( err, got )
+let x = [];
+
+for ( let i = 0; i < 1000; i++ ) 
 {
-  if( err )
-  throw err;
-  console.log( 'New matrix created!' );
-  return null;
-});
+  x.push( randomInteger( -100, 100 ) );
+}
+
+x = _.Matrix.Make( [ 1000, 1 ] ).copy( x );
+
+const b = _.Matrix.Mul( null, [ M, x ] );
+
+if ( !isCorrectSystem(M, x, b) )
+throw _.err( 'Error:', new Error('incorrect system') );
+
+
+_.fileProvider.fileWrite
+({
+  filePath : `${__dirname}/System1000.json`, 
+  data: { 
+    M: Object.values(M.buffer),
+    x: Object.values(x.buffer), 
+    b: Object.values(b.buffer)
+  },
+  encoding : 'json',
+})
+console.log( 'New matrix created!' );
