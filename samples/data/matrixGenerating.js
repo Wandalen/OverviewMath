@@ -4,6 +4,7 @@ require( 'wFiles' );
 
 const isCorrectSystem = require('./systemChecker');
 const randomInteger = require('./randomInteger');
+const isNonZeroDeterminant = require('./isNonZeroDeterminant');
 
 function generateM( rows, columns )
 {
@@ -47,12 +48,6 @@ function generateM( rows, columns )
   return result;
 }
 
-function nonZeroDeterminant( matrix )
-{
-  // checking logic...
-  return true;
-}
-
 const dimensions = 1000;
 let M;
 
@@ -61,7 +56,7 @@ while ( true )
   M = _.Matrix.Make( [ dimensions, dimensions ] )
     .copy(generateM( dimensions, dimensions ));
 
-  if ( nonZeroDeterminant( M ) )
+  if ( isNonZeroDeterminant( M ) )
   break;
 }
 
