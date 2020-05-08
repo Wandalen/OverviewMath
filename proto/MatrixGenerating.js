@@ -79,7 +79,7 @@ console.log(b);
 
 _.fileProvider.fileWrite
 ({
-  filePath : `${__dirname}/../sample/data/System1000.json`, 
+  filePath : `${__dirname}/../data/System1000.json`,
   data: { 
     M: Object.values(M.buffer),
     x: Object.values(x.buffer), 
