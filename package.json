@@ -10,7 +10,7 @@
   "main": "index.js",
   "files": [],
   "scripts": {
-    "newMatrix": "node ./samples/data/matrixGenerating.js"
+    "newMatrix": "node ./proto/MatrixGenerating.js"
   },
   "repository": {
     "type": "git",

@@ -4,8 +4,6 @@ require( 'wmathmatrix' );
 require( 'wFiles' );
 require( 'wequaler' );
 
-const randomInteger = require('../../data/randomInteger');
-
 var data = _.fileProvider.fileRead({
   filePath : `${__dirname}/../../data/System1000.json`,
   encoding : 'json', 

@@ -2,7 +2,6 @@
 Review of open source math modules of different kind
 
 ### Public math modules
-
 | №  | Module | Binding | Solves SLE | Dependants | Node.js | Browser |
 |:---|:------:|:------------:|:----------:|:-------:|:----------:|:-------:|
 | 1 | [@tensorflow/tfjs](https://github.com/tensorflow/tfjs) | + | + | 161 | + | + |
@@ -48,9 +47,7 @@ Review of open source math modules of different kind
 | 41 | [add](https://github.com/ben-ng/add) | - | - | 129 | + | + |
 | 42 | [compute-cosine-similarity](https://github.com/compute-io/cosine-similarity) | - | - | 2 | + | + |
 
-
 ### Public symbolic expression math modules
-
 | №  | Module | Binding | Solves SLE | Dependants | Node.js | Browser |
 |:---|:-------|:------------:|:----------:|:-------:|:----------:|:-------:|
 | 1 | [mathjs](https://github.com/josdejong/mathjs) | - | + | 960 | + | + |

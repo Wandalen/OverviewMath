@@ -2,9 +2,8 @@ const _ = require( 'wTools' );
 require( 'wmathmatrix' );
 require( 'wFiles' );
 
-const isCorrectSystem = require('./systemChecker');
-const randomInteger = require('./randomInteger');
-const isNonZeroDeterminant = require('./isNonZeroDeterminant');
+const isCorrectSystem = require('./SystemChecker');
+const isNonZeroDeterminant = require('./IsNonZeroDeterminant');
 
 function generateM( rows, columns )
 {
@@ -22,12 +21,12 @@ function generateM( rows, columns )
   }
 
   for ( let i = 0; i < 100000; ++i ) {
-    const row1 = randomInteger( 0, dimensions - 1 );
+    const row1 = _.intRandom([0, dimensions - 1])
     let row2;
   
     while ( true ) 
     {
-      row2 = randomInteger( 0, dimensions - 1 );
+      row2 = _.intRandom([0, dimensions - 1])
   
       if ( row1 !== row2 ) 
       break
@@ -64,7 +63,7 @@ let x = [];
 
 for ( let i = 0; i < 1000; i++ ) 
 {
-  x.push( randomInteger( -100, 100 ) );
+  x.push( _.intRandom([-100, 100]) );
 }
 
 x = _.Matrix.Make( [ 1000, 1 ] ).copy( x );
@@ -80,7 +79,7 @@ console.log(b);
 
 _.fileProvider.fileWrite
 ({
-  filePath : `${__dirname}/System1000.json`, 
+  filePath : `${__dirname}/../sample/data/System1000.json`, 
   data: { 
     M: Object.values(M.buffer),
     x: Object.values(x.buffer), 
