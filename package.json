@@ -10,7 +10,8 @@
   "main": "index.js",
   "files": [],
   "scripts": {
-    "newMatrix": "node ./proto/MatrixGenerating.js"
+    "newMatrix": "node ./proto/MatrixGenerating.js",
+    "test" : "wtest .run 'proto/**'"
   },
   "repository": {
     "type": "git",
@@ -35,7 +36,14 @@
     "wFiles": "alpha",
     "wTools": "alpha",
     "wequaler": "alpha",
-    "wmathmatrix": "alpha"
+    "wmathmatrix": "alpha",
+    "wTesting": "alpha",
+    "eslint": "=6.8.0",
+    "eslint-config-standard": "=14.1.1",
+    "eslint-plugin-import": "=2.20.2",
+    "eslint-plugin-node": "=11.1.0",
+    "eslint-plugin-promise": "=4.2.1",
+    "eslint-plugin-standard": "=4.0.1"
   },
   "devDependencies": {
     "wTesting": "gamma"
