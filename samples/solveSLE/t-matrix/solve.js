@@ -1,39 +1,29 @@
 const Matrix = require( 't-matrix' );
-const wMathMatrix = require( 'wmathmatrix' );
-const wFiles = require( 'wFiles' );
+const _ = require( 'wTools' );
+require( 'wmathmatrix' );
+require( 'wFiles' );
+require( 'wequaler' );
 
 const randomInteger = require('../../data/randomInteger');
-// const matrix = require('../../data/System1000.json');
 
-try {
-  wFiles.fileProvider.fileRead({ 
-    filePath : `${__dirname}/../../data/System1000.json`,
-    encoding : 'json', 
-    sync : 0 })
-  .finally( function( err, data )
-  {
-    if( err )
-    throw err;
-    
-    const dataArr = data.split(',');
-    const dimensions =  Math.sqrt(dataArr.length);
-    console.log(dataArr, dimensions);
-    const matrix = wMathMatrix.Matrix.Make([ dimensions, dimensions ])
-      .copy(dataArr);
+var data = _.fileProvider.fileRead({
+  filePath : `${__dirname}/../../data/System1000.json`,
+  encoding : 'json', 
+});
 
-    console.log(matrix);
-    return null;
-  });
-} catch (error) {
-  console.log(error);
-}
+const Mdims = Math.sqrt( data.M.length );
+const M = _.Matrix.Make([ Mdims, Mdims ]).copy(data.M);
+const x = _.Matrix.Make([ data.x.length, 1 ]).copy(data.x);
+const b = _.Matrix.Make([ data.b.length, 1 ]).copy(data.b);
+console.log(M);
+console.log(x);
+console.log(b);
 
-
-const vector = [];
-
-for (let i = 0; i < 1000; i++) {
-  vector.push(randomInteger(-1000, 1000));
-}
-
-const result = Matrix.ldiv(matrix, vector);
-console.log(result);
+/*
+  А тут перевірка уже не виконовується. Як я помітив - після зчитування і нового формування матриці М,
+  порядок значень у буфері уже не той, який був при формування матриці М під час її генерації(до запису).
+  Вектори x та b формуються так само, як і при їх генерації(до запису). Для семплів нам потрібні матриці
+  у вигляді ваших матриць _.Matrix.Make([ n, m ]).copy(arr)?
+ */
+const result = _.Matrix.Mul( null, [ M, x ] );
+console.log(_.equivalent( result, b ));
