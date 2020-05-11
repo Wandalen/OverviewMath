@@ -6,7 +6,7 @@ require( 'wequaler' );
 
 var data = _.fileProvider.fileRead({
   filePath : `${__dirname}/../../data/System1000.json`,
-  encoding : 'json', 
+  encoding : 'json',
 });
 
 const Mdims = Math.sqrt( data.M.length );
