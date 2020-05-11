@@ -12,7 +12,7 @@
   "scripts": {
     "newMatrix": "node ./proto/MatrixGenerating.js",
     "newReadMe": "node ./proto/ReadMeGenerator.js",
-    "test" : "wtest .run 'proto/**'"
+    "test": "wtest .run 'proto/**'"
   },
   "repository": {
     "type": "git",

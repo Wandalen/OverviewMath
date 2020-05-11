@@ -7,7 +7,7 @@ const transp = ubique.transpose;
 
 const vector = [];
 
-for (let i = 0; i < 1000; i++) 
+for (let i = 0; i < 1000; i++)
 {
   vector.push(randomInteger(-1000, 1000));
 }

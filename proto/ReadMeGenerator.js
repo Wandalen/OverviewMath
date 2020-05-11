@@ -1,56 +1,58 @@
-const _ = require( 'wTools' );
-require( 'wFiles' );
+(function () {
+  'use strict';
 
-const title = _.fileProvider.fileRead({
-  filePath : `${__dirname}/../doc/title.md`
-});
+  const _ = require( 'wTools' );
+  require( 'wFiles' );
 
-let mainContent = `
+  function abs() { return _.path.s.join( __dirname, ... arguments ) }
+
+  const title = _.fileProvider.fileRead({
+    filePath : `${__dirname}/../doc/title.md`
+  });
+
+  let mainContent = `
 ### Public math modules
 | №  | Module | Binding | Solves SLE | Dependants | Node.js | Browser |
 |:---|:------:|:------------:|:----------:|:-------:|:----------:|:-------:|`;
 
-const generalPurposeData = _.fileProvider.fileRead({
-  filePath : `${__dirname}/../data/GeneralPurpose.yml`,
-  encoding : 'yaml',
-});
+  const generalPurposeData = _.fileProvider.fileRead({
+    filePath : abs('../data/GeneralPurpose.yml'),
+    encoding : 'yaml',
+  });
 
-generalPurposeData.forEach((lib, index) =>
-{
-  'use strict';
+  generalPurposeData.forEach((lib, index) =>
+  {
+    mainContent += `
+| ${index + 1} | [${lib.npmName}](${lib.repoUri}) | ${lib.binding ? '+' : '-'} | ${lib.solvesSLE ? '+' : '-'} |` +
+`${lib.dependants} | ${lib.supportsNodejs ? '+' : '-'} | ${lib.supportsBrowser ? '+' : '-'} |`;
+  });
 
   mainContent += `
-  | ${index + 1} | [${lib.npmName}](${lib.repoUri}) | ${lib.binding ? '+' : '-'} | ${lib.solvesSLE ? '+' : '-'} |` +
-  ` ${lib.dependants} | ${lib.supportsNodejs ? '+' : '-'} | ${lib.supportsBrowser ? '+' : '-'} |`;
-});
-
-mainContent += `
 ### Public symbolic expression math modules
 | №  | Module | Binding | Solves SLE | Dependants | Node.js | Browser |
 |:---|:-------|:------------:|:----------:|:-------:|:----------:|:-------:|
 `;
 
-const symbolicExpressionData = _.fileProvider.fileRead({
-  filePath : `${__dirname}/../data/SymbolicExpression.yml`,
-  encoding : 'yaml',
-});
+  const symbolicExpressionData = _.fileProvider.fileRead({
+    filePath : abs('../data/SymbolicExpression.yml'),
+    encoding : 'yaml',
+  });
 
-symbolicExpressionData.forEach((lib, index) =>
-{
-  'use strict';
+  symbolicExpressionData.forEach((lib, index) =>
+  {
+    mainContent += `| ${index + 1} | [${lib.npmName}](${lib.repoUri}) | ${lib.binding ? '+' : '-'} | ${lib.solvesSLE ? '+' : '-'} |` +
+` ${lib.dependants} | ${lib.supportsNodejs ? '+' : '-'} | ${lib.supportsBrowser ? '+' : '-'} |
+`;
+  })
 
-  mainContent += `| ${index + 1} | [${lib.npmName}](${lib.repoUri}) | ${lib.binding ? '+' : '-'} | ${lib.solvesSLE ? '+' : '-'} |` +
-  ` ${lib.dependants} | ${lib.supportsNodejs ? '+' : '-'} | ${lib.supportsBrowser ? '+' : '-'} |
-  `;
-})
+  const links = _.fileProvider.fileRead({
+    filePath : abs('../doc/resources.md'),
+  });
 
-const links = _.fileProvider.fileRead({
-  filePath : `${__dirname}/../doc/resources.md`
-});
+  _.fileProvider.fileWrite({
+    filePath : abs('../README.md'),
+    data : title + mainContent + links
+  });
 
-_.fileProvider.fileWrite({
-  filePath : `${__dirname}/../README.md`,
-  data : title + mainContent + links
-});
-
-console.log( 'ReadMe created!' );
+  console.log( 'ReadMe created!' );
+})();

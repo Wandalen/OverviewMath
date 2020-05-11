@@ -26,13 +26,11 @@ function generateM( rows, columns )
     const row1 = _.intRandom([ 0, dimensions - 1 ])
     let row2;
 
-    while ( true )
+    do
     {
-      row2 = _.intRandom([ 0, dimensions - 1 ])
-
-      if ( row1 !== row2 )
-      break
+      row2 = _.intRandom([ 0, dimensions - 1 ]);
     }
+    while ( !(row1 !== row2) )
 
     const k = Math.random() / 5;
 

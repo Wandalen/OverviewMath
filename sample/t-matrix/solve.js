@@ -1,4 +1,4 @@
-const Matrix = require( 't-matrix' );
+// const Matrix = require( 't-matrix' );
 const _ = require( 'wTools' );
 require( 'wmathmatrix' );
 require( 'wFiles' );

@@ -1,5 +1,5 @@
-const _ = require( 'wTools' );
-require( 'wmathmatrix' );
+// const _ = require( 'wTools' );
+// require( 'wmathmatrix' );
 
 function isNonZeroDeterminant( matrix )
 {
