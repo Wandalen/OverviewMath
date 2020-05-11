@@ -2,64 +2,64 @@ Public symbolic expression math modules:
 - id: 1
   Module: mathjs
   link: https://github.com/josdejong/mathjs
-  Binding: "-"
-  Solves SLE: "+"
+  Binding: false
+  Solves SLE: true
   Dependants: 960
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 2
   Module: "@yaffle/expression"
   link: https://github.com/Yaffle/Expression
-  Binding: "-"
-  Solves SLE: "+"
+  Binding: false
+  Solves SLE: true
   Dependants: 0
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 3
   Module: algebra.js
   link: https://github.com/nicolewhite/algebra.js
-  Binding: "-"
-  Solves SLE: "-"
+  Binding: false
+  Solves SLE: false
   Dependants: 13
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 4
   Module: nerdamer
   link: https://github.com/jiggzson/nerdamer
-  Binding: "-"
-  Solves SLE: "-"
+  Binding: false
+  Solves SLE: false
   Dependants: 6
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 5
   Module: algebrite
   link: https://github.com/davidedc/Algebrite
-  Binding: "-"
-  Solves SLE: "-"
+  Binding: false
+  Solves SLE: false
   Dependants: 6
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 6
   Module: theorem.js
   link: https://github.com/arguiot/TheoremJS
-  Binding: "-"
-  Solves SLE: "-"
+  Binding: false
+  Solves SLE: false
   Dependants: 1
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 7
   Module: coffeequate
   link: https://github.com/MatthewJA/Coffeequate
-  Binding: "-"
-  Solves SLE: "-"
+  Binding: false
+  Solves SLE: false
   Dependants: 1
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 8
   Module: metadelta
   link: https://github.com/metadelta/metadelta
-  Binding: "-"
-  Solves SLE: "-"
+  Binding: false
+  Solves SLE: false
   Dependants: 0
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true

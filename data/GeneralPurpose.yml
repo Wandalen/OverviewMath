@@ -2,336 +2,336 @@ Public math modules:
 - id: 1
   Module: "@tensorflow/tfjs"
   link: https://github.com/tensorflow/tfjs
-  Binding: "+"
-  Solves SLE: "+"
+  Binding: true
+  Solves SLE: true
   Dependants: 161
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 2
   Module: vectorious
   link: https://github.com/mateogianolio/vectorious
-  Binding: "+"
-  Solves SLE: "+"
+  Binding: true
+  Solves SLE: true
   Dependants: 8
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 3
   Module: vectorious-plus
   link: https://github.com/ukrbublik/vectorious-plus
-  Binding: "+"
-  Solves SLE: "+"
+  Binding: true
+  Solves SLE: true
   Dependants: 0
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 4
   Module: nlapack
   link: https://github.com/nperf/nlapack
-  Binding: "+"
-  Solves SLE: "+"
+  Binding: true
+  Solves SLE: true
   Dependants: 1
-  Node.js: "+"
-  Browser: "-"
+  Node.js: true
+  Browser: false
 - id: 5
   Module: blasjs
   link: https://github.com/jacobbogers/blasjs
-  Binding: "+"
-  Solves SLE: "+"
+  Binding: true
+  Solves SLE: true
   Dependants: 0
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 6
   Module: nblas-plus
   link: https://github.com/ukrbublik/nblas-plus
-  Binding: "+"
-  Solves SLE: "+"
+  Binding: true
+  Solves SLE: true
   Dependants: 1
-  Node.js: "+"
-  Browser: "-"
+  Node.js: true
+  Browser: false
 - id: 7
   Module: eigenjs
   link: https://github.com/rick68/eigenjs
-  Binding: "+"
-  Solves SLE: "+"
+  Binding: true
+  Solves SLE: true
   Dependants: 0
-  Node.js: "+"
-  Browser: "-"
+  Node.js: true
+  Browser: false
 - id: 8
   Module: node-julia
   link: https://github.com/waTeim/node-julia
-  Binding: "+"
-  Solves SLE: "+"
+  Binding: true
+  Solves SLE: true
   Dependants: 0
-  Node.js: "+"
-  Browser: "-"
+  Node.js: true
+  Browser: false
 - id: 9
   Module: "@stdlib/stdlib"
   link: https://github.com/stdlib-js/stdlib
-  Binding: "+"
-  Solves SLE: "-"
+  Binding: true
+  Solves SLE: false
   Dependants: 4
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 10
   Module: qminer
   link: https://github.com/qminer/qminer
-  Binding: "+"
-  Solves SLE: "-"
+  Binding: true
+  Solves SLE: false
   Dependants: 4
-  Node.js: "+"
-  Browser: "-"
+  Node.js: true
+  Browser: false
 - id: 11
   Module: eigen
   link: https://github.com/BertrandBev/eigen-js
-  Binding: "+"
-  Solves SLE: "-"
+  Binding: true
+  Solves SLE: false
   Dependants: 0
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 12
   Module: lalg
   link: https://github.com/rcorbish/node-linalg
-  Binding: "+"
-  Solves SLE: "-"
+  Binding: true
+  Solves SLE: false
   Dependants: 0
-  Node.js: "+"
-  Browser: "-"
+  Node.js: true
+  Browser: false
 - id: 13
   Module: nblas
   link: https://github.com/nperf/nblas
-  Binding: "+"
-  Solves SLE: "-"
+  Binding: true
+  Solves SLE: false
   Dependants: 3
-  Node.js: "+"
-  Browser: "-"
+  Node.js: true
+  Browser: false
 - id: 14
   Module: nclblast
   link: https://github.com/nperf/nclblast
-  Binding: "+"
-  Solves SLE: "-"
+  Binding: true
+  Solves SLE: false
   Dependants: 0
-  Node.js: "+"
-  Browser: "-"
+  Node.js: true
+  Browser: false
 - id: 15
   Module: node-hperformance
   link: https://github.com/amatosc/node-hperformance
-  Binding: "+"
-  Solves SLE: "-"
+  Binding: true
+  Solves SLE: false
   Dependants: 0
-  Node.js: "+"
-  Browser: "-"
+  Node.js: true
+  Browser: false
 - id: 16
   Module: mathjs
   link: https://github.com/josdejong/mathjs
-  Binding: "-"
-  Solves SLE: "+"
+  Binding: false
+  Solves SLE: true
   Dependants: 960
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 17
   Module: tdma
   link: https://github.com/armancodv/tdma
-  Binding: "-"
-  Solves SLE: "+"
+  Binding: false
+  Solves SLE: true
   Dependants: 0
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 18
   Module: solve-tridiagonal
   link: https://github.com/scijs/solve-tridiagonal
-  Binding: "-"
-  Solves SLE: "+"
+  Binding: false
+  Solves SLE: true
   Dependants: 0
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 19
   Module: solve-banded
   link: https://github.com/scijs/solve-banded
-  Binding: "-"
-  Solves SLE: "+"
+  Binding: false
+  Solves SLE: true
   Dependants: 0
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 20
   Module: solve-periodic-tridiagonal
   link: https://github.com/scijs/solve-periodic-tridiagonal
-  Binding: "-"
-  Solves SLE: "+"
+  Binding: false
+  Solves SLE: true
   Dependants: 0
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 21
   Module: ndarray-linear-solve
   link: https://github.com/scijs/ndarray-linear-solve
-  Binding: "-"
-  Solves SLE: "+"
+  Binding: false
+  Solves SLE: true
   Dependants: 2
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 22
   Module: lapack
   link: https://github.com/NaturalNode/node-lapack
-  Binding: "-"
-  Solves SLE: "+"
+  Binding: false
+  Solves SLE: true
   Dependants: 0
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 23
   Module: ubique
   link: https://github.com/maxto/ubique
-  Binding: "-"
-  Solves SLE: "+"
+  Binding: false
+  Solves SLE: true
   Dependants: 1
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 24
   Module: nd4js
   link: https://github.com/DirkToewe/nd4js
-  Binding: "-"
-  Solves SLE: "+"
+  Binding: false
+  Solves SLE: true
   Dependants: 0
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 25
   Module: t-matrix
   link: https://github.com/zakalwe314/t-matrix
-  Binding: "-"
-  Solves SLE: "+"
+  Binding: false
+  Solves SLE: true
   Dependants: 0
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 26
   Module: lalgebra
   link: https://github.com/isotopo/lalgebra
-  Binding: "-"
-  Solves SLE: "+"
+  Binding: false
+  Solves SLE: true
   Dependants: 2
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 27
   Module: MLweb
   link: https://github.com/lauerfab/MLweb/
-  Binding: "-"
-  Solves SLE: "+"
-  Dependants: "-"
-  Node.js: "-"
-  Browser: "+"
+  Binding: false
+  Solves SLE: true
+  Dependants: false
+  Node.js: false
+  Browser: true
 - id: 28
   Module: gl-matrix
   link: https://github.com/toji/gl-matrix
-  Binding: "-"
-  Solves SLE: "-"
+  Binding: false
+  Solves SLE: false
   Dependants: 404
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 29
   Module: numjs
   link: https://github.com/nicolaspanel/numjs
-  Binding: "-"
-  Solves SLE: "-"
+  Binding: false
+  Solves SLE: false
   Dependants: 20
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 30
   Module: numbers
   link: https://github.com/numbers/numbers.js
-  Binding: "-"
-  Solves SLE: "-"
+  Binding: false
+  Solves SLE: false
   Dependants: 0
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 31
   Module: ndarray
   link: https://github.com/scijs/ndarray
-  Binding: "-"
-  Solves SLE: "-"
+  Binding: false
+  Solves SLE: false
   Dependants: 312
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 32
   Module: cwise
   link: https://github.com/scijs/cwise
-  Binding: "-"
-  Solves SLE: "-"
+  Binding: false
+  Solves SLE: false
   Dependants: 67
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 33
   Module: linear-algebra
   link: https://github.com/hiddentao/linear-algebra
-  Binding: "-"
-  Solves SLE: "-"
+  Binding: false
+  Solves SLE: false
   Dependants: 8
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 34
   Module: compute.io
   link: https://github.com/compute-io/compute.io
-  Binding: "-"
-  Solves SLE: "-"
+  Binding: false
+  Solves SLE: false
   Dependants: 2
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 35
   Module: nsolvejs
   link: https://github.com/weasysolutions/Nsolvejs
-  Binding: "-"
-  Solves SLE: "-"
+  Binding: false
+  Solves SLE: false
   Dependants: 0
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 36
   Module: vec-la
   link: https://github.com/francisrstokes/vec-la
-  Binding: "-"
-  Solves SLE: "-"
+  Binding: false
+  Solves SLE: false
   Dependants: 0
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 37
   Module: vec-la-fp
   link: https://github.com/francisrstokes/vec-la-fp
-  Binding: "-"
-  Solves SLE: "-"
+  Binding: false
+  Solves SLE: false
   Dependants: 0
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 38
   Module: dstructs-matrix
   link: https://github.com/dstructs/matrix
-  Binding: "-"
-  Solves SLE: "-"
+  Binding: false
+  Solves SLE: false
   Dependants: 0
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 39
   Module: matrix
   link: https://github.com/raghavgujjar/matrix
-  Binding: "-"
-  Solves SLE: "-"
+  Binding: false
+  Solves SLE: false
   Dependants: 0
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 40
   Module: math2d
   link: https://github.com/crazytoucan/math2d
-  Binding: "-"
-  Solves SLE: "-"
+  Binding: false
+  Solves SLE: false
   Dependants: 0
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 41
   Module: add
   link: https://github.com/ben-ng/add
-  Binding: "-"
-  Solves SLE: "-"
+  Binding: false
+  Solves SLE: false
   Dependants: 129
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
 - id: 42
   Module: compute-cosine-similarity
   link: https://github.com/compute-io/cosine-similarity
-  Binding: "-"
-  Solves SLE: "-"
+  Binding: false
+  Solves SLE: false
   Dependants: 2
-  Node.js: "+"
-  Browser: "+"
+  Node.js: true
+  Browser: true
