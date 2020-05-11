@@ -1,2 +1,65 @@
-"Public symbolic expression math modules": 
-  raw: "| № | Module | Binding | Solves SLE | Dependants | Node.js | Browser | \n|:--|:--|:-:|:-:|:-:|:-:|:-:|\n| 1 | [mathjs](https://github.com/josdejong/mathjs) | - | + | 960 | + | + | \n| 2 | [@yaffle/expression](https://github.com/Yaffle/Expression) | - | + | 0 | + | + | \n| 3 | [algebra.js](https://github.com/nicolewhite/algebra.js) | - | - | 13 | + | + | \n| 4 | [nerdamer](https://github.com/jiggzson/nerdamer) | - | - | 6 | + | + | \n| 5 | [algebrite](https://github.com/davidedc/Algebrite) | - | - | 6 | + | + | \n| 6 | [theorem.js](https://github.com/arguiot/TheoremJS) | - | - | 1 | + | + | \n| 7 | [coffeequate](https://github.com/MatthewJA/Coffeequate) | - | - | 1 | + | + | \n| 8 | [metadelta](https://github.com/metadelta/metadelta) | - | - | 0 | + | + | \n\n"
+Public symbolic expression math modules:
+- id: 1
+  Module: mathjs
+  link: https://github.com/josdejong/mathjs
+  Binding: "-"
+  Solves SLE: "+"
+  Dependants: 960
+  Node.js: "+"
+  Browser: "+"
+- id: 2
+  Module: "@yaffle/expression"
+  link: https://github.com/Yaffle/Expression
+  Binding: "-"
+  Solves SLE: "+"
+  Dependants: 0
+  Node.js: "+"
+  Browser: "+"
+- id: 3
+  Module: algebra.js
+  link: https://github.com/nicolewhite/algebra.js
+  Binding: "-"
+  Solves SLE: "-"
+  Dependants: 13
+  Node.js: "+"
+  Browser: "+"
+- id: 4
+  Module: nerdamer
+  link: https://github.com/jiggzson/nerdamer
+  Binding: "-"
+  Solves SLE: "-"
+  Dependants: 6
+  Node.js: "+"
+  Browser: "+"
+- id: 5
+  Module: algebrite
+  link: https://github.com/davidedc/Algebrite
+  Binding: "-"
+  Solves SLE: "-"
+  Dependants: 6
+  Node.js: "+"
+  Browser: "+"
+- id: 6
+  Module: theorem.js
+  link: https://github.com/arguiot/TheoremJS
+  Binding: "-"
+  Solves SLE: "-"
+  Dependants: 1
+  Node.js: "+"
+  Browser: "+"
+- id: 7
+  Module: coffeequate
+  link: https://github.com/MatthewJA/Coffeequate
+  Binding: "-"
+  Solves SLE: "-"
+  Dependants: 1
+  Node.js: "+"
+  Browser: "+"
+- id: 8
+  Module: metadelta
+  link: https://github.com/metadelta/metadelta
+  Binding: "-"
+  Solves SLE: "-"
+  Dependants: 0
+  Node.js: "+"
+  Browser: "+"
