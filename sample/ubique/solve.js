@@ -1,18 +1,23 @@
 const ubique = require('ubique');
+const _ = require( 'wTools' );
+require( 'wmathmatrix' );
+require( 'wFiles' );
+require( 'wequaler' );
 
-const randomInteger = require('../../data/randomInteger');
-const matrix = require('../../data/System1000');
+const createMatrix = require('../../proto/CreateMatrix');
+
+var data = _.fileProvider.fileRead({
+  filePath : `${__dirname}/../../data/System1000.json`,
+  encoding : 'json',
+});
 
 const transp = ubique.transpose;
 
-const vector = [];
+const result = ubique.linsolve(createMatrix(data.M), transp(data.x));
+console.log(result);
+console.log(data.b);
 
-for (let i = 0; i < 1000; i++) 
-{
-  vector.push(randomInteger(-1000, 1000));
-}
-
-console.log(ubique.linsolve(matrix, transp(vector)))
+console.log(_.equivalent( result, data.b ));
 
 // console.log(ubique.linsolve([[1, 1, -1], [1, -2, 3], [2, 3, 1]], transp([5, 6, 3])));
 // [[5.846154], [-2.384615], [-1.538462]]
