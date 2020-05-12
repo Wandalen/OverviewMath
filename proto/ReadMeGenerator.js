@@ -7,12 +7,12 @@
   function abs() { return _.path.s.join( __dirname, ... arguments ) }
 
   const title = _.fileProvider.fileRead({
-    filePath : `${__dirname}/../doc/title.md`
+    filePath : abs('../doc/title.md')
   });
 
   let mainContent = `
 ### Public math modules
-| №  | Module | Binding | Solves SLE | Dependants | Node.js | Browser |
+| №  | Module | Binding | Solves SLE | Dependents | Node.js | Browser |
 |:---|:------:|:------------:|:----------:|:-------:|:----------:|:-------:|`;
 
   const generalPurposeData = _.fileProvider.fileRead({
@@ -24,12 +24,12 @@
   {
     mainContent += `
 | ${index + 1} | [${lib.npmName}](${lib.repoUri}) | ${lib.binding ? '+' : '-'} | ${lib.solvesSLE ? '+' : '-'} |` +
-`${lib.dependants} | ${lib.supportsNodejs ? '+' : '-'} | ${lib.supportsBrowser ? '+' : '-'} |`;
+`${lib.dependents} | ${lib.supportsNodejs ? '+' : '-'} | ${lib.supportsBrowser ? '+' : '-'} |`;
   });
 
   mainContent += `
 ### Public symbolic expression math modules
-| №  | Module | Binding | Solves SLE | Dependants | Node.js | Browser |
+| №  | Module | Binding | Solves SLE | Dependents | Node.js | Browser |
 |:---|:-------|:------------:|:----------:|:-------:|:----------:|:-------:|
 `;
 
@@ -41,7 +41,7 @@
   symbolicExpressionData.forEach((lib, index) =>
   {
     mainContent += `| ${index + 1} | [${lib.npmName}](${lib.repoUri}) | ${lib.binding ? '+' : '-'} | ${lib.solvesSLE ? '+' : '-'} |` +
-` ${lib.dependants} | ${lib.supportsNodejs ? '+' : '-'} | ${lib.supportsBrowser ? '+' : '-'} |
+` ${lib.dependents} | ${lib.supportsNodejs ? '+' : '-'} | ${lib.supportsBrowser ? '+' : '-'} |
 `;
   })
 
