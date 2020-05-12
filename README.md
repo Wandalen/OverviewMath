@@ -48,14 +48,14 @@ Review of open source math modules of different kind
 ### Public symbolic expression math modules
 | №  | Module | Binding | Solves SLE | Dependents | Node.js | Browser |
 |:---|:-------|:------------:|:----------:|:-------:|:----------:|:-------:|
-| 1 | [metadelta](https://github.com/metadelta/metadelta) | - | - | 0 | + | + |
+| 1 | [mathjs](https://github.com/josdejong/mathjs) | - | + | 960 | + | + |
 | 2 | [@yaffle/expression](https://github.com/Yaffle/Expression) | - | + | 0 | + | + |
-| 3 | [coffeequate](https://github.com/MatthewJA/Coffeequate) | - | - | 1 | + | + |
-| 4 | [theorem.js](https://github.com/arguiot/TheoremJS) | - | - | 1 | + | + |
+| 3 | [algebra.js](https://github.com/nicolewhite/algebra.js) | - | - | 13 | + | + |
+| 4 | [nerdamer](https://github.com/jiggzson/nerdamer) | - | - | 6 | + | + |
 | 5 | [algebrite](https://github.com/davidedc/Algebrite) | - | - | 6 | + | + |
-| 6 | [nerdamer](https://github.com/jiggzson/nerdamer) | - | - | 6 | + | + |
-| 7 | [algebra.js](https://github.com/nicolewhite/algebra.js) | - | - | 13 | + | + |
-| 8 | [mathjs](https://github.com/josdejong/mathjs) | - | + | 960 | + | + |
+| 6 | [theorem.js](https://github.com/arguiot/TheoremJS) | - | - | 1 | + | + |
+| 7 | [coffeequate](https://github.com/MatthewJA/Coffeequate) | - | - | 1 | + | + |
+| 8 | [metadelta](https://github.com/metadelta/metadelta) | - | - | 0 | + | + |
 #### Links to useful articles:
 - https://smartbear.com/blog/test-and-monitor/four-serious-math-libraries-for-javascript/
 - https://smartbear.com/blog/test-and-monitor/four-serious-math-libraries-for-javascript/

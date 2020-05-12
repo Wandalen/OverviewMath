@@ -5,19 +5,9 @@
   require( 'wFiles' );
   require( 'warraysorted' );
 
-  // const a = [4, -2, 0, 1, 5, 7, 6];
-  // const t = [];
-  // for( let i = 0 ; i < a.length ; i++ )
-  // _.sorted.add( t, a[ i ], (a, b) => {
-  //   return a - b
-  // } );
-  // console.log(t);
+  const sortTable = require('./SortTable');
 
   function abs() { return _.path.s.join( __dirname, ... arguments ) }
-
-  const title = _.fileProvider.fileRead({
-    filePath : abs('../doc/title.md')
-  });
 
   let mainContent = `
 ### Public math modules
@@ -29,33 +19,7 @@
     encoding : 'yaml',
   });
 
-  let sortedData = [];
-  for( let i = 0 ; i < data.length ; i++ )
-  _.sorted.add( sortedData, data[ i ], (lib) => lib.dependents );
-
-  sortedData.reverse();
-
-  const bindingAndSolvingSLE = sortedData.filter((lib) => {
-    if (lib.binding && lib.solvesSLE)
-    return lib;
-  });
-
-  const onlyBinding = sortedData.filter((lib) => {
-    if (lib.binding && !lib.solvesSLE)
-    return lib;
-  });
-
-  const onlySolvingSLE = sortedData.filter((lib) => {
-    if (!lib.binding && lib.solvesSLE)
-    return lib;
-  });
-
-  const other = sortedData.filter((lib) => {
-    if (!lib.binding && !lib.solvesSLE)
-    return lib;
-  });
-
-  sortedData = [ ... bindingAndSolvingSLE, ... onlyBinding, ... onlySolvingSLE, ... other ];
+  let sortedData = sortTable(data);
 
   sortedData.forEach((lib, index) =>
   {
@@ -75,16 +39,18 @@
     encoding : 'yaml',
   });
 
-  sortedData = [];
-  for( let i = 0 ; i < data.length ; i++ )
-  _.sorted.add( sortedData, data[ i ], (lib) => lib.dependents );
+  sortedData = sortTable(data);
 
   sortedData.forEach((lib, index) =>
   {
     mainContent += `| ${index + 1} | [${lib.npmName}](${lib.repoUri}) | ${lib.binding ? '+' : '-'} | ${lib.solvesSLE ? '+' : '-'} |` +
 ` ${lib.dependents} | ${lib.supportsNodejs ? '+' : '-'} | ${lib.supportsBrowser ? '+' : '-'} |
 `;
-  })
+  });
+
+  const title = _.fileProvider.fileRead({
+    filePath : abs('../doc/title.md')
+  });
 
   const links = _.fileProvider.fileRead({
     filePath : abs('../doc/resources.md'),
