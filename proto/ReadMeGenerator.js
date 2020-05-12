@@ -5,6 +5,14 @@
   require( 'wFiles' );
   require( 'warraysorted' );
 
+  // const a = [4, -2, 0, 1, 5, 7, 6];
+  // const t = [];
+  // for( let i = 0 ; i < a.length ; i++ )
+  // _.sorted.add( t, a[ i ], (a, b) => {
+  //   return a - b
+  // } );
+  // console.log(t);
+
   function abs() { return _.path.s.join( __dirname, ... arguments ) }
 
   const title = _.fileProvider.fileRead({
@@ -23,11 +31,31 @@
 
   let sortedData = [];
   for( let i = 0 ; i < data.length ; i++ )
-  _.sorted.add( sortedData, data[ i ], (lib) => lib.dependents )
+  _.sorted.add( sortedData, data[ i ], (lib) => lib.dependents );
 
-  // _.sorted.add( sortedData, data[ i ], (lib) => {
-  //   !isNaN( lib.dependents ) ? lib.dependents : 0
-  // } );
+  sortedData.reverse();
+
+  const bindingAndSolvingSLE = sortedData.filter((lib) => {
+    if (lib.binding && lib.solvesSLE)
+    return lib;
+  });
+
+  const onlyBinding = sortedData.filter((lib) => {
+    if (lib.binding && !lib.solvesSLE)
+    return lib;
+  });
+
+  const onlySolvingSLE = sortedData.filter((lib) => {
+    if (!lib.binding && lib.solvesSLE)
+    return lib;
+  });
+
+  const other = sortedData.filter((lib) => {
+    if (!lib.binding && !lib.solvesSLE)
+    return lib;
+  });
+
+  sortedData = [ ... bindingAndSolvingSLE, ... onlyBinding, ... onlySolvingSLE, ... other ];
 
   sortedData.forEach((lib, index) =>
   {

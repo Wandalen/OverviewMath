@@ -184,7 +184,7 @@
   repoUri: 'https://github.com/lauerfab/MLweb/'
   binding: false
   solvesSLE: true
-  dependents: false
+  dependents: 0
   supportsNodejs: false
   supportsBrowser: true
 - npmName: gl-matrix
