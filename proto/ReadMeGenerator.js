@@ -3,6 +3,7 @@
 
   const _ = require( 'wTools' );
   require( 'wFiles' );
+  require( 'warraysorted' );
 
   function abs() { return _.path.s.join( __dirname, ... arguments ) }
 
@@ -15,12 +16,20 @@
 | №  | Module | Binding | Solves SLE | Dependents | Node.js | Browser |
 |:---|:------:|:------------:|:----------:|:-------:|:----------:|:-------:|`;
 
-  const generalPurposeData = _.fileProvider.fileRead({
+  let data = _.fileProvider.fileRead({
     filePath : abs('../data/GeneralPurpose.yml'),
     encoding : 'yaml',
   });
 
-  generalPurposeData.forEach((lib, index) =>
+  let sortedData = [];
+  for( let i = 0 ; i < data.length ; i++ )
+  _.sorted.add( sortedData, data[ i ], (lib) => lib.dependents )
+
+  // _.sorted.add( sortedData, data[ i ], (lib) => {
+  //   !isNaN( lib.dependents ) ? lib.dependents : 0
+  // } );
+
+  sortedData.forEach((lib, index) =>
   {
     mainContent += `
 | ${index + 1} | [${lib.npmName}](${lib.repoUri}) | ${lib.binding ? '+' : '-'} | ${lib.solvesSLE ? '+' : '-'} |` +
@@ -33,12 +42,16 @@
 |:---|:-------|:------------:|:----------:|:-------:|:----------:|:-------:|
 `;
 
-  const symbolicExpressionData = _.fileProvider.fileRead({
+  data = _.fileProvider.fileRead({
     filePath : abs('../data/SymbolicExpression.yml'),
     encoding : 'yaml',
   });
 
-  symbolicExpressionData.forEach((lib, index) =>
+  sortedData = [];
+  for( let i = 0 ; i < data.length ; i++ )
+  _.sorted.add( sortedData, data[ i ], (lib) => lib.dependents );
+
+  sortedData.forEach((lib, index) =>
   {
     mainContent += `| ${index + 1} | [${lib.npmName}](${lib.repoUri}) | ${lib.binding ? '+' : '-'} | ${lib.solvesSLE ? '+' : '-'} |` +
 ` ${lib.dependents} | ${lib.supportsNodejs ? '+' : '-'} | ${lib.supportsBrowser ? '+' : '-'} |

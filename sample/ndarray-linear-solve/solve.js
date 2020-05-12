@@ -2,7 +2,6 @@ const solve = require('ndarray-linear-solve');
 const show = require('ndarray-show');
 const ndarray = require('ndarray');
 
-const randomInteger = require('../../data/randomInteger');
 const matrix = require('../../data/System1000');
 
 const modifiedMatrix = [];

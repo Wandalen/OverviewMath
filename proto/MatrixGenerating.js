@@ -71,10 +71,6 @@ const b = _.Matrix.Mul( null, [ M, x ] );
 if ( !isCorrectSystem(M, x, b) )
 throw _.err( 'Error:', new Error('incorrect system') );
 
-console.log(M);
-console.log(x);
-console.log(b);
-
 _.fileProvider.fileWrite
 ({
   filePath : `${__dirname}/../data/System1000.json`,
