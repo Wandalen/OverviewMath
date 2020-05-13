@@ -1,4 +1,5 @@
-( function _Integration_test_s_() {
+( function _Integration_test_s_()
+{
 
 'use strict';
 
@@ -28,7 +29,7 @@ let path = fileProvider.path;
 function onSuiteBegin()
 {
   let context = this;
-  context.assetsOriginalSuitePath = path.join( __dirname, '..'  );
+  context.assetsOriginalSuitePath = path.join( __dirname, '..' );
 }
 
 //
@@ -57,11 +58,11 @@ function samples( test )
   let a = context.assetFor( test );
   let filter = { filePath : a.abs( 'sample/**/*.(s|js)' ), basePath : a.abs( '.' ) };
   let found = a.fileProvider.filesFind
-  ({
+  ( {
     filter,
     mode : 'distinct',
     mandatory : 0,
-  });
+  } );
 
   /* */
 
@@ -78,22 +79,22 @@ function samples( test )
       test.case = found[ i ].relative;
       startTime = _.time.now();
       return null;
-    })
+    } )
 
     if( _.longHas( found[ i ].exts, 'throwing' ) )
     {
-      a.appStartNonThrowing({ execPath : found[ i ].relative })
+      a.appStartNonThrowing( { execPath : found[ i ].relative } )
       .then( ( got ) =>
       {
         console.log( _.time.spent( startTime ) );
         test.description = 'nonzero exit code';
         test.notIdentical( got.exitCode, 0 );
         return null;
-      })
+      } )
     }
     else
     {
-      a.appStartNonThrowing({ execPath : found[ i ].relative })
+      a.appStartNonThrowing( { execPath : found[ i ].relative } )
       .then( ( got ) =>
       {
         console.log( _.time.spent( startTime ) );
@@ -107,7 +108,7 @@ function samples( test )
         test.description = 'have some output';
         test.ge( got.output.split( '\n' ).length, 2 )
         return null;
-      })
+      } )
     }
   }
 
@@ -153,4 +154,4 @@ Self = wTestSuite( Self );
 if( typeof module !== 'undefined' && !module.parent )
 _global_.wTester.test( Self.name );
 
-})();
+} )();

@@ -2,7 +2,7 @@ const _ = require( 'wTools' );
 require( 'wequaler' );
 require( 'wmathmatrix' );
 
-function isCorrectSystem(M, x, b)
+function isCorrectSystem( M, x, b )
 {
   'use strict';
 
