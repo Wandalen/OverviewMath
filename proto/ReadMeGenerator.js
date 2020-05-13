@@ -9,10 +9,27 @@
 
   function abs() { return _.path.s.join( __dirname, ... arguments ) }
 
+  const columns = [
+    { tableTitle : 'Module', dataTitle : 'npmName' },
+    { '' : '' },
+    { 'Binding' : 'binding' },
+    { 'Solves SLE' : 'solvesSLE' },
+    { 'Dependents' : 'dependents' },
+    { 'Node.js' : 'supportsNodejs' },
+    { 'Browser' : 'supportsBrowser' }
+  ];
+
+  let columnTitleRow = '|№|';
+  let subColumnTitleRow = '|:-:|';
+  columns.forEach((column) => {
+    columnTitleRow += column + '|';
+    subColumnTitleRow += ':--:|'
+  });
+
   let mainContent = `
 ### Public math modules
-| №  | Module | Binding | Solves SLE | Dependents | Node.js | Browser |
-|:---|:------:|:------------:|:----------:|:-------:|:----------:|:-------:|`;
+${columnTitleRow}
+${subColumnTitleRow}`;
 
   let data = _.fileProvider.fileRead({
     filePath : abs('../data/GeneralPurpose.yml'),
@@ -30,8 +47,8 @@
 
   mainContent += `
 ### Public symbolic expression math modules
-| №  | Module | Binding | Solves SLE | Dependents | Node.js | Browser |
-|:---|:-------|:------------:|:----------:|:-------:|:----------:|:-------:|
+${columnTitleRow}
+${subColumnTitleRow}
 `;
 
   data = _.fileProvider.fileRead({
