@@ -25,7 +25,6 @@
     "@tensorflow/tfjs": "=1.7.4",
     "@tensorflow/tfjs-node": "=1.7.4",
     "@tensorflow/tfjs-node-gpu": "=1.7.4",
-    "dependent-counts": "^2.0.0",
     "eslint": "=6.8.0",
     "eslint-config-standard": "=14.1.1",
     "eslint-plugin-import": "=2.20.2",

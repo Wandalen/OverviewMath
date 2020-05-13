@@ -1,39 +1,39 @@
 (function () {
   'use strict';
 
-  // const http = require('http');
-  // const _ = require( 'wTools' );
-  // require( 'wFiles' );
+  const http = require('http');
+  const _ = require( 'wTools' );
+  require( 'wFiles' );
 
-  // _.npm.dependantsRertive = function(packageName)
-  // {
-  //   if (!packageName)
-  //   throw _.err( 'Error:', new Error('Need a package name') );
+  function getPackageDetails(packageName)
+  {
+    if (!packageName)
+    throw _.err( 'Error:', new Error('Need a package name') );
 
-  //   const url = 'https://replicate.npmjs.com/registry/_design/app/_view/dependedUpon?group_level=2&startkey=%5B%22' +
-  //    packageName + '%22%5D&endkey=%5B%22' + packageName + '%22%2C%7B%7D%5D&skip=0&limit=10000';
+    const url = 'https://replicate.npmjs.com:443/registry/_design/app/_view/dependedUpon?group_level=2&startkey=%5B%22' +
+     packageName + '%22%5D&endkey=%5B%22' + packageName + '%22%2C%7B%7D%5D&skip=0&limit=10000';
 
-  //   const uriData = _.uri.parse(url);
+    const uriData = _.uri.parse(url);
 
-  //   const options = {
-  //     host : uriData.host,
-  //     path : uriData.path
-  //   }
+    const options = {
+      host : uriData.host,
+      path : uriData.path
+    }
 
-  //   http.request(options, (response) => {
-  //     var str = '';
+    function callback(response) {
+      var str = '';
+      response.on('data', function (chunk) {
+        str += chunk;
+      });
+      response.on('end', function () {
+        console.log(str);
+      });
+    }
 
-  //     response.on('data', function (chunk) {
-  //       str += chunk;
-  //     });
+    http.request(options, callback).end();
+  }
 
-  //     response.on('end', function () {
-  //       console.log(str);
-  //     });
-  //   }).end();
-  // }
-
-  // console.log(_.npm.dependantsRertive('@tensorflow/tfjs'));
+  getPackageDetails('@tensorflow/tfjs');
 
   // function abs() { return _.path.s.join( __dirname, ... arguments ) }
 
