@@ -11,6 +11,8 @@ var data = _.fileProvider.fileRead({
   encoding : 'json',
 });
 
+console.log(data);
+
 const transp = ubique.transpose;
 
 const result = ubique.linsolve(createMatrix(data.M), transp(data.x));

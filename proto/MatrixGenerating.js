@@ -22,19 +22,20 @@ function generateM( rows, columns )
     matrix.push( row );
   }
 
-  for ( let i = 0; i < 100000; ++i ) {
-    const row1 = _.intRandom([ 0, dimensions - 1 ])
+  for ( let i = 0; i < 10000; ++i ) {
+    const row1 = _.intRandom([ 0, rows ])
     let row2;
+
 
     do
     {
-      row2 = _.intRandom([ 0, dimensions - 1 ]);
+      row2 = _.intRandom([ 0, rows ]);
     }
     while ( !(row1 !== row2) )
 
     const k = Math.random() / 5;
 
-    for ( let j = 0; j < dimensions; j++ )
+    for ( let j = 0; j < rows; j++ )
     {
       matrix[ row2 ][ j ] += matrix[ row1 ][ j ] * k;
     }
@@ -47,7 +48,7 @@ function generateM( rows, columns )
   return result;
 }
 
-const dimensions = 1000;
+const dimensions = 100;
 let M;
 
 do
@@ -59,12 +60,12 @@ while ( !isNonZeroDeterminant( M ) )
 
 let x = [];
 
-for ( let i = 0; i < 1000; i++ )
+for ( let i = 0; i < dimensions; i++ )
 {
   x.push( _.intRandom([ -100, 100 ]) );
 }
 
-x = _.Matrix.Make( [ 1000, 1 ] ).copy( x );
+x = _.Matrix.Make( [ dimensions, 1 ] ).copy( x );
 
 const b = _.Matrix.Mul( null, [ M, x ] );
 

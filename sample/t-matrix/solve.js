@@ -18,6 +18,7 @@ const M = _.Matrix({
 
 const x = _.Matrix.Make([ data.x.length, 1 ]).copy(data.x);
 const b = _.Matrix.Make([ data.b.length, 1 ]).copy(data.b);
+console.log(M, x, b);
 
 const result = _.Matrix.Mul( null, [ M, x ] );
 console.log(_.equivalent( result, b ));
