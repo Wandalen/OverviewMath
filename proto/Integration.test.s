@@ -105,7 +105,7 @@ function samples( test )
         test.identical( _.strCount( got.output, 'ncaught' ), 0 );
         test.identical( _.strCount( got.output, 'rror' ), 0 );
         test.description = 'have some output';
-        test.ge( got.output.split( '\n' ), 2 )
+        test.ge( got.output.split( '\n' ).length, 2 )
         return null;
       })
     }
