@@ -7,17 +7,10 @@
   require( 'warraysorted' );
 
   const sortTable = require( './SortTable' );
+  const createRow = require( './CreateRow' );
+  const columns = require( './SortingOrder' );
 
   function abs() { return _.path.s.join( __dirname, ... arguments ) }
-
-  const columns = [
-    { readMeTitle : 'Module', dataTitle : 'npmName' },
-    { readMeTitle : 'Binding', dataTitle : 'binding' },
-    { readMeTitle : 'Solves SLE', dataTitle : 'solvesSLE' },
-    { readMeTitle : 'Dependents', dataTitle : 'dependents' },
-    { readMeTitle : 'Node.js', dataTitle : 'supportsNodejs' },
-    { readMeTitle : 'Browser', dataTitle : 'supportsBrowser' }
-  ];
 
   let columnTitleRow = '|№|';
   let subColumnTitleRow = '|:-:|';
@@ -28,7 +21,7 @@
   } );
 
   let mainContent = `
-### Public math modules
+### Public general purpose math modules  
 ${columnTitleRow}
 ${subColumnTitleRow}`;
 
@@ -42,8 +35,27 @@ ${subColumnTitleRow}`;
   sortedData.forEach( ( lib, index ) =>
   {
     mainContent += `
-| ${index + 1} | [${lib.npmName}](${lib.repoUri}) | ${lib.binding ? '+' : '-'} | ${lib.solvesSLE ? '+' : '-'} |` +
-`${lib.dependents} | ${lib.supportsNodejs ? '+' : '-'} | ${lib.supportsBrowser ? '+' : '-'} |`;
+${createRow( columns, lib, index )}`;
+} );
+
+
+mainContent += `
+### Public special purpose math modules  
+${columnTitleRow}
+${subColumnTitleRow}
+`;
+
+  data = _.fileProvider.fileRead( {
+    filePath : abs( '../data/Special.yml' ),
+    encoding : 'yaml',
+  } );
+
+  sortedData = sortTable( data );
+
+  sortedData.forEach( ( lib, index ) =>
+  {
+    mainContent += `${createRow( columns, lib, index )}
+`;
   } );
 
   mainContent += `
@@ -61,8 +73,7 @@ ${subColumnTitleRow}
 
   sortedData.forEach( ( lib, index ) =>
   {
-    mainContent += `| ${index + 1} | [${lib.npmName}](${lib.repoUri}) | ${lib.binding ? '+' : '-'} | ${lib.solvesSLE ? '+' : '-'} |` +
-` ${lib.dependents} | ${lib.supportsNodejs ? '+' : '-'} | ${lib.supportsBrowser ? '+' : '-'} |
+    mainContent += `${createRow( columns, lib, index )}
 `;
   } );
 
