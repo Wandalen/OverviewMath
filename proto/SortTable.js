@@ -14,18 +14,61 @@ function sortTable( tableData, sortingOrder )
 
   // const tableDataCopy = [ ... tableData ];
 
-  for ( let i = 0; i < sortingOrder.length; i++ )
-  {
-    if ( sortingOrder[ i ].dataTitle !== 'npmName' )
-    {
-      if ( typeof sortingOrder[ i ].dataType === 'boolean' )
-      {
+  // for ( let i = 0; i < sortingOrder.length; i++ )
+  // {
+  //   if ( sortingOrder[ i ].dataTitle !== 'npmName' )
+  //   {
+  //     if ( typeof sortingOrder[ i ].dataType === 'boolean' )
+  //     {
+  //     }
+  //   }
+  // }
 
-      }
-    }
+  const sorted = [];
+
+  const booleanColumns = sortingOrder.filter( ( column ) => column.dataType === 'boolean' );
+  const cycles = booleanColumns.length;
+
+  for ( let i = 0; i < cycles; i++ )
+  {
+    sortedByDependants.forEach( ( lib, idx ) =>
+      {
+        let passes = true;
+
+        booleanColumns.forEach( ( column ) =>
+        {
+          if ( !lib[ column.dataTitle ] )
+          passes = false;
+        } )
+
+        if ( passes )
+        {
+          sorted.push( lib );
+          sortedByDependants.splice( idx, 1 );
+        }
+      } )
+
+    booleanColumns.pop();
   }
 
-  return sortedByDependants;
+  // sorted.push( ... sortedByDependants.filter( ( lib ) =>
+  // {
+
+  // } ) )
+
+  // const temp = sortedByDependants.filter( ( lib ) =>
+  // {
+  //   let flag = true;
+
+  //   booleanColumns.forEach( ( column ) =>
+  //   {
+
+  //   } )
+
+  //   return flag;
+  // } )
+
+  return [ ... sorted, ... sortedByDependants ];
   // let sortedData = [];
   // for( let i = 0 ; i < tableData.length ; i++ )
   // _.sorted.add( sortedData, tableData[ i ], ( lib ) => lib.dependents );
