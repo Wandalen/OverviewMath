@@ -11,9 +11,7 @@
     if ( !packageName )
     throw _.err( 'Error:', new Error( 'Need a package name' ) );
 
-    const url = 'https://replicate.npmjs.com:443/registry/_design/app/_view/dependedUpon?group_level=2&startkey=%5B%22' +
-     packageName + '%22%5D&endkey=%5B%22' + packageName + '%22%2C%7B%7D%5D&skip=0&limit=10000';
-
+    const url = ``;
     const uriData = _.uri.parse( url );
 
     const options = {
@@ -37,7 +35,7 @@
     http.request( options, callback ).end();
   }
 
-  getPackageDetails( '@tensorflow/tfjs' );
+  getPackageDetails( 'wTools' );
 
   // function abs() { return _.path.s.join( __dirname, ... arguments ) }
 

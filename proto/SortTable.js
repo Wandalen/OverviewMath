@@ -5,57 +5,58 @@ function sortTable( tableData, sortingOrder )
   const _ = require( 'wTools' );
   require( 'warraysorted' );
 
-  // const tableDataCopy = [...tableData];
+  const sortedByDependants = [];
 
-  // sortingOrder.forEach( ( column ) =>
-  // {
-  //   if ( column.dataTitle !== 'npmName' )
-  //   {
-  //     tableData.forEach( ( lib ) =>
-  //     {
-  //       if ( typeof lib[ column.dataTitle ] === 'boolean' )
-  //       {
-  //         return lib[ column.dataTitle ] === true
-  //       }
-  //       else if (  )
-  //       {
-          
-  //       }
-  //     } )
-  //   }
-  // } )
-
-  let sortedData = [];
   for( let i = 0 ; i < tableData.length ; i++ )
-  _.sorted.add( sortedData, tableData[ i ], ( lib ) => lib.dependents );
+  _.sorted.add( sortedByDependants, tableData[ i ], ( lib ) => lib.dependants );
 
-  sortedData.reverse();
+  sortedByDependants.reverse();
 
-  const bindingAndSolvingSLE = sortedData.filter( ( lib ) =>
+  // const tableDataCopy = [ ... tableData ];
+
+  for ( let i = 0; i < sortingOrder.length; i++ )
   {
-    if ( lib.binding && lib.solvesSLE )
-    return lib;
-  } );
+    if ( sortingOrder[ i ].dataTitle !== 'npmName' )
+    {
+      if ( typeof sortingOrder[ i ].dataType === 'boolean' )
+      {
 
-  const onlyBinding = sortedData.filter( ( lib ) =>
-  {
-    if ( lib.binding && !lib.solvesSLE )
-    return lib;
-  } );
+      }
+    }
+  }
 
-  const onlySolvingSLE = sortedData.filter( ( lib ) =>
-  {
-    if ( !lib.binding && lib.solvesSLE )
-    return lib;
-  } );
+  return sortedByDependants;
+  // let sortedData = [];
+  // for( let i = 0 ; i < tableData.length ; i++ )
+  // _.sorted.add( sortedData, tableData[ i ], ( lib ) => lib.dependents );
 
-  const other = sortedData.filter( ( lib ) =>
-  {
-    if ( !lib.binding && !lib.solvesSLE )
-    return lib;
-  } );
+  // sortedData.reverse();
 
-  return [ ... bindingAndSolvingSLE, ... onlyBinding, ... onlySolvingSLE, ... other ];
+  // const bindingAndSolvingSLE = sortedData.filter( ( lib ) =>
+  // {
+  //   if ( lib.binding && lib.solvesSLE )
+  //   return lib;
+  // } );
+
+  // const onlyBinding = sortedData.filter( ( lib ) =>
+  // {
+  //   if ( lib.binding && !lib.solvesSLE )
+  //   return lib;
+  // } );
+
+  // const onlySolvingSLE = sortedData.filter( ( lib ) =>
+  // {
+  //   if ( !lib.binding && lib.solvesSLE )
+  //   return lib;
+  // } );
+
+  // const other = sortedData.filter( ( lib ) =>
+  // {
+  //   if ( !lib.binding && !lib.solvesSLE )
+  //   return lib;
+  // } );
+
+  // return [ ... bindingAndSolvingSLE, ... onlyBinding, ... onlySolvingSLE, ... other ];
 }
 
 module.exports = sortTable;

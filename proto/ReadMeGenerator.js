@@ -30,7 +30,7 @@ ${subColumnTitleRow}`;
     encoding : 'yaml',
   } );
 
-  let sortedData = sortTable( data );
+  let sortedData = sortTable( data, columns );
 
   sortedData.forEach( ( lib, index ) =>
   {
@@ -50,7 +50,7 @@ ${subColumnTitleRow}
     encoding : 'yaml',
   } );
 
-  sortedData = sortTable( data );
+  sortedData = sortTable( data, columns );
 
   sortedData.forEach( ( lib, index ) =>
   {
@@ -69,7 +69,7 @@ ${subColumnTitleRow}
     encoding : 'yaml',
   } );
 
-  sortedData = sortTable( data );
+  sortedData = sortTable( data, columns );
 
   sortedData.forEach( ( lib, index ) =>
   {
