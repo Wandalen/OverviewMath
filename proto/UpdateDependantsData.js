@@ -1,57 +1,77 @@
-(function () {
+( function ()
+{
   'use strict';
 
-  const http = require('http');
   const _ = require( 'wTools' );
   require( 'wFiles' );
+  require( 'wnpmtools' );
 
-  function getPackageDetails(packageName)
+  function abs() { return _.path.s.join( __dirname, ... arguments ) }
+
+  const generalPurposeData = _.fileProvider.fileRead(
   {
-    if (!packageName)
-    throw _.err( 'Error:', new Error('Need a package name') );
-
-    const url = 'https://replicate.npmjs.com:443/registry/_design/app/_view/dependedUpon?group_level=2&startkey=%5B%22' +
-     packageName + '%22%5D&endkey=%5B%22' + packageName + '%22%2C%7B%7D%5D&skip=0&limit=10000';
-
-    const uriData = _.uri.parse(url);
-
-    const options = {
-      host : uriData.host,
-      path : uriData.path
-    }
-
-    function callback(response) {
-      var str = '';
-      response.on('data', function (chunk) {
-        str += chunk;
-      });
-      response.on('end', function () {
-        console.log(str);
-      });
-    }
-
-    http.request(options, callback).end();
+    filePath : abs( '../data/GeneralPurpose.yml' ),
+    encoding : 'yaml'
   }
+  );
 
-  getPackageDetails('@tensorflow/tfjs');
+  const symbolicExpressionData = _.fileProvider.fileRead(
+  {
+    filePath : abs( '../data/SymbolicExpression.yml' ),
+    encoding : 'yaml'
+  }
+  );
 
-  // function abs() { return _.path.s.join( __dirname, ... arguments ) }
+  const specialData = _.fileProvider.fileRead(
+  {
+    filePath : abs( '../data/Special.yml' ),
+    encoding : 'yaml'
+  }
+  );
 
-  // const generalPurposeData = _.fileProvider.fileRead({
-  //   filePath : abs('../data/GeneralPurpose.yml'),
-  //   encoding : 'yaml',
-  // });
+  const tables = [ generalPurposeData, symbolicExpressionData, specialData ];
 
-  // generalPurposeData.forEach((lib) => {
-  //   const registryData = _.npm.dependantsRertive(lib.npmName);
-  //   // і далі перевірка поля dependents
-  // });
+  tables.forEach( ( table ) =>
+  {
+    table.forEach( async ( lib ) =>
+    {
+      try
+      {
+        const dependants = await _.npm.dependantsRertive( lib.npmName );
+        if ( isNaN( dependants ) )
+        lib.dependants = '-';
+        else
+        lib.dependants = dependants;
+      }
+      catch( error )
+      {
+        console.log( error );
+        lib.dependants = '-';
+      }
+    } )
+  } );
 
-  // _.fileProvider.fileWrite({
-  //   filePath : abs('../data/GeneralPurpose.yml'),
-  //   data : generalPurposeData,
-  //   encoding : 'yaml',
-  // });
+  _.fileProvider.fileWrite(
+    {
+    filePath : abs( '../data/GeneralPurpose.yml' ),
+    data : tables[ 0 ],
+    encoding : 'yaml',
+  }
+  );
 
-  // console.log(generalPurposeData);
-})();
+  _.fileProvider.fileWrite(
+    {
+    filePath : abs( '../data/SymbolicExpression.yml' ),
+    data : tables[ 1 ],
+    encoding : 'yaml',
+  }
+  );
+
+  _.fileProvider.fileWrite(
+    {
+    filePath : abs( '../data/Special.yml' ),
+    data : tables[ 2 ],
+    encoding : 'yaml',
+  }
+  );
+} )();

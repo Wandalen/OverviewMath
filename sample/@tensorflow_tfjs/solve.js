@@ -1,14 +1,21 @@
-const tf = require('@tensorflow/tfjs');
-console.log(tf);
+const tf = require( '@tensorflow/tfjs-node' );
+const _ = require( 'wTools' );
+require( 'wmathmatrix' );
+require( 'wFiles' );
+require( 'wequaler' );
 
-const randomInteger = require('../../data/randomInteger');
-const matrix = require('../../data/System1000');
+const createMatrix = require( '../../proto/CreateMatrix' );
 
-const vector = [];
+var data = _.fileProvider.fileRead( {
+  filePath : `${__dirname}/../../data/System1000.json`,
+  encoding : 'json',
+} );
 
-for (let i = 0; i < 1000; i++)
-{
-  vector.push(randomInteger(-1000, 1000));
-}
+const M = createMatrix( data.M );
+// console.log(M);
+const x = data.x;
+console.log( x );
+let b = data.b;
+// console.log(b);
 
-tf.linalg.solve(matrix, vector, false);
+tf.linalg.solve( M, b, false );

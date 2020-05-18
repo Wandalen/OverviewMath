@@ -1,56 +1,56 @@
 - npmName: mathjs
-  repoUri: https://github.com/josdejong/mathjs
+  repoUri: 'https://github.com/josdejong/mathjs'
   binding: false
   solvesSLE: true
-  dependents: 960
+  dependants: 960
   supportsNodejs: true
   supportsBrowser: true
-- npmName: "@yaffle/expression"
-  repoUri: https://github.com/Yaffle/Expression
+- npmName: '@yaffle/expression'
+  repoUri: 'https://github.com/Yaffle/Expression'
   binding: false
   solvesSLE: true
-  dependents: 0
+  dependants: 0
   supportsNodejs: true
   supportsBrowser: true
 - npmName: algebra.js
-  repoUri: https://github.com/nicolewhite/algebra.js
+  repoUri: 'https://github.com/nicolewhite/algebra.js'
   binding: false
   solvesSLE: false
-  dependents: 13
+  dependants: 13
   supportsNodejs: true
   supportsBrowser: true
 - npmName: nerdamer
-  repoUri: https://github.com/jiggzson/nerdamer
+  repoUri: 'https://github.com/jiggzson/nerdamer'
   binding: false
   solvesSLE: false
-  dependents: 6
+  dependants: 6
   supportsNodejs: true
   supportsBrowser: true
 - npmName: algebrite
-  repoUri: https://github.com/davidedc/Algebrite
+  repoUri: 'https://github.com/davidedc/Algebrite'
   binding: false
   solvesSLE: false
-  dependents: 6
+  dependants: 6
   supportsNodejs: true
   supportsBrowser: true
 - npmName: theorem.js
-  repoUri: https://github.com/arguiot/TheoremJS
+  repoUri: 'https://github.com/arguiot/TheoremJS'
   binding: false
   solvesSLE: false
-  dependents: 1
+  dependants: 1
   supportsNodejs: true
   supportsBrowser: true
 - npmName: coffeequate
-  repoUri: https://github.com/MatthewJA/Coffeequate
+  repoUri: 'https://github.com/MatthewJA/Coffeequate'
   binding: false
   solvesSLE: false
-  dependents: 1
+  dependants: 1
   supportsNodejs: true
   supportsBrowser: true
 - npmName: metadelta
-  repoUri: https://github.com/metadelta/metadelta
+  repoUri: 'https://github.com/metadelta/metadelta'
   binding: false
   solvesSLE: false
-  dependents: 0
+  dependants: 0
   supportsNodejs: true
   supportsBrowser: true

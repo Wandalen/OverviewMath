@@ -2,293 +2,223 @@
   repoUri: 'https://github.com/tensorflow/tfjs'
   binding: true
   solvesSLE: true
-  dependents: 161
+  dependants: 161
   supportsNodejs: true
   supportsBrowser: true
 - npmName: vectorious
   repoUri: 'https://github.com/mateogianolio/vectorious'
   binding: true
   solvesSLE: true
-  dependents: 8
+  dependants: 8
   supportsNodejs: true
   supportsBrowser: true
 - npmName: vectorious-plus
   repoUri: 'https://github.com/ukrbublik/vectorious-plus'
   binding: true
   solvesSLE: true
-  dependents: 0
+  dependants: 0
   supportsNodejs: true
   supportsBrowser: true
 - npmName: nlapack
   repoUri: 'https://github.com/nperf/nlapack'
   binding: true
   solvesSLE: true
-  dependents: 1
+  dependants: 1
   supportsNodejs: true
   supportsBrowser: false
 - npmName: blasjs
   repoUri: 'https://github.com/jacobbogers/blasjs'
   binding: true
   solvesSLE: true
-  dependents: 0
+  dependants: 0
   supportsNodejs: true
   supportsBrowser: true
 - npmName: nblas-plus
   repoUri: 'https://github.com/ukrbublik/nblas-plus'
   binding: true
   solvesSLE: true
-  dependents: 1
+  dependants: 1
   supportsNodejs: true
   supportsBrowser: false
 - npmName: eigenjs
   repoUri: 'https://github.com/rick68/eigenjs'
   binding: true
   solvesSLE: true
-  dependents: 0
+  dependants: 0
   supportsNodejs: true
   supportsBrowser: false
 - npmName: node-julia
   repoUri: 'https://github.com/waTeim/node-julia'
   binding: true
   solvesSLE: true
-  dependents: 0
+  dependants: 0
   supportsNodejs: true
   supportsBrowser: false
 - npmName: '@stdlib/stdlib'
   repoUri: 'https://github.com/stdlib-js/stdlib'
   binding: true
   solvesSLE: false
-  dependents: 4
+  dependants: 4
   supportsNodejs: true
   supportsBrowser: true
-- npmName: qminer
-  repoUri: 'https://github.com/qminer/qminer'
-  binding: true
-  solvesSLE: false
-  dependents: 4
-  supportsNodejs: true
-  supportsBrowser: false
 - npmName: eigen
   repoUri: 'https://github.com/BertrandBev/eigen-js'
   binding: true
   solvesSLE: false
-  dependents: 0
+  dependants: 0
   supportsNodejs: true
   supportsBrowser: true
 - npmName: lalg
   repoUri: 'https://github.com/rcorbish/node-linalg'
   binding: true
   solvesSLE: false
-  dependents: 0
+  dependants: 0
   supportsNodejs: true
   supportsBrowser: false
 - npmName: nblas
   repoUri: 'https://github.com/nperf/nblas'
   binding: true
   solvesSLE: false
-  dependents: 3
+  dependants: 3
   supportsNodejs: true
   supportsBrowser: false
 - npmName: nclblast
   repoUri: 'https://github.com/nperf/nclblast'
   binding: true
   solvesSLE: false
-  dependents: 0
+  dependants: 0
   supportsNodejs: true
   supportsBrowser: false
 - npmName: node-hperformance
   repoUri: 'https://github.com/amatosc/node-hperformance'
   binding: true
   solvesSLE: false
-  dependents: 0
+  dependants: 0
   supportsNodejs: true
   supportsBrowser: false
 - npmName: mathjs
   repoUri: 'https://github.com/josdejong/mathjs'
   binding: false
   solvesSLE: true
-  dependents: 960
-  supportsNodejs: true
-  supportsBrowser: true
-- npmName: tdma
-  repoUri: 'https://github.com/armancodv/tdma'
-  binding: false
-  solvesSLE: true
-  dependents: 0
-  supportsNodejs: true
-  supportsBrowser: true
-- npmName: solve-tridiagonal
-  repoUri: 'https://github.com/scijs/solve-tridiagonal'
-  binding: false
-  solvesSLE: true
-  dependents: 0
-  supportsNodejs: true
-  supportsBrowser: true
-- npmName: solve-banded
-  repoUri: 'https://github.com/scijs/solve-banded'
-  binding: false
-  solvesSLE: true
-  dependents: 0
-  supportsNodejs: true
-  supportsBrowser: true
-- npmName: solve-periodic-tridiagonal
-  repoUri: 'https://github.com/scijs/solve-periodic-tridiagonal'
-  binding: false
-  solvesSLE: true
-  dependents: 0
-  supportsNodejs: true
-  supportsBrowser: true
-- npmName: ndarray-linear-solve
-  repoUri: 'https://github.com/scijs/ndarray-linear-solve'
-  binding: false
-  solvesSLE: true
-  dependents: 2
+  dependants: 960
   supportsNodejs: true
   supportsBrowser: true
 - npmName: lapack
   repoUri: 'https://github.com/NaturalNode/node-lapack'
   binding: false
   solvesSLE: true
-  dependents: 0
+  dependants: 0
   supportsNodejs: true
   supportsBrowser: true
 - npmName: ubique
   repoUri: 'https://github.com/maxto/ubique'
   binding: false
   solvesSLE: true
-  dependents: 1
+  dependants: 1
   supportsNodejs: true
   supportsBrowser: true
 - npmName: nd4js
   repoUri: 'https://github.com/DirkToewe/nd4js'
   binding: false
   solvesSLE: true
-  dependents: 0
+  dependants: 0
   supportsNodejs: true
   supportsBrowser: true
 - npmName: t-matrix
   repoUri: 'https://github.com/zakalwe314/t-matrix'
   binding: false
   solvesSLE: true
-  dependents: 0
+  dependants: 0
   supportsNodejs: true
   supportsBrowser: true
 - npmName: lalgebra
   repoUri: 'https://github.com/isotopo/lalgebra'
   binding: false
   solvesSLE: true
-  dependents: 2
+  dependants: 2
   supportsNodejs: true
   supportsBrowser: true
 - npmName: MLweb
   repoUri: 'https://github.com/lauerfab/MLweb/'
   binding: false
   solvesSLE: true
-  dependents: 0
+  dependants: 0
   supportsNodejs: false
   supportsBrowser: true
 - npmName: gl-matrix
   repoUri: 'https://github.com/toji/gl-matrix'
   binding: false
   solvesSLE: false
-  dependents: 404
+  dependants: 404
   supportsNodejs: true
   supportsBrowser: true
 - npmName: numjs
   repoUri: 'https://github.com/nicolaspanel/numjs'
   binding: false
   solvesSLE: false
-  dependents: 20
+  dependants: 20
   supportsNodejs: true
   supportsBrowser: true
 - npmName: numbers
   repoUri: 'https://github.com/numbers/numbers.js'
   binding: false
   solvesSLE: false
-  dependents: 0
-  supportsNodejs: true
-  supportsBrowser: true
-- npmName: ndarray
-  repoUri: 'https://github.com/scijs/ndarray'
-  binding: false
-  solvesSLE: false
-  dependents: 312
+  dependants: 0
   supportsNodejs: true
   supportsBrowser: true
 - npmName: cwise
   repoUri: 'https://github.com/scijs/cwise'
   binding: false
   solvesSLE: false
-  dependents: 67
+  dependants: 67
   supportsNodejs: true
   supportsBrowser: true
 - npmName: linear-algebra
   repoUri: 'https://github.com/hiddentao/linear-algebra'
   binding: false
   solvesSLE: false
-  dependents: 8
+  dependants: 8
   supportsNodejs: true
   supportsBrowser: true
 - npmName: compute.io
   repoUri: 'https://github.com/compute-io/compute.io'
   binding: false
   solvesSLE: false
-  dependents: 2
-  supportsNodejs: true
-  supportsBrowser: true
-- npmName: nsolvejs
-  repoUri: 'https://github.com/weasysolutions/Nsolvejs'
-  binding: false
-  solvesSLE: false
-  dependents: 0
+  dependants: 2
   supportsNodejs: true
   supportsBrowser: true
 - npmName: vec-la
   repoUri: 'https://github.com/francisrstokes/vec-la'
   binding: false
   solvesSLE: false
-  dependents: 0
+  dependants: 0
   supportsNodejs: true
   supportsBrowser: true
 - npmName: vec-la-fp
   repoUri: 'https://github.com/francisrstokes/vec-la-fp'
   binding: false
   solvesSLE: false
-  dependents: 0
+  dependants: 0
   supportsNodejs: true
   supportsBrowser: true
 - npmName: dstructs-matrix
   repoUri: 'https://github.com/dstructs/matrix'
   binding: false
   solvesSLE: false
-  dependents: 0
+  dependants: 0
   supportsNodejs: true
   supportsBrowser: true
 - npmName: matrix
   repoUri: 'https://github.com/raghavgujjar/matrix'
   binding: false
   solvesSLE: false
-  dependents: 0
+  dependants: 0
   supportsNodejs: true
   supportsBrowser: true
 - npmName: math2d
   repoUri: 'https://github.com/crazytoucan/math2d'
   binding: false
   solvesSLE: false
-  dependents: 0
-  supportsNodejs: true
-  supportsBrowser: true
-- npmName: add
-  repoUri: 'https://github.com/ben-ng/add'
-  binding: false
-  solvesSLE: false
-  dependents: 129
-  supportsNodejs: true
-  supportsBrowser: true
-- npmName: compute-cosine-similarity
-  repoUri: 'https://github.com/compute-io/cosine-similarity'
-  binding: false
-  solvesSLE: false
-  dependents: 2
+  dependants: 0
   supportsNodejs: true
   supportsBrowser: true

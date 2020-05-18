@@ -1,29 +1,29 @@
-const ubique = require('ubique');
+const ubique = require( 'ubique' );
 const _ = require( 'wTools' );
 require( 'wmathmatrix' );
 require( 'wFiles' );
 require( 'wequaler' );
 
-const createMatrix = require('../../proto/CreateMatrix');
+const createMatrix = require( '../../proto/CreateMatrix' );
 
 const transp = ubique.transpose;
 
-var data = _.fileProvider.fileRead({
+var data = _.fileProvider.fileRead( {
   filePath : `${__dirname}/../../data/System1000.json`,
   encoding : 'json',
-});
+} );
 
-const M = createMatrix(data.M);
+const M = createMatrix( data.M );
 // console.log(M);
 const x = data.x;
-console.log(x);
-let b = transp(data.b);
+console.log( x );
+let b = transp( data.b );
 // console.log(b);
 
-const xResult = ubique.linsolve(M, b);
-console.log(xResult);
+const xResult = ubique.linsolve( M, b );
+console.log( xResult );
 
-console.log(_.equivalent( xResult, x )); // false ?
+console.log( _.equivalent( xResult, x ) ); // false ?
 
 // const m = _.Matrix
 // ({

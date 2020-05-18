@@ -2,8 +2,8 @@ const _ = require( 'wTools' );
 require( 'wmathmatrix' );
 require( 'wFiles' );
 
-const isCorrectSystem = require('./SystemChecker');
-const isNonZeroDeterminant = require('./IsNonZeroDeterminant');
+const isCorrectSystem = require( './SystemChecker' );
+const isNonZeroDeterminant = require( './IsNonZeroDeterminant' );
 
 function generateM( rows, columns )
 {
@@ -22,16 +22,16 @@ function generateM( rows, columns )
     matrix.push( row );
   }
 
-  for ( let i = 0; i < 10000; ++i ) {
-    const row1 = _.intRandom([ 0, rows ])
+  for ( let i = 0; i < 10000; ++i )
+{
+    const row1 = _.intRandom( [ 0, rows ] )
     let row2;
-
 
     do
     {
-      row2 = _.intRandom([ 0, rows ]);
+      row2 = _.intRandom( [ 0, rows ] );
     }
-    while ( !(row1 !== row2) )
+    while ( !( row1 !== row2 ) )
 
     const k = Math.random() / 5;
 
@@ -43,7 +43,7 @@ function generateM( rows, columns )
 
   const result = [];
 
-  matrix.forEach( (row) => result.push( ... row ) );
+  matrix.forEach( ( row ) => result.push( ... row ) );
 
   return result;
 }
@@ -54,7 +54,7 @@ let M;
 do
 {
   M = _.Matrix.Make( [ dimensions, dimensions ] )
-    .copy(generateM( dimensions, dimensions ));
+    .copy( generateM( dimensions, dimensions ) );
 }
 while ( !isNonZeroDeterminant( M ) )
 
@@ -62,24 +62,24 @@ let x = [];
 
 for ( let i = 0; i < dimensions; i++ )
 {
-  x.push( _.intRandom([ -100, 100 ]) );
+  x.push( _.intRandom( [ -100, 100 ] ) );
 }
 
 x = _.Matrix.Make( [ dimensions, 1 ] ).copy( x );
 
 const b = _.Matrix.Mul( null, [ M, x ] );
 
-if ( !isCorrectSystem(M, x, b) )
-throw _.err( 'Error:', new Error('incorrect system') );
+if ( !isCorrectSystem( M, x, b ) )
+throw _.err( 'Error:', new Error( 'incorrect system' ) );
 
 _.fileProvider.fileWrite
-({
+( {
   filePath : `${__dirname}/../data/System1000.json`,
   data : {
-    M : Object.values(M.buffer),
-    x : Object.values(x.buffer),
-    b : Object.values(b.buffer)
+    M : Object.values( M.buffer ),
+    x : Object.values( x.buffer ),
+    b : Object.values( b.buffer )
   },
   encoding : 'json'
-})
+} )
 console.log( 'New matrix created!' );
