@@ -1,2 +1,3 @@
 # Awesome Math!
-Review of open source math modules of different kind
+
+Curated overview of awesome Javascript projects to solve math problems.
