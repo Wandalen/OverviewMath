@@ -31,13 +31,22 @@
 
   const tables = [ generalPurposeData, symbolicExpressionData, specialData ];
 
-  console.log( `Loading data... ` );
+  console.log( `Loading data, wait... ` );
 
   tables.forEach( ( table ) =>
   {
+    updateTable( table );
+  } );
+
+  function updateTable( table )
+  {
+    let step = 0;
     for ( let i = 0; i < table.length; i++ )
     {
-      _.npm.dependantsRertive( { remotePath : table[ i ].npmName } )
+      step += 500;
+      setTimeout( () =>
+      {
+        _.npm.dependantsRertive( { remotePath : table[ i ].npmName } )
         .then( ( dependants ) =>
           {
             if ( isNaN( dependants ) )
@@ -48,8 +57,9 @@
             writeData();
             return null;
           } )
+      }, step )
     }
-  } );
+  }
 
   function writeData()
   {
