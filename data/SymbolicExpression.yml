@@ -2,14 +2,14 @@
   repoUri: 'https://github.com/josdejong/mathjs'
   binding: false
   solvesSLE: true
-  dependants: 960
+  dependants: 978
   supportsNodejs: true
   supportsBrowser: true
 - npmName: '@yaffle/expression'
   repoUri: 'https://github.com/Yaffle/Expression'
   binding: false
   solvesSLE: true
-  dependants: '-'
+  dependants: 0
   supportsNodejs: true
   supportsBrowser: true
 - npmName: algebra.js

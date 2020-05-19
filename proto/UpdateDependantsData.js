@@ -31,53 +31,68 @@
 
   const tables = [ generalPurposeData, symbolicExpressionData, specialData ];
 
-  async function test() {
-    const dep = await _.npm.dependantsRertive( { remotePath : '@stdlib/stdlib' } );
-    console.log(dep);
-  }
-  test()
+  console.log( `Total tables - ${tables.length}. Loading data... ` );
 
-  // tables.forEach( ( table ) =>
-  // {
-  //   table.forEach( async ( lib ) =>
-  //   {
-  //     try
-  //     {
-  //       const dependants = await _.npm.dependantsRertive( { remotePath : lib.npmName } );
-  //       if ( isNaN( dependants ) )
-  //       lib.dependants = '-';
-  //       else
-  //       lib.dependants = dependants;
-  //     }
-  //     catch( error )
-  //     {
-  //       console.log( error );
-  //       lib.dependants = '-';
-  //     }
-  //   } )
-  // } );
-
-  _.fileProvider.fileWrite(
+  tables.forEach( ( table, idx ) =>
+  {
+    for ( let i = 0; i < table.length; i++ )
     {
-    filePath : abs( '../data/GeneralPurpose.yml' ),
-    data : tables[ 0 ],
-    encoding : 'yaml',
-  }
-  );
+      if ( i === table.length - 1 )
+      {
+        _.npm.dependantsRertive( { remotePath : table[ i ].npmName } )
+          .then( ( dependants ) =>
+            {
+              if ( isNaN( dependants ) )
+              table[ i ].dependants = '-';
+              else
+              table[ i ].dependants = dependants;
 
-  _.fileProvider.fileWrite(
-    {
-    filePath : abs( '../data/SymbolicExpression.yml' ),
-    data : tables[ 1 ],
-    encoding : 'yaml',
-  }
-  );
+              writeData( idx );
+              return null;
+            } )
+      }
+      else
+      {
+        _.npm.dependantsRertive( { remotePath : table[ i ].npmName } )
+          .then( ( dependants ) =>
+            {
+              if ( isNaN( dependants ) )
+              table[ i ].dependants = '-';
+              else
+              table[ i ].dependants = dependants;
 
-  _.fileProvider.fileWrite(
-    {
-    filePath : abs( '../data/Special.yml' ),
-    data : tables[ 2 ],
-    encoding : 'yaml',
+              return null;
+            } )
+      }
+    }
+  } );
+
+  function writeData( tableNumber )
+  {
+    _.fileProvider.fileWrite(
+      {
+      filePath : abs( '../data/GeneralPurpose.yml' ),
+      data : tables[ 0 ],
+      encoding : 'yaml',
+    }
+    );
+
+    _.fileProvider.fileWrite(
+      {
+      filePath : abs( '../data/SymbolicExpression.yml' ),
+      data : tables[ 1 ],
+      encoding : 'yaml',
+    }
+    );
+
+    _.fileProvider.fileWrite(
+      {
+      filePath : abs( '../data/Special.yml' ),
+      data : tables[ 2 ],
+      encoding : 'yaml',
+    }
+    );
+
+    console.log( `table ${tableNumber} is updated!` );
   }
-  );
 } )();

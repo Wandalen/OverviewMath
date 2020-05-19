@@ -1,12 +1,38 @@
-function sortTable( tableData, sortingOrder )
+function sortTable( tableData, columns )
 {
   'use strict';
 
   const _ = require( 'wTools' );
   require( 'warraysorted' );
 
+  let sortedData = [];
 
-  
+  for ( let i = 0; i < columns.length; i++ )
+  {
+    let trueLibs = [];
+    let falseLibs = [];
+
+    if ( i === 1 )
+    {
+      if ( column.dataType === 'number' )
+      {
+        for( let j = 0 ; j < tableData.length ; j++ )
+        _.sorted.add( sortedData, tableData[ j ], ( lib ) =>
+        {
+          return lib.dependants !== '-' ? lib.dependants : 0;
+        } );
+
+        break;
+      }
+      else
+      {
+        trueLibs = tableData.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+        falseLibs = tableData.filter( ( lib ) => !lib[ columns[ i ].dataTitle ] );
+        sortedData = [ ... trueLibs, ... falseLibs ];
+      }
+    }
+  }
+
 
   // const sortedByDependants = [];
 
