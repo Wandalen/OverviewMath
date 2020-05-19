@@ -7,29 +7,113 @@ function sortTable( tableData, columns )
 
   let sortedData = [];
 
+  for( let i = 0 ; i < tableData.length ; i++ )
+  _.sorted.add( sortedData, tableData[ i ], ( lib ) =>
+  {
+    return lib.dependants !== '-' ? lib.dependants : 0;
+  } );
+
+  sortedData.reverse();
+
   for ( let i = 0; i < columns.length; i++ )
   {
-    let trueLibs = [];
-    let falseLibs = [];
-
     if ( i === 1 )
     {
-      if ( column.dataType === 'number' )
+      if ( columns[ i ].dataType === 'number' )
       {
-        for( let j = 0 ; j < tableData.length ; j++ )
-        _.sorted.add( sortedData, tableData[ j ], ( lib ) =>
-        {
-          return lib.dependants !== '-' ? lib.dependants : 0;
-        } );
-
         break;
       }
       else
       {
-        trueLibs = tableData.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
-        falseLibs = tableData.filter( ( lib ) => !lib[ columns[ i ].dataTitle ] );
+        const trueLibs = tableData.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+        const falseLibs = tableData.filter( ( lib ) => !lib[ columns[ i ].dataTitle ] );
         sortedData = [ ... trueLibs, ... falseLibs ];
       }
+    }
+    else if ( i === 2 )
+    {
+      if ( columns[ i ].dataType === 'number' )
+      {
+
+      }
+      else
+      {
+        let trueLibs = sortedData.filter( ( lib ) => lib[ columns[ i - 1 ].dataTitle ] );
+        let falseLibs = sortedData.filter( ( lib ) => !lib[ columns[ i - 1 ].dataTitle ] );
+
+        let temp1 = trueLibs.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+        let temp2 = trueLibs.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+
+        trueLibs = [ ... temp1, ... temp2 ];
+
+        temp1 = falseLibs.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+        temp2 = falseLibs.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+
+        falseLibs = [ ... temp1, ... temp2 ];
+
+        sortedData = [ ... trueLibs, ... falseLibs ];
+      }
+    }
+    else if ( i === 3 )
+    {
+      if ( columns[ i ].dataType === 'number' )
+      {
+        break;
+      }
+      else
+      {
+        const trueTrue = sortedData.filter( ( lib ) =>
+        {
+          if ( lib[ columns[ i - 1 ].dataTitle && lib[ columns[ i - 2 ].dataTitle ] ] )
+          return true;
+          else
+          return false;
+        } );
+
+        const trueFalse = sortedData.filter( ( lib ) =>
+        {
+          if ( !lib[ columns[ i - 1 ].dataTitle && lib[ columns[ i - 2 ].dataTitle ] ] )
+          return true;
+          else
+          return false;
+        } );
+
+        const falseTrue = sortedData.filter( ( lib ) =>
+        {
+          if ( lib[ columns[ i - 1 ].dataTitle && !lib[ columns[ i - 2 ].dataTitle ] ] )
+          return true;
+          else
+          return false;
+        } );
+
+        const falseFalse = sortedData.filter( ( lib ) =>
+        {
+          if ( !lib[ columns[ i - 1 ].dataTitle && !lib[ columns[ i - 2 ].dataTitle ] ] )
+          return true;
+          else
+          return false;
+        } );
+
+        // let temp1 = trueLibs.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+        // let temp2 = trueLibs.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+
+        // trueLibs = [ ... temp1, ... temp2 ];
+
+        // temp1 = falseLibs.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+        // temp2 = falseLibs.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+
+        // falseLibs = [ ... temp1, ... temp2 ];
+
+        sortedData = [ ... trueLibs, ... falseLibs ];
+      }
+    }
+    else if ( i === 4 )
+    {
+
+    }
+    else
+    {
+
     }
   }
 
