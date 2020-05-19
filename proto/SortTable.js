@@ -5,12 +5,15 @@ function sortTable( tableData, sortingOrder )
   const _ = require( 'wTools' );
   require( 'warraysorted' );
 
-  const sortedByDependants = [];
 
-  for( let i = 0 ; i < tableData.length ; i++ )
-  _.sorted.add( sortedByDependants, tableData[ i ], ( lib ) => lib.dependants );
+  
 
-  sortedByDependants.reverse();
+  // const sortedByDependants = [];
+
+  // for( let i = 0 ; i < tableData.length ; i++ )
+  // _.sorted.add( sortedByDependants, tableData[ i ], ( lib ) => lib.dependants );
+
+  // sortedByDependants.reverse();
 
   // const tableDataCopy = [ ... tableData ];
 
@@ -24,32 +27,32 @@ function sortTable( tableData, sortingOrder )
   //   }
   // }
 
-  const sorted = [];
+  // const sorted = [];
 
-  const booleanColumns = sortingOrder.filter( ( column ) => column.dataType === 'boolean' );
-  const cycles = booleanColumns.length;
+  // const booleanColumns = sortingOrder.filter( ( column ) => column.dataType === 'boolean' );
+  // const cycles = booleanColumns.length;
 
-  for ( let i = 0; i < cycles; i++ )
-  {
-    sortedByDependants.forEach( ( lib, idx ) =>
-      {
-        let passes = true;
+  // for ( let i = 0; i < cycles; i++ )
+  // {
+  //   sortedByDependants.forEach( ( lib, idx ) =>
+  //     {
+  //       let passes = true;
 
-        booleanColumns.forEach( ( column ) =>
-        {
-          if ( !lib[ column.dataTitle ] )
-          passes = false;
-        } )
+  //       booleanColumns.forEach( ( column ) =>
+  //       {
+  //         if ( !lib[ column.dataTitle ] )
+  //         passes = false;
+  //       } )
 
-        if ( passes )
-        {
-          sorted.push( lib );
-          sortedByDependants.splice( idx, 1 );
-        }
-      } )
+  //       if ( passes )
+  //       {
+  //         sorted.push( lib );
+  //         sortedByDependants.splice( idx, 1 );
+  //       }
+  //     } )
 
-    booleanColumns.pop();
-  }
+  //   booleanColumns.pop();
+  // }
 
   // sorted.push( ... sortedByDependants.filter( ( lib ) =>
   // {
@@ -68,7 +71,7 @@ function sortTable( tableData, sortingOrder )
   //   return flag;
   // } )
 
-  return [ ... sorted, ... sortedByDependants ];
+  // return [ ... sorted, ... sortedByDependants ];
   // let sortedData = [];
   // for( let i = 0 ; i < tableData.length ; i++ )
   // _.sorted.add( sortedData, tableData[ i ], ( lib ) => lib.dependents );
