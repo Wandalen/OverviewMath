@@ -31,25 +31,31 @@
 
   const tables = [ generalPurposeData, symbolicExpressionData, specialData ];
 
-  tables.forEach( ( table ) =>
-  {
-    table.forEach( async ( lib ) =>
-    {
-      try
-      {
-        const dependants = await _.npm.dependantsRertive( lib.npmName );
-        if ( isNaN( dependants ) )
-        lib.dependants = '-';
-        else
-        lib.dependants = dependants;
-      }
-      catch( error )
-      {
-        console.log( error );
-        lib.dependants = '-';
-      }
-    } )
-  } );
+  async function test() {
+    const dep = await _.npm.dependantsRertive( { remotePath : '@stdlib/stdlib' } );
+    console.log(dep);
+  }
+  test()
+
+  // tables.forEach( ( table ) =>
+  // {
+  //   table.forEach( async ( lib ) =>
+  //   {
+  //     try
+  //     {
+  //       const dependants = await _.npm.dependantsRertive( { remotePath : lib.npmName } );
+  //       if ( isNaN( dependants ) )
+  //       lib.dependants = '-';
+  //       else
+  //       lib.dependants = dependants;
+  //     }
+  //     catch( error )
+  //     {
+  //       console.log( error );
+  //       lib.dependants = '-';
+  //     }
+  //   } )
+  // } );
 
   _.fileProvider.fileWrite(
     {

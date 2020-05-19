@@ -9,7 +9,7 @@
   repoUri: 'https://github.com/Yaffle/Expression'
   binding: false
   solvesSLE: true
-  dependants: 0
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: true
 - npmName: algebra.js

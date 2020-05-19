@@ -2,223 +2,223 @@
   repoUri: 'https://github.com/tensorflow/tfjs'
   binding: true
   solvesSLE: true
-  dependants: 161
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: true
 - npmName: vectorious
   repoUri: 'https://github.com/mateogianolio/vectorious'
   binding: true
   solvesSLE: true
-  dependants: 8
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: true
 - npmName: vectorious-plus
   repoUri: 'https://github.com/ukrbublik/vectorious-plus'
   binding: true
   solvesSLE: true
-  dependants: 0
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: true
 - npmName: nlapack
   repoUri: 'https://github.com/nperf/nlapack'
   binding: true
   solvesSLE: true
-  dependants: 1
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: false
 - npmName: blasjs
   repoUri: 'https://github.com/jacobbogers/blasjs'
   binding: true
   solvesSLE: true
-  dependants: 0
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: true
 - npmName: nblas-plus
   repoUri: 'https://github.com/ukrbublik/nblas-plus'
   binding: true
   solvesSLE: true
-  dependants: 1
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: false
 - npmName: eigenjs
   repoUri: 'https://github.com/rick68/eigenjs'
   binding: true
   solvesSLE: true
-  dependants: 0
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: false
 - npmName: node-julia
   repoUri: 'https://github.com/waTeim/node-julia'
   binding: true
   solvesSLE: true
-  dependants: 0
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: false
 - npmName: '@stdlib/stdlib'
   repoUri: 'https://github.com/stdlib-js/stdlib'
   binding: true
   solvesSLE: false
-  dependants: 4
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: true
 - npmName: eigen
   repoUri: 'https://github.com/BertrandBev/eigen-js'
   binding: true
   solvesSLE: false
-  dependants: 0
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: true
 - npmName: lalg
   repoUri: 'https://github.com/rcorbish/node-linalg'
   binding: true
   solvesSLE: false
-  dependants: 0
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: false
 - npmName: nblas
   repoUri: 'https://github.com/nperf/nblas'
   binding: true
   solvesSLE: false
-  dependants: 3
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: false
 - npmName: nclblast
   repoUri: 'https://github.com/nperf/nclblast'
   binding: true
   solvesSLE: false
-  dependants: 0
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: false
 - npmName: node-hperformance
   repoUri: 'https://github.com/amatosc/node-hperformance'
   binding: true
   solvesSLE: false
-  dependants: 0
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: false
 - npmName: mathjs
   repoUri: 'https://github.com/josdejong/mathjs'
   binding: false
   solvesSLE: true
-  dependants: 960
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: true
 - npmName: lapack
   repoUri: 'https://github.com/NaturalNode/node-lapack'
   binding: false
   solvesSLE: true
-  dependants: 0
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: true
 - npmName: ubique
   repoUri: 'https://github.com/maxto/ubique'
   binding: false
   solvesSLE: true
-  dependants: 1
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: true
 - npmName: nd4js
   repoUri: 'https://github.com/DirkToewe/nd4js'
   binding: false
   solvesSLE: true
-  dependants: 0
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: true
 - npmName: t-matrix
   repoUri: 'https://github.com/zakalwe314/t-matrix'
   binding: false
   solvesSLE: true
-  dependants: 0
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: true
 - npmName: lalgebra
   repoUri: 'https://github.com/isotopo/lalgebra'
   binding: false
   solvesSLE: true
-  dependants: 2
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: true
 - npmName: MLweb
   repoUri: 'https://github.com/lauerfab/MLweb/'
   binding: false
   solvesSLE: true
-  dependants: 0
+  dependants: '-'
   supportsNodejs: false
   supportsBrowser: true
 - npmName: gl-matrix
   repoUri: 'https://github.com/toji/gl-matrix'
   binding: false
   solvesSLE: false
-  dependants: 404
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: true
 - npmName: numjs
   repoUri: 'https://github.com/nicolaspanel/numjs'
   binding: false
   solvesSLE: false
-  dependants: 20
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: true
 - npmName: numbers
   repoUri: 'https://github.com/numbers/numbers.js'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: true
 - npmName: cwise
   repoUri: 'https://github.com/scijs/cwise'
   binding: false
   solvesSLE: false
-  dependants: 67
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: true
 - npmName: linear-algebra
   repoUri: 'https://github.com/hiddentao/linear-algebra'
   binding: false
   solvesSLE: false
-  dependants: 8
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: true
 - npmName: compute.io
   repoUri: 'https://github.com/compute-io/compute.io'
   binding: false
   solvesSLE: false
-  dependants: 2
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: true
 - npmName: vec-la
   repoUri: 'https://github.com/francisrstokes/vec-la'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: true
 - npmName: vec-la-fp
   repoUri: 'https://github.com/francisrstokes/vec-la-fp'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: true
 - npmName: dstructs-matrix
   repoUri: 'https://github.com/dstructs/matrix'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: true
 - npmName: matrix
   repoUri: 'https://github.com/raghavgujjar/matrix'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: true
 - npmName: math2d
   repoUri: 'https://github.com/crazytoucan/math2d'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: '-'
   supportsNodejs: true
   supportsBrowser: true
