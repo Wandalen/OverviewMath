@@ -2,55 +2,55 @@
   repoUri: 'https://github.com/josdejong/mathjs'
   binding: false
   solvesSLE: true
-  dependants: 978
+  dependants: null
   supportsNodejs: true
   supportsBrowser: true
 - npmName: '@yaffle/expression'
   repoUri: 'https://github.com/Yaffle/Expression'
   binding: false
   solvesSLE: true
-  dependants: 0
+  dependants: null
   supportsNodejs: true
   supportsBrowser: true
 - npmName: algebra.js
   repoUri: 'https://github.com/nicolewhite/algebra.js'
   binding: false
   solvesSLE: false
-  dependants: 13
+  dependants: null
   supportsNodejs: true
   supportsBrowser: true
 - npmName: nerdamer
   repoUri: 'https://github.com/jiggzson/nerdamer'
   binding: false
   solvesSLE: false
-  dependants: 6
+  dependants: null
   supportsNodejs: true
   supportsBrowser: true
 - npmName: algebrite
   repoUri: 'https://github.com/davidedc/Algebrite'
   binding: false
   solvesSLE: false
-  dependants: 6
+  dependants: null
   supportsNodejs: true
   supportsBrowser: true
 - npmName: theorem.js
   repoUri: 'https://github.com/arguiot/TheoremJS'
   binding: false
   solvesSLE: false
-  dependants: 1
+  dependants: null
   supportsNodejs: true
   supportsBrowser: true
 - npmName: coffeequate
   repoUri: 'https://github.com/MatthewJA/Coffeequate'
   binding: false
   solvesSLE: false
-  dependants: 1
+  dependants: null
   supportsNodejs: true
   supportsBrowser: true
 - npmName: metadelta
   repoUri: 'https://github.com/metadelta/metadelta'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: null
   supportsNodejs: true
   supportsBrowser: true

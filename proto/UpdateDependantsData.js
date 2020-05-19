@@ -31,43 +31,27 @@
 
   const tables = [ generalPurposeData, symbolicExpressionData, specialData ];
 
-  console.log( `Total tables - ${tables.length}. Loading data... ` );
+  console.log( `Loading data... ` );
 
-  tables.forEach( ( table, idx ) =>
+  tables.forEach( ( table ) =>
   {
     for ( let i = 0; i < table.length; i++ )
     {
-      if ( i === table.length - 1 )
-      {
-        _.npm.dependantsRertive( { remotePath : table[ i ].npmName } )
-          .then( ( dependants ) =>
-            {
-              if ( isNaN( dependants ) )
-              table[ i ].dependants = '-';
-              else
-              table[ i ].dependants = dependants;
+      _.npm.dependantsRertive( { remotePath : table[ i ].npmName } )
+        .then( ( dependants ) =>
+          {
+            if ( isNaN( dependants ) )
+            table[ i ].dependants = '-';
+            else
+            table[ i ].dependants = dependants;
 
-              writeData( idx );
-              return null;
-            } )
-      }
-      else
-      {
-        _.npm.dependantsRertive( { remotePath : table[ i ].npmName } )
-          .then( ( dependants ) =>
-            {
-              if ( isNaN( dependants ) )
-              table[ i ].dependants = '-';
-              else
-              table[ i ].dependants = dependants;
-
-              return null;
-            } )
-      }
+            writeData();
+            return null;
+          } )
     }
   } );
 
-  function writeData( tableNumber )
+  function writeData()
   {
     _.fileProvider.fileWrite(
       {
@@ -92,7 +76,5 @@
       encoding : 'yaml',
     }
     );
-
-    console.log( `table ${tableNumber} is updated!` );
   }
 } )();
