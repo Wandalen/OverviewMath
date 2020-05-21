@@ -6,15 +6,15 @@ function createRow( columns, lib, index )
 
   columns.forEach( ( column ) =>
   {
-    if ( column.dataTitle === 'npmName' )
+    if( column.dataTitle === 'npmName' )
     {
       row += `[${lib.npmName}](${lib.repoUri})|`
     }
-    else if ( lib[ column.dataTitle ] === true )
+    else if( lib[ column.dataTitle ] === true )
     {
       row += '+|';
     }
-    else if ( lib[ column.dataTitle ] === false )
+    else if( lib[ column.dataTitle ] === false )
     {
       row += '-|';
     }

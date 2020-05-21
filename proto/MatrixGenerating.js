@@ -11,10 +11,10 @@ function generateM( rows, columns )
 
   const matrix = [];
 
-  for ( let i = 0; i < rows; i++ )
+  for( let i = 0; i < rows; i++ )
   {
     const row = [];
-    for ( let j = 0; j < columns; j++ )
+    for( let j = 0; j < columns; j++ )
     {
       let value = i === j ? 1 : 0;
       row.push( value );
@@ -22,8 +22,8 @@ function generateM( rows, columns )
     matrix.push( row );
   }
 
-  for ( let i = 0; i < 10000; ++i )
-{
+  for( let i = 0; i < 10000; ++i )
+  {
     const row1 = _.intRandom( [ 0, rows ] )
     let row2;
 
@@ -31,11 +31,11 @@ function generateM( rows, columns )
     {
       row2 = _.intRandom( [ 0, rows ] );
     }
-    while ( !( row1 !== row2 ) )
+    while( !( row1 !== row2 ) )
 
     const k = Math.random() / 5;
 
-    for ( let j = 0; j < rows; j++ )
+    for( let j = 0; j < rows; j++ )
     {
       matrix[ row2 ][ j ] += matrix[ row1 ][ j ] * k;
     }
@@ -54,13 +54,13 @@ let M;
 do
 {
   M = _.Matrix.Make( [ dimensions, dimensions ] )
-    .copy( generateM( dimensions, dimensions ) );
+  .copy( generateM( dimensions, dimensions ) );
 }
-while ( !isNonZeroDeterminant( M ) )
+while( !isNonZeroDeterminant( M ) )
 
 let x = [];
 
-for ( let i = 0; i < dimensions; i++ )
+for( let i = 0; i < dimensions; i++ )
 {
   x.push( _.intRandom( [ -100, 100 ] ) );
 }
@@ -69,7 +69,7 @@ x = _.Matrix.Make( [ dimensions, 1 ] ).copy( x );
 
 const b = _.Matrix.Mul( null, [ M, x ] );
 
-if ( !isCorrectSystem( M, x, b ) )
+if( !isCorrectSystem( M, x, b ) )
 throw _.err( 'Error:', new Error( 'incorrect system' ) );
 
 _.fileProvider.fileWrite

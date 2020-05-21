@@ -17,11 +17,11 @@ function sortTable( tableData, columns )
 
   sortedData.reverse();
 
-  for ( let i = 0; i < columns.length; i++ )
+  for( let i = 0; i < columns.length; i++ )
   {
-    if ( i === 1 )
+    if( i === 1 )
     {
-      if ( columns[ i ].dataType === 'number' )
+      if( columns[ i ].dataType === 'number' )
       {
         break;
       }
@@ -32,9 +32,9 @@ function sortTable( tableData, columns )
         sortedData = [ ... trueLibs, ... falseLibs ];
       }
     }
-    else if ( i === 2 )
+    else if( i === 2 )
     {
-      if ( columns[ i ].dataType === 'number' )
+      if( columns[ i ].dataType === 'number' )
       {
 
       }
@@ -56,9 +56,9 @@ function sortTable( tableData, columns )
         sortedData = [ ... trueLibs, ... falseLibs ];
       }
     }
-    else if ( i === 3 )
+    else if( i === 3 )
     {
-      if ( columns[ i ].dataType === 'number' )
+      if( columns[ i ].dataType === 'number' )
       {
         break;
       }
@@ -66,7 +66,7 @@ function sortTable( tableData, columns )
       {
         let trueTrue = sortedData.filter( ( lib ) =>
         {
-          if ( lib[ columns[ i - 1 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle )
+          if( lib[ columns[ i - 1 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle )
           return true;
           else
           return false;
@@ -74,7 +74,7 @@ function sortTable( tableData, columns )
 
         let trueFalse = sortedData.filter( ( lib ) =>
         {
-          if ( !lib[ columns[ i - 1 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle )
+          if( !lib[ columns[ i - 1 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle )
           return true;
           else
           return false;
@@ -82,7 +82,7 @@ function sortTable( tableData, columns )
 
         let falseTrue = sortedData.filter( ( lib ) =>
         {
-          if ( lib[ columns[ i - 1 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle )
+          if( lib[ columns[ i - 1 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle )
           return true;
           else
           return false;
@@ -90,7 +90,7 @@ function sortTable( tableData, columns )
 
         let falseFalse = sortedData.filter( ( lib ) =>
         {
-          if ( !lib[ columns[ i - 1 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle )
+          if( !lib[ columns[ i - 1 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle )
           return true;
           else
           return false;
@@ -119,9 +119,9 @@ function sortTable( tableData, columns )
         sortedData = [ ... trueTrue, ... trueFalse, ... falseTrue, ... falseFalse ];
       }
     }
-    else if ( i === 4 )
+    else if( i === 4 )
     {
-      if ( columns[ i ].dataType === 'number' )
+      if( columns[ i ].dataType === 'number' )
       {
         break;
       }
@@ -129,7 +129,7 @@ function sortTable( tableData, columns )
       {
         let trueTrueTrue = sortedData.filter( ( lib ) =>
         {
-          if ( lib[ columns[ i - 1 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle && lib[ columns[ i - 3 ] ].dataTitle )
+          if( lib[ columns[ i - 1 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle && lib[ columns[ i - 3 ] ].dataTitle )
           return true;
           else
           return false;
@@ -137,7 +137,7 @@ function sortTable( tableData, columns )
 
         let trueTrueFalse = sortedData.filter( ( lib ) =>
         {
-          if ( lib[ columns[ i - 1 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle )
+          if( lib[ columns[ i - 1 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle )
           return true;
           else
           return false;
@@ -145,7 +145,7 @@ function sortTable( tableData, columns )
 
         let trueFalseTrue = sortedData.filter( ( lib ) =>
         {
-          if ( lib[ columns[ i - 1 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle )
+          if( lib[ columns[ i - 1 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle )
           return true;
           else
           return false;
@@ -153,7 +153,7 @@ function sortTable( tableData, columns )
 
         let trueFalseFalse = sortedData.filter( ( lib ) =>
         {
-          if ( lib[ columns[ i - 1 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle )
+          if( lib[ columns[ i - 1 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle )
           return true;
           else
           return false;
@@ -181,7 +181,7 @@ function sortTable( tableData, columns )
 
         let falseTrueTrue = sortedData.filter( ( lib ) =>
         {
-          if ( !lib[ columns[ i - 1 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle && lib[ columns[ i - 3 ] ].dataTitle )
+          if( !lib[ columns[ i - 1 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle && lib[ columns[ i - 3 ] ].dataTitle )
           return true;
           else
           return false;
@@ -189,7 +189,7 @@ function sortTable( tableData, columns )
 
         let falseTrueFalse = sortedData.filter( ( lib ) =>
         {
-          if ( !lib[ columns[ i - 1 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle )
+          if( !lib[ columns[ i - 1 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle )
           return true;
           else
           return false;
@@ -197,7 +197,7 @@ function sortTable( tableData, columns )
 
         let falseFalseTrue = sortedData.filter( ( lib ) =>
         {
-          if ( !lib[ columns[ i - 1 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle )
+          if( !lib[ columns[ i - 1 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle )
           return true;
           else
           return false;
@@ -205,7 +205,7 @@ function sortTable( tableData, columns )
 
         let falseFalseFalse = sortedData.filter( ( lib ) =>
         {
-          if ( !lib[ columns[ i - 1 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle )
+          if( !lib[ columns[ i - 1 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle )
           return true;
           else
           return false;
