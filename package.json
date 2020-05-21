@@ -6,7 +6,11 @@
   "description": "Review of open source math modules of different kind",
   "license": "MIT",
   "author": "Kostiantyn Wandalen <wanalen@willbe.so>",
-  "contributors": [],
+  "contributors": 
+  [
+    { "name" : "Kostiantyn Wandalen", "email" : "wanalen@01.school" },
+    { "name" : "Artem Bohush", "email" : "art.bohush@gmail.com" }
+  ],
   "main": "index.js",
   "files": [],
   "scripts": {
