@@ -2,7 +2,7 @@
   repoUri: 'https://github.com/josdejong/mathjs'
   binding: false
   solvesSLE: true
-  dependants: 960
+  dependants: 979
   supportsNodejs: true
   supportsBrowser: true
 - npmName: '@yaffle/expression'

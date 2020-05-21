@@ -44,7 +44,7 @@
   repoUri: 'https://github.com/scijs/ndarray'
   binding: false
   solvesSLE: false
-  dependants: 312
+  dependants: 315
   supportsNodejs: true
   supportsBrowser: true
 - npmName: nsolvejs
@@ -58,13 +58,13 @@
   repoUri: 'https://github.com/ben-ng/add'
   binding: false
   solvesSLE: false
-  dependants: 129
+  dependants: 134
   supportsNodejs: true
   supportsBrowser: true
 - npmName: compute-cosine-similarity
   repoUri: 'https://github.com/compute-io/cosine-similarity'
   binding: false
   solvesSLE: false
-  dependants: 2
+  dependants: 8
   supportsNodejs: true
   supportsBrowser: true

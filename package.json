@@ -6,13 +6,17 @@
   "description": "Review of open source math modules of different kind",
   "license": "MIT",
   "author": "Kostiantyn Wandalen <wanalen@willbe.so>",
-  "contributors": [],
+  "contributors": 
+  [
+    { "name" : "Kostiantyn Wandalen", "email" : "wanalen@01.school" },
+    { "name" : "Artem Bohush", "email" : "art.bohush@gmail.com" }
+  ],
   "main": "index.js",
   "files": [],
   "scripts": {
     "newMatrix": "node ./proto/MatrixGenerating.js",
     "newReadMe": "node ./proto/ReadMeGenerator.js",
-    "updateDependantsData": "node proto/UpdateDependantsData.js",
+    "updateData": "node proto/UpdateDependantsData.js",
     "test": "wtest .run 'proto/**'"
   },
   "repository": {
@@ -25,7 +29,6 @@
   "dependencies": {
     "eslint": "=6.8.0",
     "wFiles": "alpha",
-    "wTesting": "alpha",
     "wTools": "alpha",
     "warraysorted": "alpha",
     "wequaler": "alpha",
@@ -33,7 +36,7 @@
     "wnpmtools": "alpha"
   },
   "devDependencies": {
-    "wTesting": "gamma"
+    "wTesting": "^1.0.315"
   },
   "keywords": []
 }
