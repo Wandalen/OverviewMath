@@ -6,6 +6,8 @@ function sortTable( tableData, columns )
   require( 'warraysorted' );
 
   let sortedData = [];
+  let temp1 = [];
+  let temp2 = [];
 
   for( let i = 0 ; i < tableData.length ; i++ )
   _.sorted.add( sortedData, tableData[ i ], ( lib ) =>
@@ -41,13 +43,13 @@ function sortTable( tableData, columns )
         let trueLibs = sortedData.filter( ( lib ) => lib[ columns[ i - 1 ].dataTitle ] );
         let falseLibs = sortedData.filter( ( lib ) => !lib[ columns[ i - 1 ].dataTitle ] );
 
-        let temp1 = trueLibs.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
-        let temp2 = trueLibs.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+        temp1 = trueLibs.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+        temp2 = trueLibs.filter( ( lib ) => !lib[ columns[ i ].dataTitle ] );
 
         trueLibs = [ ... temp1, ... temp2 ];
 
         temp1 = falseLibs.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
-        temp2 = falseLibs.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+        temp2 = falseLibs.filter( ( lib ) => !lib[ columns[ i ].dataTitle ] );
 
         falseLibs = [ ... temp1, ... temp2 ];
 
@@ -62,59 +64,186 @@ function sortTable( tableData, columns )
       }
       else
       {
-        const trueTrue = sortedData.filter( ( lib ) =>
+        let trueTrue = sortedData.filter( ( lib ) =>
         {
-          if ( lib[ columns[ i - 1 ].dataTitle && lib[ columns[ i - 2 ].dataTitle ] ] )
+          if ( lib[ columns[ i - 1 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle )
           return true;
           else
           return false;
         } );
 
-        const trueFalse = sortedData.filter( ( lib ) =>
+        let trueFalse = sortedData.filter( ( lib ) =>
         {
-          if ( !lib[ columns[ i - 1 ].dataTitle && lib[ columns[ i - 2 ].dataTitle ] ] )
+          if ( !lib[ columns[ i - 1 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle )
           return true;
           else
           return false;
         } );
 
-        const falseTrue = sortedData.filter( ( lib ) =>
+        let falseTrue = sortedData.filter( ( lib ) =>
         {
-          if ( lib[ columns[ i - 1 ].dataTitle && !lib[ columns[ i - 2 ].dataTitle ] ] )
+          if ( lib[ columns[ i - 1 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle )
           return true;
           else
           return false;
         } );
 
-        const falseFalse = sortedData.filter( ( lib ) =>
+        let falseFalse = sortedData.filter( ( lib ) =>
         {
-          if ( !lib[ columns[ i - 1 ].dataTitle && !lib[ columns[ i - 2 ].dataTitle ] ] )
+          if ( !lib[ columns[ i - 1 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle )
           return true;
           else
           return false;
         } );
 
-        // let temp1 = trueLibs.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
-        // let temp2 = trueLibs.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+        temp1 = trueTrue.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+        temp2 = trueTrue.filter( ( lib ) => !lib[ columns[ i ].dataTitle ] );
 
-        // trueLibs = [ ... temp1, ... temp2 ];
+        trueTrue = [ ... temp1, ... temp2 ];
 
-        // temp1 = falseLibs.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
-        // temp2 = falseLibs.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+        temp1 = trueFalse.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+        temp2 = trueFalse.filter( ( lib ) => !lib[ columns[ i ].dataTitle ] );
 
-        // falseLibs = [ ... temp1, ... temp2 ];
+        trueFalse = [ ... temp1, ... temp2 ];
 
-        sortedData = [ ... trueLibs, ... falseLibs ];
+        temp1 = falseTrue.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+        temp2 = falseTrue.filter( ( lib ) => !lib[ columns[ i ].dataTitle ] );
+
+        falseTrue = [ ... temp1, ... temp2 ];
+
+        temp1 = falseFalse.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+        temp2 = falseFalse.filter( ( lib ) => !lib[ columns[ i ].dataTitle ] );
+
+        falseFalse = [ ... temp1, ... temp2 ];
+
+        sortedData = [ ... trueTrue, ... trueFalse, ... falseTrue, ... falseFalse ];
       }
     }
     else if ( i === 4 )
     {
+      if ( columns[ i ].dataType === 'number' )
+      {
+        break;
+      }
+      else
+      {
+        let trueTrueTrue = sortedData.filter( ( lib ) =>
+        {
+          if ( lib[ columns[ i - 1 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle && lib[ columns[ i - 3 ] ].dataTitle )
+          return true;
+          else
+          return false;
+        } );
 
-    }
-    else
-    {
+        let trueTrueFalse = sortedData.filter( ( lib ) =>
+        {
+          if ( lib[ columns[ i - 1 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle )
+          return true;
+          else
+          return false;
+        } );
 
+        let trueFalseTrue = sortedData.filter( ( lib ) =>
+        {
+          if ( lib[ columns[ i - 1 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle )
+          return true;
+          else
+          return false;
+        } );
+
+        let trueFalseFalse = sortedData.filter( ( lib ) =>
+        {
+          if ( lib[ columns[ i - 1 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle )
+          return true;
+          else
+          return false;
+        } );
+
+        temp1 = trueTrueTrue.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+        temp2 = trueTrueTrue.filter( ( lib ) => !lib[ columns[ i ].dataTitle ] );
+
+        trueTrueTrue = [ ... temp1, ... temp2 ];
+
+        temp1 = trueTrueFalse.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+        temp2 = trueTrueFalse.filter( ( lib ) => !lib[ columns[ i ].dataTitle ] );
+
+        trueTrueFalse = [ ... temp1, ... temp2 ];
+
+        temp1 = trueFalseTrue.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+        temp2 = trueFalseTrue.filter( ( lib ) => !lib[ columns[ i ].dataTitle ] );
+
+        trueFalseTrue = [ ... temp1, ... temp2 ];
+
+        temp1 = trueFalseFalse.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+        temp2 = trueFalseFalse.filter( ( lib ) => !lib[ columns[ i ].dataTitle ] );
+
+        trueFalseFalse = [ ... temp1, ... temp2 ];
+
+        let falseTrueTrue = sortedData.filter( ( lib ) =>
+        {
+          if ( !lib[ columns[ i - 1 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle && lib[ columns[ i - 3 ] ].dataTitle )
+          return true;
+          else
+          return false;
+        } );
+
+        let falseTrueFalse = sortedData.filter( ( lib ) =>
+        {
+          if ( !lib[ columns[ i - 1 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle )
+          return true;
+          else
+          return false;
+        } );
+
+        let falseFalseTrue = sortedData.filter( ( lib ) =>
+        {
+          if ( !lib[ columns[ i - 1 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle )
+          return true;
+          else
+          return false;
+        } );
+
+        let falseFalseFalse = sortedData.filter( ( lib ) =>
+        {
+          if ( !lib[ columns[ i - 1 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle )
+          return true;
+          else
+          return false;
+        } );
+
+        temp1 = falseTrueTrue.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+        temp2 = falseTrueTrue.filter( ( lib ) => !lib[ columns[ i ].dataTitle ] );
+
+        falseTrueTrue = [ ... temp1, ... temp2 ];
+
+        temp1 = falseTrueFalse.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+        temp2 = falseTrueFalse.filter( ( lib ) => !lib[ columns[ i ].dataTitle ] );
+
+        falseTrueFalse = [ ... temp1, ... temp2 ];
+
+        temp1 = falseFalseTrue.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+        temp2 = falseFalseTrue.filter( ( lib ) => !lib[ columns[ i ].dataTitle ] );
+
+        falseFalseTrue = [ ... temp1, ... temp2 ];
+
+        temp1 = falseFalseFalse.filter( ( lib ) => lib[ columns[ i ].dataTitle ] );
+        temp2 = falseFalseFalse.filter( ( lib ) => !lib[ columns[ i ].dataTitle ] );
+
+        falseFalseFalse = [ ... temp1, ... temp2 ];
+
+
+        sortedData = [
+          ... trueTrueTrue, ... trueTrueFalse, ... trueFalseTrue, ... trueFalseFalse,
+          ... falseTrueTrue, ... falseTrueFalse, ... falseFalseTrue, ... falseFalseFalse
+        ];
+      }
     }
+    // else
+    // {
+
+    // }
+
+    return sortedData
   }
 
 
