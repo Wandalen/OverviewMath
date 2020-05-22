@@ -1,9 +1,52 @@
+'use strict';
+
 const _ = require( 'wTools' );
 require( 'wmathmatrix' );
 require( 'wFiles' );
 
 const isCorrectSystem = require( './SystemChecker' );
 const isNonZeroDeterminant = require( './IsNonZeroDeterminant' );
+
+const dimensions = Number( process.argv.slice( 2 ) );
+
+if( dimensions !== 100 && dimensions !== 1000 )
+throw _.err( 'Error:', new Error( 'specify after command correct matrix dimensions - 100 or 1000' ) );
+
+let M;
+
+do
+{
+  M = _.Matrix.Make( [ dimensions, dimensions ] )
+  .copy( generateM( dimensions, dimensions ) );
+}
+while( !isNonZeroDeterminant( M ) )
+
+let x = [];
+
+for( let i = 0; i < dimensions; i++ )
+{
+  x.push( _.intRandom( [ -dimensions, dimensions ] ) );
+}
+
+x = _.Matrix.Make( [ dimensions, 1 ] ).copy( x );
+
+const b = _.Matrix.Mul( null, [ M, x ] );
+
+if( !isCorrectSystem( M, x, b ) )
+throw _.err( 'Error:', new Error( 'incorrect system' ) );
+
+_.fileProvider.fileWrite
+( {
+  filePath : `${__dirname}/../data/${dimensions === 100 ? 'System100.json' : 'System1000.json'}`,
+  data : {
+    M : Object.values( M.buffer ),
+    x : Object.values( x.buffer ),
+    b : Object.values( b.buffer )
+  },
+  encoding : 'json'
+} );
+
+console.log( `New matrix ${dimensions + 'x' + dimensions} created!` );
 
 function generateM( rows, columns )
 {
@@ -22,7 +65,9 @@ function generateM( rows, columns )
     matrix.push( row );
   }
 
-  for( let i = 0; i < 10000; ++i )
+  const end = dimensions === 100 ? 10000 : 100000;
+
+  for( let i = 0; i < end; ++i )
   {
     const row1 = _.intRandom( [ 0, rows ] )
     let row2;
@@ -47,39 +92,3 @@ function generateM( rows, columns )
 
   return result;
 }
-
-const dimensions = 100;
-let M;
-
-do
-{
-  M = _.Matrix.Make( [ dimensions, dimensions ] )
-  .copy( generateM( dimensions, dimensions ) );
-}
-while( !isNonZeroDeterminant( M ) )
-
-let x = [];
-
-for( let i = 0; i < dimensions; i++ )
-{
-  x.push( _.intRandom( [ -100, 100 ] ) );
-}
-
-x = _.Matrix.Make( [ dimensions, 1 ] ).copy( x );
-
-const b = _.Matrix.Mul( null, [ M, x ] );
-
-if( !isCorrectSystem( M, x, b ) )
-throw _.err( 'Error:', new Error( 'incorrect system' ) );
-
-_.fileProvider.fileWrite
-( {
-  filePath : `${__dirname}/../data/System1000.json`,
-  data : {
-    M : Object.values( M.buffer ),
-    x : Object.values( x.buffer ),
-    b : Object.values( b.buffer )
-  },
-  encoding : 'json'
-} )
-console.log( 'New matrix created!' );
