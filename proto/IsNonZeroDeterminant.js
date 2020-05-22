@@ -5,8 +5,8 @@ function isNonZeroDeterminant( matrix )
 {
   'use strict';
 
-  const determinant = Math.round( matrix.determinant() );
-  console.log( determinant );
+  const determinant = matrix.determinant();
+  console.log( 'determinant: ', determinant );
 
   return !!determinant;
 }
