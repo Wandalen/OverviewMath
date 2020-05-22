@@ -1,19 +1,32 @@
-module.exports = [
-  { readMeTitle : 'Module',
-    dataTitle : 'npmName' },
-  { readMeTitle : 'Binding',
+module.exports =
+[
+  {
+    readMeTitle : 'Module',
+    dataTitle : 'npmName'
+  },
+  {
+    readMeTitle : 'Binding',
     dataTitle : 'binding',
-    dataType : 'boolean' },
-  { readMeTitle : 'Solves SLE',
+    dataType : 'boolean'
+  },
+  {
+    readMeTitle : 'Solves SLE',
     dataTitle : 'solvesSLE',
-    dataType : 'boolean' },
-  { readMeTitle : 'Node.js',
+    dataType : 'boolean'
+  },
+  {
+    readMeTitle : 'Node.js',
     dataTitle : 'supportsNodejs',
-    dataType : 'boolean' },
-  { readMeTitle : 'Browser',
+    dataType : 'boolean'
+  },
+  {
+    readMeTitle : 'Browser',
     dataTitle : 'supportsBrowser',
-    dataType : 'boolean' },
-  { readMeTitle : 'Dependants',
+    dataType : 'boolean'
+  },
+  {
+    readMeTitle : 'Dependants',
     dataTitle : 'dependants',
-    dataType : 'number' },
+    dataType : 'number'
+  },
 ];

@@ -1,5 +1,3 @@
-( function ()
-{
 'use strict';
 
 const _ = require( 'wTools' );
@@ -21,7 +19,7 @@ columns.forEach( ( column ) =>
 } );
 
 let mainContent = `
-### Public general purpose math modules  
+### Public general purpose math modules
 ${columnTitleRow}
 ${subColumnTitleRow}`;
 
@@ -40,7 +38,7 @@ ${createRow( columns, lib, index )}`;
 
 
 mainContent += `
-### Public special purpose math modules  
+### Public special purpose math modules
 ${columnTitleRow}
 ${subColumnTitleRow}
 `;
@@ -91,4 +89,3 @@ _.fileProvider.fileWrite( {
 } );
 
 console.log( 'ReadMe created!' );
-} )();
