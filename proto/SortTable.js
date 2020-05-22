@@ -5,9 +5,44 @@ function sortTable( tableData, columns )
   const _ = require( 'wTools' );
   require( 'warraysorted' );
 
-  let sortedData = [];
+  // let dataCopy = [ ... data ];
+  // let sortedData = [];
+
+  // for( let i = 0; i < columns.length; i++ )
+  // {
+  //   if( i === 1 )
+  //   {
+  //     if( columns[ i ].dataType === 'number' )
+  //     {
+  //       for( let j = 0 ; j < data.length ; j++ )
+  //       _.sorted.add( sortedData, data[ j ], ( lib ) => lib.dependants !== '-' ? lib.dependants : 0 );
+
+  //       sortedData.reverse();
+  //       break;
+  //     }
+  //     else
+  //     {
+  //       sortedData = data.sort( compare )
+  //     }
+  //   }
+  // }
+
+  // function compare( lib1, lib2 )
+  // {
+  //   if( lib1[ columns[ i ].dataTitle ] && !lib2[ columns[ i ].dataTitle ] )
+  //   return -1;
+
+  //   if( !lib1[ columns[ i ].dataTitle ] && lib2[ columns[ i ].dataTitle ] )
+  //   return 1;
+
+  //   return 0;
+  // }
+
+  // return sortedData;
+
   let temp1 = [];
   let temp2 = [];
+  let sortedData = [];
 
   for( let i = 0 ; i < tableData.length ; i++ )
   _.sorted.add( sortedData, tableData[ i ], ( lib ) =>
@@ -36,7 +71,7 @@ function sortTable( tableData, columns )
     {
       if( columns[ i ].dataType === 'number' )
       {
-
+        break;
       }
       else
       {
@@ -66,7 +101,7 @@ function sortTable( tableData, columns )
       {
         let trueTrue = sortedData.filter( ( lib ) =>
         {
-          if( lib[ columns[ i - 1 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle )
+          if( lib[ columns[ i - 1 ].dataTitle ] && lib[ columns[ i - 2 ].dataTitle ] )
           return true;
           else
           return false;
@@ -74,7 +109,7 @@ function sortTable( tableData, columns )
 
         let trueFalse = sortedData.filter( ( lib ) =>
         {
-          if( !lib[ columns[ i - 1 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle )
+          if( !lib[ columns[ i - 1 ].dataTitle ] && lib[ columns[ i - 2 ].dataTitle ] )
           return true;
           else
           return false;
@@ -82,7 +117,7 @@ function sortTable( tableData, columns )
 
         let falseTrue = sortedData.filter( ( lib ) =>
         {
-          if( lib[ columns[ i - 1 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle )
+          if( lib[ columns[ i - 1 ].dataTitle ] && !lib[ columns[ i - 2 ].dataTitle ] )
           return true;
           else
           return false;
@@ -90,7 +125,7 @@ function sortTable( tableData, columns )
 
         let falseFalse = sortedData.filter( ( lib ) =>
         {
-          if( !lib[ columns[ i - 1 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle )
+          if( !lib[ columns[ i - 1 ].dataTitle ] && !lib[ columns[ i - 2 ].dataTitle ] )
           return true;
           else
           return false;
@@ -129,7 +164,7 @@ function sortTable( tableData, columns )
       {
         let trueTrueTrue = sortedData.filter( ( lib ) =>
         {
-          if( lib[ columns[ i - 1 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle && lib[ columns[ i - 3 ] ].dataTitle )
+          if( lib[ columns[ i - 1 ].dataTitle ] && lib[ columns[ i - 2 ].dataTitle ] && lib[ columns[ i - 3 ].dataTitle ] )
           return true;
           else
           return false;
@@ -137,7 +172,7 @@ function sortTable( tableData, columns )
 
         let trueTrueFalse = sortedData.filter( ( lib ) =>
         {
-          if( lib[ columns[ i - 1 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle )
+          if( lib[ !columns[ i - 1 ].dataTitle ] && lib[ columns[ i - 2 ].dataTitle ] && lib[ columns[ i - 2 ].dataTitle ] )
           return true;
           else
           return false;
@@ -145,7 +180,7 @@ function sortTable( tableData, columns )
 
         let trueFalseTrue = sortedData.filter( ( lib ) =>
         {
-          if( lib[ columns[ i - 1 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle )
+          if( lib[ columns[ i - 1 ].dataTitle ] && !lib[ columns[ i - 2 ].dataTitle ] && lib[ columns[ i - 2 ].dataTitle ] )
           return true;
           else
           return false;
@@ -153,7 +188,7 @@ function sortTable( tableData, columns )
 
         let trueFalseFalse = sortedData.filter( ( lib ) =>
         {
-          if( lib[ columns[ i - 1 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle )
+          if( lib[ !columns[ i - 1 ].dataTitle ] && !lib[ columns[ i - 2 ].dataTitle ] && lib[ columns[ i - 2 ].dataTitle ] )
           return true;
           else
           return false;
@@ -181,7 +216,7 @@ function sortTable( tableData, columns )
 
         let falseTrueTrue = sortedData.filter( ( lib ) =>
         {
-          if( !lib[ columns[ i - 1 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle && lib[ columns[ i - 3 ] ].dataTitle )
+          if( lib[ columns[ i - 1 ].dataTitle ] && lib[ columns[ i - 2 ].dataTitle ] && !lib[ columns[ i - 3 ].dataTitle ] )
           return true;
           else
           return false;
@@ -189,7 +224,7 @@ function sortTable( tableData, columns )
 
         let falseTrueFalse = sortedData.filter( ( lib ) =>
         {
-          if( !lib[ columns[ i - 1 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle )
+          if( !lib[ columns[ i - 1 ].dataTitle ] && lib[ columns[ i - 2 ].dataTitle ] && !lib[ columns[ i - 2 ].dataTitle ] )
           return true;
           else
           return false;
@@ -197,7 +232,7 @@ function sortTable( tableData, columns )
 
         let falseFalseTrue = sortedData.filter( ( lib ) =>
         {
-          if( !lib[ columns[ i - 1 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle && lib[ columns[ i - 2 ] ].dataTitle )
+          if( lib[ columns[ i - 1 ].dataTitle ] && !lib[ columns[ i - 2 ].dataTitle ] && !lib[ columns[ i - 2 ].dataTitle ] )
           return true;
           else
           return false;
@@ -205,7 +240,7 @@ function sortTable( tableData, columns )
 
         let falseFalseFalse = sortedData.filter( ( lib ) =>
         {
-          if( !lib[ columns[ i - 1 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle && !lib[ columns[ i - 2 ] ].dataTitle )
+          if( !lib[ columns[ i - 1 ].dataTitle ] && !lib[ columns[ i - 2 ].dataTitle ] && !lib[ columns[ i - 2 ].dataTitle ] )
           return true;
           else
           return false;
@@ -238,110 +273,13 @@ function sortTable( tableData, columns )
         ];
       }
     }
-    // else
-    // {
+    else
+    {
 
-    // }
-
-    return sortedData
+    }
   }
 
-
-  // const sortedByDependants = [];
-
-  // for( let i = 0 ; i < tableData.length ; i++ )
-  // _.sorted.add( sortedByDependants, tableData[ i ], ( lib ) => lib.dependants );
-
-  // sortedByDependants.reverse();
-
-  // const tableDataCopy = [ ... tableData ];
-
-  // for ( let i = 0; i < sortingOrder.length; i++ )
-  // {
-  //   if ( sortingOrder[ i ].dataTitle !== 'npmName' )
-  //   {
-  //     if ( typeof sortingOrder[ i ].dataType === 'boolean' )
-  //     {
-  //     }
-  //   }
-  // }
-
-  // const sorted = [];
-
-  // const booleanColumns = sortingOrder.filter( ( column ) => column.dataType === 'boolean' );
-  // const cycles = booleanColumns.length;
-
-  // for ( let i = 0; i < cycles; i++ )
-  // {
-  //   sortedByDependants.forEach( ( lib, idx ) =>
-  //     {
-  //       let passes = true;
-
-  //       booleanColumns.forEach( ( column ) =>
-  //       {
-  //         if ( !lib[ column.dataTitle ] )
-  //         passes = false;
-  //       } )
-
-  //       if ( passes )
-  //       {
-  //         sorted.push( lib );
-  //         sortedByDependants.splice( idx, 1 );
-  //       }
-  //     } )
-
-  //   booleanColumns.pop();
-  // }
-
-  // sorted.push( ... sortedByDependants.filter( ( lib ) =>
-  // {
-
-  // } ) )
-
-  // const temp = sortedByDependants.filter( ( lib ) =>
-  // {
-  //   let flag = true;
-
-  //   booleanColumns.forEach( ( column ) =>
-  //   {
-
-  //   } )
-
-  //   return flag;
-  // } )
-
-  // return [ ... sorted, ... sortedByDependants ];
-  // let sortedData = [];
-  // for( let i = 0 ; i < tableData.length ; i++ )
-  // _.sorted.add( sortedData, tableData[ i ], ( lib ) => lib.dependents );
-
-  // sortedData.reverse();
-
-  // const bindingAndSolvingSLE = sortedData.filter( ( lib ) =>
-  // {
-  //   if ( lib.binding && lib.solvesSLE )
-  //   return lib;
-  // } );
-
-  // const onlyBinding = sortedData.filter( ( lib ) =>
-  // {
-  //   if ( lib.binding && !lib.solvesSLE )
-  //   return lib;
-  // } );
-
-  // const onlySolvingSLE = sortedData.filter( ( lib ) =>
-  // {
-  //   if ( !lib.binding && lib.solvesSLE )
-  //   return lib;
-  // } );
-
-  // const other = sortedData.filter( ( lib ) =>
-  // {
-  //   if ( !lib.binding && !lib.solvesSLE )
-  //   return lib;
-  // } );
-
-  // return [ ... bindingAndSolvingSLE, ... onlyBinding, ... onlySolvingSLE, ... other ];
+  return sortedData;
 }
 
 module.exports = sortTable;
