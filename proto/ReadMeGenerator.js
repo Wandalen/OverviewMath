@@ -4,13 +4,11 @@ const _ = require( 'wTools' );
 require( 'wFiles' );
 require( 'warraysorted' );
 
-const sortTable = require( './SortData' );
 const columns = require( './SortOrder' );
-
-function abs() { return _.path.s.join( __dirname, ... arguments ) }
 
 let columnTitleRow = '|№|';
 let subColumnTitleRow = '|:-:|';
+
 columns.forEach( ( column ) =>
 {
   columnTitleRow += column.readMeTitle + '|';
@@ -22,14 +20,13 @@ let mainContent = `
 ${columnTitleRow}
 ${subColumnTitleRow}`;
 
-let data = _.fileProvider.fileRead( {
+let data = _.fileProvider.fileRead
+( {
   filePath : abs( '../data/GeneralPurpose.yml' ),
   encoding : 'yaml',
 } );
 
-let sortedData = sortTable( data, columns );
-
-sortedData.forEach( ( lib, index ) =>
+data.forEach( ( lib, index ) =>
 {
   mainContent += `
 ${createRow( columns, lib, index )}`;
@@ -42,14 +39,13 @@ ${columnTitleRow}
 ${subColumnTitleRow}
 `;
 
-data = _.fileProvider.fileRead( {
+data = _.fileProvider.fileRead
+( {
   filePath : abs( '../data/Special.yml' ),
   encoding : 'yaml',
 } );
 
-sortedData = sortTable( data, columns );
-
-sortedData.forEach( ( lib, index ) =>
+data.forEach( ( lib, index ) =>
 {
   mainContent += `${createRow( columns, lib, index )}
 `;
@@ -61,33 +57,37 @@ ${columnTitleRow}
 ${subColumnTitleRow}
 `;
 
-data = _.fileProvider.fileRead( {
+data = _.fileProvider.fileRead
+( {
   filePath : abs( '../data/SymbolicExpression.yml' ),
   encoding : 'yaml',
 } );
 
-sortedData = sortTable( data, columns );
-
-sortedData.forEach( ( lib, index ) =>
+data.forEach( ( lib, index ) =>
 {
   mainContent += `${createRow( columns, lib, index )}
 `;
 } );
 
-const title = _.fileProvider.fileRead( {
+const title = _.fileProvider.fileRead
+( {
   filePath : abs( '../doc/title.md' )
 } );
 
-const links = _.fileProvider.fileRead( {
+const links = _.fileProvider.fileRead
+( {
   filePath : abs( '../doc/resources.md' ),
 } );
 
-_.fileProvider.fileWrite( {
+_.fileProvider.fileWrite
+( {
   filePath : abs( '../README.md' ),
   data : title + mainContent + links
 } );
 
-console.log( 'ReadMe created!' );
+console.log( 'ReadMe is created!' );
+
+function abs() { return _.path.s.join( __dirname, ... arguments ) }
 
 function createRow( columns, lib, index )
 {

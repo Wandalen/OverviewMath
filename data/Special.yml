@@ -1,3 +1,10 @@
+- npmName: qminer
+  repoUri: 'https://github.com/qminer/qminer'
+  binding: true
+  solvesSLE: false
+  dependants: 4
+  supportsNodejs: true
+  supportsBrowser: false
 - npmName: ndarray-linear-solve
   repoUri: 'https://github.com/scijs/ndarray-linear-solve'
   binding: false
@@ -33,25 +40,11 @@
   dependants: 0
   supportsNodejs: true
   supportsBrowser: true
-- npmName: qminer
-  repoUri: 'https://github.com/qminer/qminer'
-  binding: true
-  solvesSLE: false
-  dependants: 4
-  supportsNodejs: true
-  supportsBrowser: false
 - npmName: ndarray
   repoUri: 'https://github.com/scijs/ndarray'
   binding: false
   solvesSLE: false
   dependants: 315
-  supportsNodejs: true
-  supportsBrowser: true
-- npmName: nsolvejs
-  repoUri: 'https://github.com/weasysolutions/Nsolvejs'
-  binding: false
-  solvesSLE: false
-  dependants: 0
   supportsNodejs: true
   supportsBrowser: true
 - npmName: add
@@ -66,5 +59,12 @@
   binding: false
   solvesSLE: false
   dependants: 8
+  supportsNodejs: true
+  supportsBrowser: true
+- npmName: nsolvejs
+  repoUri: 'https://github.com/weasysolutions/Nsolvejs'
+  binding: false
+  solvesSLE: false
+  dependants: 0
   supportsNodejs: true
   supportsBrowser: true

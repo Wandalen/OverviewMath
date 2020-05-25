@@ -21,7 +21,8 @@
   "scripts": {
     "newMatrix": "node ./proto/MatrixGenerating.js",
     "newReadMe": "node ./proto/ReadMeGenerator.js",
-    "updateData": "node proto/UpdateDependantsData.js",
+    "updateData": "node ./proto/UpdateDependantsData.js",
+    "sortData": "node ./proto/SortData.js",
     "test": "wtest .run 'proto/**'"
   },
   "repository": {

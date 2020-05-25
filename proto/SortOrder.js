@@ -15,6 +15,11 @@ module.exports =
     dataType : 'boolean'
   },
   {
+    readMeTitle : 'Dependants',
+    dataTitle : 'dependants',
+    dataType : 'number'
+  },
+  {
     readMeTitle : 'Node.js',
     dataTitle : 'supportsNodejs',
     dataType : 'boolean'
@@ -23,10 +28,5 @@ module.exports =
     readMeTitle : 'Browser',
     dataTitle : 'supportsBrowser',
     dataType : 'boolean'
-  },
-  {
-    readMeTitle : 'Dependants',
-    dataTitle : 'dependants',
-    dataType : 'number'
-  },
+  }
 ];
