@@ -1,5 +1,4 @@
-( function ()
-{
+
 'use strict';
 
 const _ = require( 'wTools' );
@@ -8,26 +7,23 @@ require( 'wnpmtools' );
 
 function abs() { return _.path.s.join( __dirname, ... arguments ) }
 
-const generalPurposeData = _.fileProvider.fileRead(
-  {
-    filePath : abs( '../data/GeneralPurpose.yml' ),
-    encoding : 'yaml'
-  }
-);
+const generalPurposeData = _.fileProvider.fileRead
+({
+  filePath : abs( '../data/GeneralPurpose.yml' ),
+  encoding : 'yaml'
+});
 
-const symbolicExpressionData = _.fileProvider.fileRead(
-  {
-    filePath : abs( '../data/SymbolicExpression.yml' ),
-    encoding : 'yaml'
-  }
-);
+const symbolicExpressionData = _.fileProvider.fileRead
+({
+  filePath : abs( '../data/SymbolicExpression.yml' ),
+  encoding : 'yaml'
+});
 
-const specialData = _.fileProvider.fileRead(
-  {
-    filePath : abs( '../data/Special.yml' ),
-    encoding : 'yaml'
-  }
-);
+const specialData = _.fileProvider.fileRead
+({
+  filePath : abs( '../data/Special.yml' ),
+  encoding : 'yaml'
+});
 
 const tables = [ generalPurposeData, symbolicExpressionData, specialData ];
 
@@ -36,7 +32,7 @@ console.log( `Loading data, wait... ` );
 tables.forEach( ( table ) =>
 {
   updateTable( table );
-} );
+});
 
 function updateTable( table )
 {
@@ -63,28 +59,24 @@ function updateTable( table )
 
 function writeData()
 {
-  _.fileProvider.fileWrite(
-    {
+  _.fileProvider.fileWrite
+  ({
       filePath : abs( '../data/GeneralPurpose.yml' ),
       data : tables[ 0 ],
       encoding : 'yaml',
-    }
-  );
+  });
 
-  _.fileProvider.fileWrite(
-    {
+  _.fileProvider.fileWrite
+  ({
       filePath : abs( '../data/SymbolicExpression.yml' ),
       data : tables[ 1 ],
       encoding : 'yaml',
-    }
-  );
+  });
 
-  _.fileProvider.fileWrite(
-    {
+  _.fileProvider.fileWrite
+  ({
       filePath : abs( '../data/Special.yml' ),
       data : tables[ 2 ],
       encoding : 'yaml',
-    }
-  );
+  });
 }
-} )();
