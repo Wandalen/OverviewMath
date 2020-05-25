@@ -6,19 +6,28 @@ require( 'warraysorted' );
 
 const columns = require( './SortOrder' );
 
-let columnTitleRow = '|№|';
-let subColumnTitleRow = '|:-:|';
+const readMeColumnTitles = {
+  npmName : 'Module',
+  binding : 'Binding',
+  solvesSLE : 'Solves SLE',
+  dependants : 'Dependants',
+  supportsNodejs : 'Node.js',
+  supportsBrowser : 'Browser',
+}
+
+let columnTitlesRow = `|№|${readMeColumnTitles.npmName}|`;
+let subColumnTitlesRow = '|:-:|:-:|';
 
 columns.forEach( ( column ) =>
 {
-  columnTitleRow += column.readMeTitle + '|';
-  subColumnTitleRow += ':--:|';
+  columnTitlesRow += readMeColumnTitles[ column ] + '|';
+  subColumnTitlesRow += ':--:|';
 } );
 
 let mainContent = `
 ### Public general purpose math modules
-${columnTitleRow}
-${subColumnTitleRow}`;
+${columnTitlesRow}
+${subColumnTitlesRow}`;
 
 let data = _.fileProvider.fileRead
 ( {
@@ -36,8 +45,8 @@ ${createRow( columns, lib, index )}`;
 mainContent += `
 
 ### Public special purpose math modules
-${columnTitleRow}
-${subColumnTitleRow}
+${columnTitlesRow}
+${subColumnTitlesRow}
 `;
 
 data = _.fileProvider.fileRead
@@ -54,8 +63,8 @@ data.forEach( ( lib, index ) =>
 
 mainContent += `
 ### Public symbolic expression math modules
-${columnTitleRow}
-${subColumnTitleRow}
+${columnTitlesRow}
+${subColumnTitlesRow}
 `;
 
 data = _.fileProvider.fileRead
@@ -94,18 +103,16 @@ function createRow( columns, lib, index )
 {
   'use strict';
 
-  let row = `|${index + 1}|`;
+  let row = `|${index + 1}|[${lib.npmName}](${lib.repoUri})|`;
 
   columns.forEach( ( column ) =>
   {
-    if( column.dataTitle === 'npmName' )
-      row += `[${lib.npmName}](${lib.repoUri})|`;
-    else if( lib[ column.dataTitle ] === true )
+    if( lib[ column ] === true )
       row += '+|';
-    else if( lib[ column.dataTitle ] === false )
+    else if( lib[ column ] === false )
       row += '-|';
     else
-      row += `${lib[ column.dataTitle ]}|`;
+      row += `${lib[ column ]}|`;
   } )
 
   return row;

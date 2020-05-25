@@ -4,7 +4,7 @@ Curated overview of awesome Javascript projects to solve math problems.
 
 ### Public general purpose math modules
 |№|Module|Binding|Solves SLE|Dependants|Node.js|Browser|
-|:-:|:--:|:--:|:--:|:--:|:--:|:--:|
+|:-:|:-:|:--:|:--:|:--:|:--:|:--:|
 |1|[@tensorflow/tfjs](https://github.com/tensorflow/tfjs)|+|+|163|+|+|
 |2|[vectorious](https://github.com/mateogianolio/vectorious)|+|+|8|+|+|
 |3|[nlapack](https://github.com/nperf/nlapack)|+|+|1|+|-|
@@ -40,7 +40,7 @@ Curated overview of awesome Javascript projects to solve math problems.
 
 ### Public special purpose math modules
 |№|Module|Binding|Solves SLE|Dependants|Node.js|Browser|
-|:-:|:--:|:--:|:--:|:--:|:--:|:--:|
+|:-:|:-:|:--:|:--:|:--:|:--:|:--:|
 |1|[qminer](https://github.com/qminer/qminer)|+|-|4|+|-|
 |2|[ndarray-linear-solve](https://github.com/scijs/ndarray-linear-solve)|-|+|2|+|+|
 |3|[solve-tridiagonal](https://github.com/scijs/solve-tridiagonal)|-|+|0|+|+|
@@ -54,7 +54,7 @@ Curated overview of awesome Javascript projects to solve math problems.
 
 ### Public symbolic expression math modules
 |№|Module|Binding|Solves SLE|Dependants|Node.js|Browser|
-|:-:|:--:|:--:|:--:|:--:|:--:|:--:|
+|:-:|:-:|:--:|:--:|:--:|:--:|:--:|
 |1|[mathjs](https://github.com/josdejong/mathjs)|-|+|979|+|+|
 |2|[@yaffle/expression](https://github.com/Yaffle/Expression)|-|+|0|+|+|
 |3|[algebra.js](https://github.com/nicolewhite/algebra.js)|-|-|13|+|+|
