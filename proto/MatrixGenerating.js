@@ -5,7 +5,7 @@ require( 'wmathmatrix' );
 require( 'wFiles' );
 
 const isCorrectSystem = require( './SystemChecker' );
-const isNonZeroDeterminant = require( './IsNonZeroDeterminant' );
+const hasZeroDeterminant = require( './hasZeroDeterminant' );
 
 const dimensions = Number( process.argv.slice( 2 ) );
 
@@ -19,7 +19,7 @@ do
   M = _.Matrix.Make( [ dimensions, dimensions ] )
   .copy( generateM( dimensions, dimensions ) );
 }
-while( !isNonZeroDeterminant( M ) )
+while( hasZeroDeterminant( M ) )
 
 let x = [];
 
