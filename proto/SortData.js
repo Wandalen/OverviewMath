@@ -6,18 +6,20 @@ require( 'warraysorted' );
 
 const columns = require( './SortOrder' );
 
+let sortedData = [];
 let data = _.fileProvider.fileRead
 ( {
   filePath : abs( '../data/GeneralPurpose.yml' ),
   encoding : 'yaml',
 } );
 
-data.sort( sort );
+for( let i = 0; i < data.length; i++ )
+_.sorted.add( sortedData, data[ i ], sort )
 
 _.fileProvider.fileWrite
 ( {
   filePath : abs( '../data/GeneralPurpose.yml' ),
-  data,
+  data : sortedData,
   encoding : 'yaml',
 } );
 
@@ -29,12 +31,14 @@ data = _.fileProvider.fileRead
   encoding : 'yaml',
 } );
 
-data.sort( sort );
+sortedData = [];
+for( let i = 0; i < data.length; i++ )
+_.sorted.add( sortedData, data[ i ], sort )
 
 _.fileProvider.fileWrite
 ( {
   filePath : abs( '../data/SymbolicExpression.yml' ),
-  data,
+  data : sortedData,
   encoding : 'yaml',
 } );
 
@@ -46,12 +50,14 @@ data = _.fileProvider.fileRead
   encoding : 'yaml',
 } );
 
-data.sort( sort );
+sortedData = [];
+for( let i = 0; i < data.length; i++ )
+_.sorted.add( sortedData, data[ i ], sort )
 
 _.fileProvider.fileWrite
 ( {
   filePath : abs( '../data/Special.yml' ),
-  data,
+  data : sortedData,
   encoding : 'yaml',
 } );
 

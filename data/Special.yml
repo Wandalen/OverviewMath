@@ -12,8 +12,15 @@
   dependants: 2
   supportsNodejs: true
   supportsBrowser: true
-- npmName: solve-tridiagonal
-  repoUri: 'https://github.com/scijs/solve-tridiagonal'
+- npmName: solve-periodic-tridiagonal
+  repoUri: 'https://github.com/scijs/solve-periodic-tridiagonal'
+  binding: false
+  solvesSLE: true
+  dependants: 0
+  supportsNodejs: true
+  supportsBrowser: true
+- npmName: tdma
+  repoUri: 'https://github.com/armancodv/tdma'
   binding: false
   solvesSLE: true
   dependants: 0
@@ -26,15 +33,8 @@
   dependants: 0
   supportsNodejs: true
   supportsBrowser: true
-- npmName: solve-periodic-tridiagonal
-  repoUri: 'https://github.com/scijs/solve-periodic-tridiagonal'
-  binding: false
-  solvesSLE: true
-  dependants: 0
-  supportsNodejs: true
-  supportsBrowser: true
-- npmName: tdma
-  repoUri: 'https://github.com/armancodv/tdma'
+- npmName: solve-tridiagonal
+  repoUri: 'https://github.com/scijs/solve-tridiagonal'
   binding: false
   solvesSLE: true
   dependants: 0

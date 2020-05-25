@@ -12,6 +12,13 @@
   dependants: 8
   supportsNodejs: true
   supportsBrowser: true
+- npmName: nblas-plus
+  repoUri: 'https://github.com/ukrbublik/nblas-plus'
+  binding: true
+  solvesSLE: true
+  dependants: 1
+  supportsNodejs: true
+  supportsBrowser: false
 - npmName: nlapack
   repoUri: 'https://github.com/nperf/nlapack'
   binding: true
@@ -19,11 +26,25 @@
   dependants: 1
   supportsNodejs: true
   supportsBrowser: false
-- npmName: nblas-plus
-  repoUri: 'https://github.com/ukrbublik/nblas-plus'
+- npmName: blasjs
+  repoUri: 'https://github.com/jacobbogers/blasjs'
   binding: true
   solvesSLE: true
-  dependants: 1
+  dependants: 0
+  supportsNodejs: true
+  supportsBrowser: true
+- npmName: node-julia
+  repoUri: 'https://github.com/waTeim/node-julia'
+  binding: true
+  solvesSLE: true
+  dependants: 0
+  supportsNodejs: true
+  supportsBrowser: false
+- npmName: eigenjs
+  repoUri: 'https://github.com/rick68/eigenjs'
+  binding: true
+  solvesSLE: true
+  dependants: 0
   supportsNodejs: true
   supportsBrowser: false
 - npmName: vectorious-plus
@@ -33,27 +54,6 @@
   dependants: 0
   supportsNodejs: true
   supportsBrowser: true
-- npmName: blasjs
-  repoUri: 'https://github.com/jacobbogers/blasjs'
-  binding: true
-  solvesSLE: true
-  dependants: 0
-  supportsNodejs: true
-  supportsBrowser: true
-- npmName: eigenjs
-  repoUri: 'https://github.com/rick68/eigenjs'
-  binding: true
-  solvesSLE: true
-  dependants: 0
-  supportsNodejs: true
-  supportsBrowser: false
-- npmName: node-julia
-  repoUri: 'https://github.com/waTeim/node-julia'
-  binding: true
-  solvesSLE: true
-  dependants: 0
-  supportsNodejs: true
-  supportsBrowser: false
 - npmName: '@stdlib/stdlib'
   repoUri: 'https://github.com/stdlib-js/stdlib'
   binding: true
@@ -68,13 +68,13 @@
   dependants: 3
   supportsNodejs: true
   supportsBrowser: false
-- npmName: eigen
-  repoUri: 'https://github.com/BertrandBev/eigen-js'
+- npmName: node-hperformance
+  repoUri: 'https://github.com/amatosc/node-hperformance'
   binding: true
   solvesSLE: false
   dependants: 0
   supportsNodejs: true
-  supportsBrowser: true
+  supportsBrowser: false
 - npmName: lalg
   repoUri: 'https://github.com/rcorbish/node-linalg'
   binding: true
@@ -89,13 +89,13 @@
   dependants: 0
   supportsNodejs: true
   supportsBrowser: false
-- npmName: node-hperformance
-  repoUri: 'https://github.com/amatosc/node-hperformance'
+- npmName: eigen
+  repoUri: 'https://github.com/BertrandBev/eigen-js'
   binding: true
   solvesSLE: false
   dependants: 0
   supportsNodejs: true
-  supportsBrowser: false
+  supportsBrowser: true
 - npmName: mathjs
   repoUri: 'https://github.com/josdejong/mathjs'
   binding: false
@@ -117,8 +117,8 @@
   dependants: 1
   supportsNodejs: true
   supportsBrowser: true
-- npmName: lapack
-  repoUri: 'https://github.com/NaturalNode/node-lapack'
+- npmName: t-matrix
+  repoUri: 'https://github.com/zakalwe314/t-matrix'
   binding: false
   solvesSLE: true
   dependants: 0
@@ -131,8 +131,8 @@
   dependants: 0
   supportsNodejs: true
   supportsBrowser: true
-- npmName: t-matrix
-  repoUri: 'https://github.com/zakalwe314/t-matrix'
+- npmName: lapack
+  repoUri: 'https://github.com/NaturalNode/node-lapack'
   binding: false
   solvesSLE: true
   dependants: 0
@@ -187,13 +187,6 @@
   dependants: 8
   supportsNodejs: true
   supportsBrowser: true
-- npmName: compute.io
-  repoUri: 'https://github.com/compute-io/compute.io'
-  binding: false
-  solvesSLE: false
-  dependants: 2
-  supportsNodejs: true
-  supportsBrowser: true
 - npmName: vec-la-fp
   repoUri: 'https://github.com/francisrstokes/vec-la-fp'
   binding: false
@@ -201,8 +194,15 @@
   dependants: 2
   supportsNodejs: true
   supportsBrowser: true
-- npmName: vec-la
-  repoUri: 'https://github.com/francisrstokes/vec-la'
+- npmName: compute.io
+  repoUri: 'https://github.com/compute-io/compute.io'
+  binding: false
+  solvesSLE: false
+  dependants: 2
+  supportsNodejs: true
+  supportsBrowser: true
+- npmName: math2d
+  repoUri: 'https://github.com/crazytoucan/math2d'
   binding: false
   solvesSLE: false
   dependants: 0
@@ -215,8 +215,8 @@
   dependants: 0
   supportsNodejs: true
   supportsBrowser: true
-- npmName: math2d
-  repoUri: 'https://github.com/crazytoucan/math2d'
+- npmName: vec-la
+  repoUri: 'https://github.com/francisrstokes/vec-la'
   binding: false
   solvesSLE: false
   dependants: 0
