@@ -4,9 +4,8 @@ const _ = require( 'wTools' );
 require( 'wFiles' );
 require( 'warraysorted' );
 
-const sortTable = require( './SortTable' );
-const createRow = require( './CreateRow' );
-const columns = require( './SortingOrder' );
+const sortTable = require( './SortData' );
+const columns = require( './SortOrder' );
 
 function abs() { return _.path.s.join( __dirname, ... arguments ) }
 
@@ -15,7 +14,7 @@ let subColumnTitleRow = '|:-:|';
 columns.forEach( ( column ) =>
 {
   columnTitleRow += column.readMeTitle + '|';
-  subColumnTitleRow += ':--:|'
+  subColumnTitleRow += ':--:|';
 } );
 
 let mainContent = `
@@ -89,3 +88,32 @@ _.fileProvider.fileWrite( {
 } );
 
 console.log( 'ReadMe created!' );
+
+function createRow( columns, lib, index )
+{
+  'use strict';
+
+  let row = `|${index + 1}|`;
+
+  columns.forEach( ( column ) =>
+  {
+    if( column.dataTitle === 'npmName' )
+    {
+      row += `[${lib.npmName}](${lib.repoUri})|`
+    }
+    else if( lib[ column.dataTitle ] === true )
+    {
+      row += '+|';
+    }
+    else if( lib[ column.dataTitle ] === false )
+    {
+      row += '-|';
+    }
+    else
+    {
+      row += `${lib[ column.dataTitle ]}|`;
+    }
+  } )
+
+  return row;
+}

@@ -32,12 +32,12 @@ console.log( `Loading data, wait... ` );
 tables.forEach( ( table ) =>
 {
   updateTable( table );
-});
+} );
 
 function updateTable( table )
 {
   let step = 0;
-    for ( let i = 0; i < table.length; i++ )
+    for( let i = 0; i < table.length; i++ )
     {
       step += 500;
       setTimeout( () =>
@@ -45,7 +45,7 @@ function updateTable( table )
         _.npm.dependantsRertive( { remotePath : table[ i ].npmName } )
         .then( ( dependants ) =>
         {
-            if ( isNaN( dependants ) )
+            if( isNaN( dependants ) )
             table[ i ].dependants = '-';
             else
             table[ i ].dependants = dependants;
