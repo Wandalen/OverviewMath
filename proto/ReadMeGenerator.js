@@ -34,6 +34,7 @@ ${createRow( columns, lib, index )}`;
 
 
 mainContent += `
+
 ### Public special purpose math modules
 ${columnTitleRow}
 ${subColumnTitleRow}
@@ -98,21 +99,13 @@ function createRow( columns, lib, index )
   columns.forEach( ( column ) =>
   {
     if( column.dataTitle === 'npmName' )
-    {
-      row += `[${lib.npmName}](${lib.repoUri})|`
-    }
+      row += `[${lib.npmName}](${lib.repoUri})|`;
     else if( lib[ column.dataTitle ] === true )
-    {
       row += '+|';
-    }
     else if( lib[ column.dataTitle ] === false )
-    {
       row += '-|';
-    }
     else
-    {
       row += `${lib[ column.dataTitle ]}|`;
-    }
   } )
 
   return row;

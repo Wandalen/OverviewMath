@@ -37,6 +37,7 @@ Curated overview of awesome Javascript projects to solve math problems.
 |30|[vec-la](https://github.com/francisrstokes/vec-la)|-|-|0|+|+|
 |31|[matrix](https://github.com/raghavgujjar/matrix)|-|-|0|+|+|
 |32|[math2d](https://github.com/crazytoucan/math2d)|-|-|0|+|+|
+
 ### Public special purpose math modules
 |№|Module|Binding|Solves SLE|Dependants|Node.js|Browser|
 |:-:|:--:|:--:|:--:|:--:|:--:|:--:|
@@ -62,6 +63,7 @@ Curated overview of awesome Javascript projects to solve math problems.
 |6|[theorem.js](https://github.com/arguiot/TheoremJS)|-|-|1|+|+|
 |7|[coffeequate](https://github.com/MatthewJA/Coffeequate)|-|-|1|+|+|
 |8|[metadelta](https://github.com/metadelta/metadelta)|-|-|0|+|+|
+
 #### Links to useful articles:
 - https://awesomeopensource.com/categories/mathematics
 - https://smartbear.com/blog/test-and-monitor/four-serious-math-libraries-for-javascript/
