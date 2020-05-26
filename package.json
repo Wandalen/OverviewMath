@@ -33,7 +33,6 @@
     "url": "https://github.com/Artem-Bohush/AwesomeMath/issues"
   },
   "dependencies": {
-    "eslint": "=6.8.0",
     "wFiles": "alpha",
     "wTools": "alpha",
     "warraysorted": "alpha",
@@ -42,7 +41,8 @@
     "wnpmtools": "alpha"
   },
   "devDependencies": {
-    "wTesting": "^1.0.315"
+    "wTesting": "alpha",
+    "eslint": "=6.8.0"
   },
   "keywords": []
 }
