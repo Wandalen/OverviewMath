@@ -37,7 +37,7 @@ function updateTable( table )
   let step = 0;
     for( let i = 0; i < table.length; i++ )
     {
-      step += 500;
+      step += 300;
       setTimeout( () =>
       {
         _.npm.dependantsRertive( { remotePath : table[ i ].npmName } )

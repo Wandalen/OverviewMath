@@ -4,8 +4,6 @@ require( 'wmathmatrix' );
 require( 'wFiles' );
 require( 'wequaler' );
 
-const createMatrix = require( '../../proto/CreateMatrix' );
-
 const transp = ubique.transpose;
 
 var data = _.fileProvider.fileRead( {
@@ -121,3 +119,19 @@ console.log( _.equivalent( xResult, x ) ); // false ?
 
 // console.log(ubique.linsolve([ [ 1, 1, -1 ], [ 1, -2, 3 ], [ 2, 3, 1 ] ], transp([ 5, 6, 3 ])));
 // // [[5.846154], [-2.384615], [-1.538462]]
+
+
+function createMatrix( arr )
+{
+  'use strict';
+
+  const rowLength = Math.sqrt( arr.length );
+  const matrix = [];
+
+  for( let i = 0; i < arr.length; i += rowLength )
+  {
+    matrix.push( arr.slice( i, i + rowLength ) )
+  }
+
+  return matrix;
+}
