@@ -26,13 +26,6 @@
   dependants: 1
   supportsNodejs: true
   supportsBrowser: false
-- npmName: vectorious-plus
-  repoUri: 'https://github.com/ukrbublik/vectorious-plus'
-  binding: true
-  solvesSLE: true
-  dependants: 0
-  supportsNodejs: true
-  supportsBrowser: true
 - npmName: blasjs
   repoUri: 'https://github.com/jacobbogers/blasjs'
   binding: true
@@ -40,13 +33,6 @@
   dependants: 0
   supportsNodejs: true
   supportsBrowser: true
-- npmName: eigenjs
-  repoUri: 'https://github.com/rick68/eigenjs'
-  binding: true
-  solvesSLE: true
-  dependants: 0
-  supportsNodejs: true
-  supportsBrowser: false
 - npmName: node-julia
   repoUri: 'https://github.com/waTeim/node-julia'
   binding: true
@@ -54,6 +40,20 @@
   dependants: 0
   supportsNodejs: true
   supportsBrowser: false
+- npmName: eigenjs
+  repoUri: 'https://github.com/rick68/eigenjs'
+  binding: true
+  solvesSLE: true
+  dependants: 0
+  supportsNodejs: true
+  supportsBrowser: false
+- npmName: vectorious-plus
+  repoUri: 'https://github.com/ukrbublik/vectorious-plus'
+  binding: true
+  solvesSLE: true
+  dependants: 0
+  supportsNodejs: true
+  supportsBrowser: true
 - npmName: '@stdlib/stdlib'
   repoUri: 'https://github.com/stdlib-js/stdlib'
   binding: true

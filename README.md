@@ -9,10 +9,10 @@ Curated overview of awesome Javascript projects to solve math problems.
 |2|[vectorious](https://github.com/mateogianolio/vectorious)|+|+|8|+|+|
 |3|[nblas-plus](https://github.com/ukrbublik/nblas-plus)|+|+|1|+|-|
 |4|[nlapack](https://github.com/nperf/nlapack)|+|+|1|+|-|
-|5|[vectorious-plus](https://github.com/ukrbublik/vectorious-plus)|+|+|0|+|+|
-|6|[blasjs](https://github.com/jacobbogers/blasjs)|+|+|0|+|+|
+|5|[blasjs](https://github.com/jacobbogers/blasjs)|+|+|0|+|+|
+|6|[node-julia](https://github.com/waTeim/node-julia)|+|+|0|+|-|
 |7|[eigenjs](https://github.com/rick68/eigenjs)|+|+|0|+|-|
-|8|[node-julia](https://github.com/waTeim/node-julia)|+|+|0|+|-|
+|8|[vectorious-plus](https://github.com/ukrbublik/vectorious-plus)|+|+|0|+|+|
 |9|[@stdlib/stdlib](https://github.com/stdlib-js/stdlib)|+|-|4|+|+|
 |10|[nblas](https://github.com/nperf/nblas)|+|-|3|+|-|
 |11|[lalg](https://github.com/rcorbish/node-linalg)|+|-|0|+|-|
