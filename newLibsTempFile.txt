@@ -1,0 +1,90 @@
+// ----------------------------first approach-----
+//1 (search continues)
+
+numpy 210
+become-a-software-engineer-at-top-companies  sponsored
+math 170 + (https://github.com/dcodeIO/long.js), 
+	     (https://github.com/silentmatt/expr-eval), 
+             (https://github.com/simple-statistics/simple-statistics), 
+             (https://github.com/gpujs/gpu.js), 
+             (https://github.com/R-js/libRmath.js), 
+             (https://github.com/devanp92/combinatorics.js),
+	     (https://github.com/infusion/Fraction.js)
+mathematics 130
+coq 90
+geometry 86
+linear-algebra 83 + (https://github.com/NaturalNode/node-sylvester)
+
+//2 (search continues)
+
+theano 73
+random 57
+calculator 49 + ()
+algebra 38 + (https://github.com/viktorstrate/algebra-latex), (https://github.com/algebraic-graphs/typescript)
+optical-flow 38
+computational-geometry 36
+fft 36 
+
+//3(search done)
+
+geometry-processing 30 + ()
+distance 28 + ()
+category-theory 27 + (https://github.com/alohawav/naive_functional_programming)
+bayesian-statistics 26 + ()
+stan 26 + ()
+kalman-filter 25 + (https://github.com/wouterbulten/kalmanjs)
+solver 25 + ()
+
+//4(search done)
+
+measure 24 + ()
+probability 24 + ()
+triangulation 23 + (https://github.com/mapbox/earcut), (https://github.com/mapbox/delaunator)
+lambda-calculus 21 + (https://github.com/gtramontina/lambda), (https://github.com/benji6/church), (https://github.com/benji6/combinators-js), (https://github.com/glebec/lambda-talk), (https://github.com/moonad/Formality)
+numerical-methods 21 + ()
+blas 20 + ()
+mathjax 20 + ()
+
+//5(search done)
+
+calculus 19 + (https://github.com/aunyks/newton-api)
+computer-algebra 19 + ()
+finite-elements 19 + ()
+units 19 + ()
+arbitrary-precision 18 + ()
+statistical-analysis 18 + ()
+measurements 16 + (https://github.com/mapbox/cheap-ruler)
+
+//6(search done)
+
+eigen 15 + ()
+formula 15 + (https://github.com/handsontable/formula-parser)
+kinematics 15 + (https://github.com/glumb/kinematics),
+matrices 15 + (https://github.com/zandaqo/structurae)
+vectorization 15 + ()
+complex-numbers 14 + (https://github.com/fibo/algebra#matrices), (https://github.com/enkimute/ganja.js)
+fantasy-land 14 + (https://github.com/funfix/funland), (https://github.com/sanctuary-js/sanctuary-type-classes), (https://github.com/sanctuary-js/sanctuary-def), (https://github.com/gigobyte/purify)
+
+//7(search done)
+
+matrix-multiplication 14 + (),
+units-of-measure 14 + (https://github.com/jscheiny/safe-units),
+tensors 13 + (),
+bigdecimal  + (),
+bignumber  + (https://github.com/MikeMcl/bignumber.js), (https://github.com/silentmatt/javascript-biginteger), (https://github.com/MikeMcl/decimal.js-light), (https://github.com/MikeMcl/big.js), (https://github.com/MikeMcl/decimal.js)
+equation  + (https://github.com/mathquill/mathquill), (https://github.com/parpalak/upmath.me),
+information-theory  + (https://www.npmjs.com/package/@mapequation/infomap),
+
+//8(search done)
+
+lapack  + (),
+numbers  + (https://github.com/jonschlinkert/fill-range), (https://github.com/micromatch/to-regex-range), (https://github.com/infusion/Complex.js), (https://github.com/infusion/Fraction.js), (https://github.com/BenjaminVanRyseghem/numbro)
+numeric  + (https://github.com/jonschlinkert/is-number),
+numerical-computation  + (https://github.com/R-js/libRmath.js),
+quantities  + (https://github.com/gentooboontoo/js-quantities), (https://github.com/ben-ng/convert-units), (https://github.com/sharkdp/insect#documentation) (https://github.com/SamuelEnglard/Humanizer.Js)
+ruler  + (),
+theorem-proving  + (https://github.com/pubkey/binary-decision-diagram),
+
+//---------------------------------------------------final version----------
+
+//...

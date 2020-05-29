@@ -1,9 +1,19 @@
-
 'use strict';
 
 const _ = require( 'wTools' );
 require( 'wFiles' );
 require( 'wnpmtools' );
+
+// _.npm.dependantsRetrieve( { remotePath : 'sharp', sync : 1 } )
+// .then( ( dep ) => console.log( dep ) )
+// .catch( ( err ) => console.log( err ) );
+
+// async function test()
+// {
+//   let got = await _.npm.dependantsRetrieve( { remotePath : 'sharp', sync : 1 } );
+//   console.log( got );
+// }
+// test()
 
 const generalPurposeData = _.fileProvider.fileRead
 ( {
