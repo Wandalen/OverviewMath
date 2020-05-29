@@ -100,8 +100,6 @@ function samples( test )
   return ready;
 }
 
-samples.timeOut = 60000;
-
 //
 
 function eslint( test )
@@ -123,7 +121,7 @@ function eslint( test )
     throwingExitCode : 0
   } )
 
-  //
+  /* */
 
   ready.then( () =>
   {
@@ -136,7 +134,7 @@ function eslint( test )
     return null;
   } )
 
-  //
+  /* */
 
   if( fileProvider.fileExists( sampleDir ) )
   ready.then( () =>
@@ -153,8 +151,6 @@ function eslint( test )
   return ready;
 }
 
-eslint.timeOut = 120000;
-
 // --
 // declare
 // --
@@ -162,14 +158,15 @@ eslint.timeOut = 120000;
 var Self =
 {
 
-  name : 'Tools.Math.Integration',
+  name : 'Overview.Math.Integration',
   silencing : 1,
   enabled : 1,
+  routineTimeOut : 300000,
 
   tests :
   {
     samples,
-    eslint
+    eslint,
   },
 
 }
