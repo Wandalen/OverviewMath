@@ -85,17 +85,3 @@ bigdecimal  + (),
 bignumber  + (https://github.com/MikeMcl/bignumber.js), (https://github.com/silentmatt/javascript-biginteger), (https://github.com/MikeMcl/decimal.js-light), (https://github.com/MikeMcl/big.js), (https://github.com/MikeMcl/decimal.js)
 equation  + (https://github.com/mathquill/mathquill), (https://github.com/parpalak/upmath.me),
 information-theory  + (https://www.npmjs.com/package/@mapequation/infomap),
-
-//8(search done)
-
-lapack  + (),
-numbers  + (https://github.com/jonschlinkert/fill-range), (https://github.com/micromatch/to-regex-range), (https://github.com/infusion/Complex.js), (https://github.com/infusion/Fraction.js), (https://github.com/BenjaminVanRyseghem/numbro)
-numeric  + (https://github.com/jonschlinkert/is-number),
-numerical-computation  + (https://github.com/R-js/libRmath.js),
-quantities  + (https://github.com/gentooboontoo/js-quantities), (https://github.com/ben-ng/convert-units), (https://github.com/sharkdp/insect#documentation) (https://github.com/SamuelEnglard/Humanizer.Js)
-ruler  + (),
-theorem-proving  + (https://github.com/pubkey/binary-decision-diagram),
-
-//---------------------------------------------------final version----------
-
-//...
