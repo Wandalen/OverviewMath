@@ -1,7 +1,7 @@
 // ----------------------------first approach-----
 //1 (search continues)
 
-numpy 210 +
+numpy 210 + ()
 math 170 + (https://github.com/dcodeIO/long.js), 
 	          (https://github.com/silentmatt/expr-eval), 
              (https://github.com/simple-statistics/simple-statistics), 
@@ -10,7 +10,7 @@ math 170 + (https://github.com/dcodeIO/long.js),
              (https://github.com/devanp92/combinatorics.js),
 	            https://github.com/infusion/Fraction.js)
 mathematics 130 + (https://github.com/mrpandey/d3graphTheory)
-coq 90 +
+coq 90 + (https://github.com/jscoq/jscoq), 
 geometry 86 + (https://github.com/arthur-e/Wicket),
               (https://github.com/jsxgraph/jsxgraph),
               (https://github.com/pboyer/verb),
@@ -22,11 +22,11 @@ linear-algebra 83 + (https://github.com/NaturalNode/node-sylvester)
 
 //2 (search continues)
 
-theano 73
-random 57
+theano 73 + ()
+random 57 + ()
 calculator 49 + ()
 algebra 38 + (https://github.com/viktorstrate/algebra-latex), (https://github.com/algebraic-graphs/typescript)
-optical-flow 38
+optical-flow 38 + ()
 computational-geometry 36 + (https://github.com/mourner/robust-predicates), 
                             (https://github.com/w8r/GreinerHormann),
                             (https://github.com/anvaka/isect),
