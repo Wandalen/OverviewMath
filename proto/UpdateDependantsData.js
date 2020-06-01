@@ -4,9 +4,9 @@ const _ = require( 'wTools' );
 require( 'wFiles' );
 require( 'wnpmtools' );
 
-// _.npm.dependantsRetrieve( { remotePath : 'sharp', sync : 1 } )
-// .then( ( dep ) => console.log( dep ) )
-// .catch( ( err ) => console.log( err ) );
+_.npm.dependantsRetrieve( { remotePath : 'sharp', sync : 1 } )
+.then( ( dep ) => console.log( dep ) )
+.catch( ( err ) => console.log( err ) );
 
 // async function test()
 // {
