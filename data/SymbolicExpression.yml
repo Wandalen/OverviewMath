@@ -2,7 +2,7 @@
   repoUri: 'https://github.com/josdejong/mathjs'
   binding: false
   solvesSLE: true
-  dependants: 979
+  dependants: 987
   supportsNodejs: true
   supportsBrowser: true
 - npmName: '@yaffle/expression'
@@ -54,24 +54,24 @@
   dependants: 0
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'newtonmath.js'
+- npmName: newtonmath.js
   repoUri: 'https://github.com/benpryke/NewtonMath.js'
   binding: false
   solvesSLE: false
   dependants: 0
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'hot-formula-parser'
+- npmName: hot-formula-parser
   repoUri: 'https://github.com/handsontable/formula-parser'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 55
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'expr-eval'
+- npmName: expr-eval
   repoUri: 'https://github.com/silentmatt/expr-eval'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 87
   supportsNodejs: true
   supportsBrowser: true

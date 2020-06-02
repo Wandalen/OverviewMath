@@ -1,105 +1,105 @@
-- npmName: 'robust-predicates'
+- npmName: robust-predicates
   repoUri: 'https://github.com/mourner/robust-predicates'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 3
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'earcut'
+- npmName: earcut
   repoUri: 'https://github.com/mapbox/earcut'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 191
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'delaunator'
+- npmName: delaunator
   repoUri: 'https://github.com/mapbox/delaunator'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 19
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'ganja.js'
+- npmName: ganja.js
   repoUri: 'https://github.com/enkimute/ganja.js'
   binding: true
   solvesSLE: false
   dependants: 0
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'martinez-polygon-clipping'
+- npmName: martinez-polygon-clipping
   repoUri: 'https://github.com/w8r/martinez'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 13
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'isect'
+- npmName: isect
   repoUri: 'https://github.com/anvaka/isect'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 1
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'earcut'
+- npmName: earcut
   repoUri: 'https://github.com/mapbox/earcut'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 191
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'greiner-hormann'
+- npmName: greiner-hormann
   repoUri: 'https://github.com/w8r/GreinerHormann'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 5
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'rbush'
+- npmName: rbush
   repoUri: 'https://github.com/mourner/rbush'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 180
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'verb-nurbs'
+- npmName: verb-nurbs
   repoUri: 'https://github.com/pboyer/verb'
   binding: true
   solvesSLE: false
-  dependants: 0
+  dependants: 1
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'nurbs'
+- npmName: nurbs
   repoUri: 'https://github.com/standardcyborg/nurbs'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 1
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'makerjs'
+- npmName: makerjs
   repoUri: 'https://github.com/microsoft/maker.js'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 23
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'intersects'
+- npmName: intersects
   repoUri: 'https://github.com/davidfig/intersects'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 7
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'CindyJS'
+- npmName: CindyJS
   repoUri: 'https://github.com/CindyJS/CindyJS'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: '-'
   supportsNodejs: false
   supportsBrowser: true
-- npmName: 'sylvester'
+- npmName: sylvester
   repoUri: 'https://github.com/NaturalNode/node-sylvester'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 43
   supportsNodejs: true
   supportsBrowser: true

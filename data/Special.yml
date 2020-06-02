@@ -51,14 +51,14 @@
   repoUri: 'https://github.com/ben-ng/add'
   binding: false
   solvesSLE: false
-  dependants: 134
+  dependants: 139
   supportsNodejs: true
   supportsBrowser: true
 - npmName: compute-cosine-similarity
   repoUri: 'https://github.com/compute-io/cosine-similarity'
   binding: false
   solvesSLE: false
-  dependants: 8
+  dependants: 9
   supportsNodejs: true
   supportsBrowser: true
 - npmName: nsolvejs
@@ -75,94 +75,94 @@
   dependants: 0
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'big.js'
+- npmName: big.js
   repoUri: 'https://github.com/MikeMcl/big.js'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 727
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'bignumber.js'
+- npmName: bignumber.js
   repoUri: 'https://github.com/MikeMcl/bignumber.js'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 2617
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'decimal.js'
+- npmName: decimal.js
   repoUri: 'https://github.com/MikeMcl/decimal.js'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 558
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'complex.js'
+- npmName: complex.js
   repoUri: 'https://github.com/infusion/Complex.js'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 7
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'fraction.js'
+- npmName: fraction.js
   repoUri: 'https://github.com/infusion/Fraction.js'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 37
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'numbro'
+- npmName: numbro
   repoUri: 'https://github.com/BenjaminVanRyseghem/numbro'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 188
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'alga-ts'
+- npmName: alga-ts
   repoUri: 'https://github.com/algebraic-graphs/typescript'
   binding: true
   solvesSLE: false
   dependants: 0
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'earcut'
+- npmName: earcut
   repoUri: 'https://github.com/glebec/lambda-talk'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 191
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'kinematics'
+- npmName: kinematics
   repoUri: 'https://github.com/glumb/kinematics'
   binding: false
   solvesSLE: false
   dependants: 0
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'kalmanjs'
+- npmName: kalmanjs
   repoUri: 'https://github.com/wouterbulten/kalmanjs'
   binding: true
   solvesSLE: false
-  dependants: 0
+  dependants: 7
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'js-combinatorics'
+- npmName: js-combinatorics
   repoUri: 'https://github.com/dankogai/js-combinatorics'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 116
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'fft.js'
+- npmName: fft.js
   repoUri: 'https://github.com/indutny/fft.js'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 13
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'simple-statistics'
+- npmName: simple-statistics
   repoUri: 'https://github.com/simple-statistics/simple-statistics'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 151
   supportsNodejs: true
   supportsBrowser: true

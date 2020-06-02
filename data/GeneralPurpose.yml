@@ -2,7 +2,7 @@
   repoUri: 'https://github.com/tensorflow/tfjs'
   binding: true
   solvesSLE: true
-  dependants: 163
+  dependants: 165
   supportsNodejs: true
   supportsBrowser: true
 - npmName: vectorious
@@ -100,7 +100,7 @@
   repoUri: 'https://github.com/josdejong/mathjs'
   binding: false
   solvesSLE: true
-  dependants: 979
+  dependants: 987
   supportsNodejs: true
   supportsBrowser: true
 - npmName: lalgebra
@@ -149,7 +149,7 @@
   repoUri: 'https://github.com/toji/gl-matrix'
   binding: false
   solvesSLE: false
-  dependants: 414
+  dependants: 416
   supportsNodejs: true
   supportsBrowser: true
 - npmName: dstructs-matrix
@@ -222,31 +222,31 @@
   dependants: 0
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'insect'
+- npmName: insect
   repoUri: 'https://github.com/sharkdp/insect'
   binding: false
   solvesSLE: false
   dependants: 0
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'lib-r-math.js'
+- npmName: lib-r-math.js
   repoUri: 'https://github.com/R-js/libRmath.js'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 3
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'algebra'
+- npmName: algebra
   repoUri: 'https://github.com/fibo/algebra'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 1
   supportsNodejs: true
   supportsBrowser: true
-- npmName: 'sylvester'
+- npmName: sylvester
   repoUri: 'https://github.com/NaturalNode/node-sylvester'
   binding: false
   solvesSLE: false
-  dependants: 0
+  dependants: 43
   supportsNodejs: true
   supportsBrowser: true
