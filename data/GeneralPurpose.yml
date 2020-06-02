@@ -222,3 +222,31 @@
   dependants: 0
   supportsNodejs: true
   supportsBrowser: true
+- npmName: 'insect'
+  repoUri: 'https://github.com/sharkdp/insect'
+  binding: false
+  solvesSLE: false
+  dependants: 0
+  supportsNodejs: true
+  supportsBrowser: true
+- npmName: 'lib-r-math.js'
+  repoUri: 'https://github.com/R-js/libRmath.js'
+  binding: false
+  solvesSLE: false
+  dependants: 0
+  supportsNodejs: true
+  supportsBrowser: true
+- npmName: 'algebra'
+  repoUri: 'https://github.com/fibo/algebra'
+  binding: false
+  solvesSLE: false
+  dependants: 0
+  supportsNodejs: true
+  supportsBrowser: true
+- npmName: 'sylvester'
+  repoUri: 'https://github.com/NaturalNode/node-sylvester'
+  binding: false
+  solvesSLE: false
+  dependants: 0
+  supportsNodejs: true
+  supportsBrowser: true
