@@ -1,22 +1,8 @@
-- npmName: robust-predicates
-  repoUri: 'https://github.com/mourner/robust-predicates'
-  binding: false
+- npmName: verb-nurbs
+  repoUri: 'https://github.com/pboyer/verb'
+  binding: true
   solvesSLE: false
-  dependants: 3
-  supportsNodejs: true
-  supportsBrowser: true
-- npmName: earcut
-  repoUri: 'https://github.com/mapbox/earcut'
-  binding: false
-  solvesSLE: false
-  dependants: 191
-  supportsNodejs: true
-  supportsBrowser: true
-- npmName: delaunator
-  repoUri: 'https://github.com/mapbox/delaunator'
-  binding: false
-  solvesSLE: false
-  dependants: 19
+  dependants: 1
   supportsNodejs: true
   supportsBrowser: true
 - npmName: ganja.js
@@ -26,18 +12,11 @@
   dependants: 0
   supportsNodejs: true
   supportsBrowser: true
-- npmName: martinez-polygon-clipping
-  repoUri: 'https://github.com/w8r/martinez'
+- npmName: earcut
+  repoUri: 'https://github.com/mapbox/earcut'
   binding: false
   solvesSLE: false
-  dependants: 13
-  supportsNodejs: true
-  supportsBrowser: true
-- npmName: isect
-  repoUri: 'https://github.com/anvaka/isect'
-  binding: false
-  solvesSLE: false
-  dependants: 1
+  dependants: 191
   supportsNodejs: true
   supportsBrowser: true
 - npmName: earcut
@@ -47,13 +26,6 @@
   dependants: 191
   supportsNodejs: true
   supportsBrowser: true
-- npmName: greiner-hormann
-  repoUri: 'https://github.com/w8r/GreinerHormann'
-  binding: false
-  solvesSLE: false
-  dependants: 5
-  supportsNodejs: true
-  supportsBrowser: true
 - npmName: rbush
   repoUri: 'https://github.com/mourner/rbush'
   binding: false
@@ -61,18 +33,11 @@
   dependants: 180
   supportsNodejs: true
   supportsBrowser: true
-- npmName: verb-nurbs
-  repoUri: 'https://github.com/pboyer/verb'
-  binding: true
-  solvesSLE: false
-  dependants: 1
-  supportsNodejs: true
-  supportsBrowser: true
-- npmName: nurbs
-  repoUri: 'https://github.com/standardcyborg/nurbs'
+- npmName: sylvester
+  repoUri: 'https://github.com/NaturalNode/node-sylvester'
   binding: false
   solvesSLE: false
-  dependants: 1
+  dependants: 43
   supportsNodejs: true
   supportsBrowser: true
 - npmName: makerjs
@@ -82,11 +47,53 @@
   dependants: 23
   supportsNodejs: true
   supportsBrowser: true
+- npmName: delaunator
+  repoUri: 'https://github.com/mapbox/delaunator'
+  binding: false
+  solvesSLE: false
+  dependants: 19
+  supportsNodejs: true
+  supportsBrowser: true
+- npmName: martinez-polygon-clipping
+  repoUri: 'https://github.com/w8r/martinez'
+  binding: false
+  solvesSLE: false
+  dependants: 13
+  supportsNodejs: true
+  supportsBrowser: true
 - npmName: intersects
   repoUri: 'https://github.com/davidfig/intersects'
   binding: false
   solvesSLE: false
   dependants: 7
+  supportsNodejs: true
+  supportsBrowser: true
+- npmName: greiner-hormann
+  repoUri: 'https://github.com/w8r/GreinerHormann'
+  binding: false
+  solvesSLE: false
+  dependants: 5
+  supportsNodejs: true
+  supportsBrowser: true
+- npmName: robust-predicates
+  repoUri: 'https://github.com/mourner/robust-predicates'
+  binding: false
+  solvesSLE: false
+  dependants: 3
+  supportsNodejs: true
+  supportsBrowser: true
+- npmName: nurbs
+  repoUri: 'https://github.com/standardcyborg/nurbs'
+  binding: false
+  solvesSLE: false
+  dependants: 1
+  supportsNodejs: true
+  supportsBrowser: true
+- npmName: isect
+  repoUri: 'https://github.com/anvaka/isect'
+  binding: false
+  solvesSLE: false
+  dependants: 1
   supportsNodejs: true
   supportsBrowser: true
 - npmName: CindyJS
@@ -95,11 +102,4 @@
   solvesSLE: false
   dependants: '-'
   supportsNodejs: false
-  supportsBrowser: true
-- npmName: sylvester
-  repoUri: 'https://github.com/NaturalNode/node-sylvester'
-  binding: false
-  solvesSLE: false
-  dependants: 43
-  supportsNodejs: true
   supportsBrowser: true

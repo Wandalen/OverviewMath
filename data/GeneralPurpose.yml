@@ -26,6 +26,13 @@
   dependants: 1
   supportsNodejs: true
   supportsBrowser: false
+- npmName: blasjs
+  repoUri: 'https://github.com/jacobbogers/blasjs'
+  binding: true
+  solvesSLE: true
+  dependants: 0
+  supportsNodejs: true
+  supportsBrowser: true
 - npmName: node-julia
   repoUri: 'https://github.com/waTeim/node-julia'
   binding: true
@@ -33,13 +40,6 @@
   dependants: 0
   supportsNodejs: true
   supportsBrowser: false
-- npmName: vectorious-plus
-  repoUri: 'https://github.com/ukrbublik/vectorious-plus'
-  binding: true
-  solvesSLE: true
-  dependants: 0
-  supportsNodejs: true
-  supportsBrowser: true
 - npmName: eigenjs
   repoUri: 'https://github.com/rick68/eigenjs'
   binding: true
@@ -47,8 +47,8 @@
   dependants: 0
   supportsNodejs: true
   supportsBrowser: false
-- npmName: blasjs
-  repoUri: 'https://github.com/jacobbogers/blasjs'
+- npmName: vectorious-plus
+  repoUri: 'https://github.com/ukrbublik/vectorious-plus'
   binding: true
   solvesSLE: true
   dependants: 0
@@ -166,6 +166,13 @@
   dependants: 66
   supportsNodejs: true
   supportsBrowser: true
+- npmName: sylvester
+  repoUri: 'https://github.com/NaturalNode/node-sylvester'
+  binding: false
+  solvesSLE: false
+  dependants: 43
+  supportsNodejs: true
+  supportsBrowser: true
 - npmName: numjs
   repoUri: 'https://github.com/nicolaspanel/numjs'
   binding: false
@@ -187,6 +194,13 @@
   dependants: 8
   supportsNodejs: true
   supportsBrowser: true
+- npmName: lib-r-math.js
+  repoUri: 'https://github.com/R-js/libRmath.js'
+  binding: false
+  solvesSLE: false
+  dependants: 3
+  supportsNodejs: true
+  supportsBrowser: true
 - npmName: compute.io
   repoUri: 'https://github.com/compute-io/compute.io'
   binding: false
@@ -199,6 +213,13 @@
   binding: false
   solvesSLE: false
   dependants: 2
+  supportsNodejs: true
+  supportsBrowser: true
+- npmName: algebra
+  repoUri: 'https://github.com/fibo/algebra'
+  binding: false
+  solvesSLE: false
+  dependants: 1
   supportsNodejs: true
   supportsBrowser: true
 - npmName: math2d
@@ -227,26 +248,5 @@
   binding: false
   solvesSLE: false
   dependants: 0
-  supportsNodejs: true
-  supportsBrowser: true
-- npmName: lib-r-math.js
-  repoUri: 'https://github.com/R-js/libRmath.js'
-  binding: false
-  solvesSLE: false
-  dependants: 3
-  supportsNodejs: true
-  supportsBrowser: true
-- npmName: algebra
-  repoUri: 'https://github.com/fibo/algebra'
-  binding: false
-  solvesSLE: false
-  dependants: 1
-  supportsNodejs: true
-  supportsBrowser: true
-- npmName: sylvester
-  repoUri: 'https://github.com/NaturalNode/node-sylvester'
-  binding: false
-  solvesSLE: false
-  dependants: 43
   supportsNodejs: true
   supportsBrowser: true
