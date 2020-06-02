@@ -15,6 +15,8 @@ const readMeColumnTitles = {
   supportsBrowser : 'Browser',
 }
 
+/* table head creating */
+
 let columnTitlesRow = `|№|${readMeColumnTitles.npmName}|`;
 let subColumnTitlesRow = '|:-:|:-:|';
 
@@ -23,6 +25,8 @@ columns.forEach( ( column ) =>
   columnTitlesRow += readMeColumnTitles[ column ] + '|';
   subColumnTitlesRow += ':--:|';
 } );
+
+/* general purpose math modules table creating */
 
 let mainContent = `
 ### Public general purpose math modules
@@ -41,6 +45,7 @@ data.forEach( ( lib, index ) =>
 ${createRow( columns, lib, index )}`;
 } );
 
+/* special purpose math modules table creating */
 
 mainContent += `
 
@@ -61,6 +66,8 @@ data.forEach( ( lib, index ) =>
 `;
 } );
 
+/* symbolic expression math modules table creating */
+
 mainContent += `
 ### Public symbolic expression math modules
 ${columnTitlesRow}
@@ -79,6 +86,28 @@ data.forEach( ( lib, index ) =>
 `;
 } );
 
+/* geometric math modules table creating */
+
+mainContent += `
+### Public geometric math modules
+${columnTitlesRow}
+${subColumnTitlesRow}
+`;
+
+data = _.fileProvider.fileRead
+( {
+  filePath : abs( '../data/Geometric.yml' ),
+  encoding : 'yaml',
+} );
+
+data.forEach( ( lib, index ) =>
+{
+  mainContent += `${createRow( columns, lib, index )}
+`;
+} );
+
+/* writing string to README.md */
+
 const title = _.fileProvider.fileRead
 ( {
   filePath : abs( '../doc/title.md' )
@@ -96,6 +125,8 @@ _.fileProvider.fileWrite
 } );
 
 console.log( 'ReadMe is created!' );
+
+/* subroutines */
 
 function abs() { return _.path.s.join( __dirname, ... arguments ) }
 
