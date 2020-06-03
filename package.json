@@ -6,8 +6,7 @@
   "description": "Review of open source math modules of different kind",
   "license": "MIT",
   "author": "Kostiantyn Wandalen <wanalen@willbe.so>",
-  "contributors":
-  [
+  "contributors": [
     {
       "name": "Kostiantyn Wandalen",
       "email": "wanalen@01.school"
@@ -19,25 +18,22 @@
   ],
   "main": "index.js",
   "files": [],
-  "scripts":
-  {
+  "scripts": {
     "newMatrix": "node ./proto/MatrixGenerating.js",
     "newReadMe": "node ./proto/ReadMeGenerator.js",
     "updateData": "node ./proto/UpdateDependantsData.js",
     "sortData": "node ./proto/SortData.js",
     "test": "wtest .run 'proto/**'"
   },
-  "repository":
-  {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/Artem-Bohush/AwesomeMath.git"
   },
-  "bugs":
-  {
+  "bugs": {
     "url": "https://github.com/Artem-Bohush/AwesomeMath/issues"
   },
-  "dependencies":
-  {
+  "dependencies": {
+    "ubique": "0.5.1",
     "wFiles": "alpha",
     "wTools": "alpha",
     "warraysorted": "alpha",
@@ -45,8 +41,7 @@
     "wmathmatrix": "alpha",
     "wnpmtools": "alpha"
   },
-  "devDependencies":
-  {
+  "devDependencies": {
     "wTesting": "alpha",
     "eslint": "6.8.0"
   },
