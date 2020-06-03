@@ -1,82 +1,42 @@
-
 'use strict';
 
 const _ = require( 'wTools' );
 require( 'wFiles' );
 require( 'wnpmtools' );
 
-const generalPurposeData = _.fileProvider.fileRead
-( {
-  filePath : abs( '../data/GeneralPurpose.yml' ),
-  encoding : 'yaml'
-} );
+const tables = [ 'GeneralPurpose', 'SymbolicExpression', 'Special', 'Geometric' ];
 
-const symbolicExpressionData = _.fileProvider.fileRead
-( {
-  filePath : abs( '../data/SymbolicExpression.yml' ),
-  encoding : 'yaml'
-} );
+tables.forEach( ( table ) => updateDependantsForTable( table ) );
 
-const specialData = _.fileProvider.fileRead
-( {
-  filePath : abs( '../data/Special.yml' ),
-  encoding : 'yaml'
-} );
-
-const tables = [ generalPurposeData, symbolicExpressionData, specialData ];
-
-console.log( `Loading data, wait... ` );
-
-tables.forEach( ( table ) =>
+function updateDependantsForTable( dataFileName )
 {
-  updateTable( table );
-} );
+  console.log( `Loading data for ${dataFileName} libs, wait... ` );
+  const data = _.fileProvider.fileRead
+  ( {
+    filePath : _.path.s.join( __dirname, `../data/${dataFileName}.yml` ),
+    encoding : 'yaml'
+  } );
 
-function updateTable( table )
-{
-  let step = 0;
-    for( let i = 0; i < table.length; i++ )
+  const npmPackageNames = [];
+
+  data.forEach( ( lib ) => npmPackageNames.push( lib.npmName ) );
+
+  _.npm.dependantsRetrieve( { remotePath : npmPackageNames, attemptLimit : 10 } )
+  .then( ( dependants ) =>
+  {
+    dependants.forEach( ( dependantsNumber, idx ) =>
     {
-      step += 300;
-      setTimeout( () =>
-      {
-        _.npm.dependantsRertive( { remotePath : table[ i ].npmName } )
-        .then( ( dependants ) =>
-        {
-            if( isNaN( dependants ) )
-            table[ i ].dependants = '-';
-            else
-            table[ i ].dependants = dependants;
+      data[ idx ].dependants = isNaN( dependantsNumber ) ? '-' : dependantsNumber;
+    } )
 
-            writeData();
-            return null;
-        } )
-      }, step )
-    }
+    _.fileProvider.fileWrite
+    ( {
+      filePath : _.path.s.join( __dirname, `../data/${dataFileName}.yml` ),
+      data,
+      encoding : 'yaml',
+    } );
+    console.log( `${dataFileName} libs dependants updated!` );
+    return null;
+  } )
+  .catch( ( err ) => console.log( err ) );
 }
-
-function writeData()
-{
-  _.fileProvider.fileWrite
-  ( {
-    filePath : abs( '../data/GeneralPurpose.yml' ),
-    data : tables[ 0 ],
-    encoding : 'yaml',
-  } );
-
-  _.fileProvider.fileWrite
-  ( {
-    filePath : abs( '../data/SymbolicExpression.yml' ),
-    data : tables[ 1 ],
-    encoding : 'yaml',
-  } );
-
-  _.fileProvider.fileWrite
-  ( {
-    filePath : abs( '../data/Special.yml' ),
-    data : tables[ 2 ],
-    encoding : 'yaml',
-  } );
-}
-
-function abs() { return _.path.s.join( __dirname, ... arguments ) }
