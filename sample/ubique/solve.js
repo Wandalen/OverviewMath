@@ -1,6 +1,5 @@
 const ubique = require( 'ubique' );
 const _ = require( 'wTools' );
-require( 'wmathmatrix' );
 require( 'wFiles' );
 require( 'wequaler' );
 

@@ -33,6 +33,7 @@
     "url": "https://github.com/Artem-Bohush/AwesomeMath/issues"
   },
   "dependencies": {
+    "tdma": "1.0.1",
     "ubique": "0.5.1",
     "wFiles": "alpha",
     "wTools": "alpha",
