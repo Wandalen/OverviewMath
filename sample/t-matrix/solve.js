@@ -1,36 +1,36 @@
 const Matrix = require( 't-matrix' );
 const _ = require( 'wTools' );
-require( 'wmathmatrix' );
 require( 'wFiles' );
 require( 'wequaler' );
 
-const createMatrix = require( '../../proto/CreateMatrix' );
-
 var data = _.fileProvider.fileRead( {
-  filePath : `${__dirname}/../../data/System1000.json`,
+  filePath : `${__dirname}/../../data/System100.json`,
   encoding : 'json',
 } );
 
 const M = createMatrix( data.M );
 // console.log(M);
 const x = data.x;
-console.log( x );
+console.log( 'vector x: ', x );
 let b = data.b;
-// console.log(b);
+// console.log( 'vector b: ', b );
 
-const xResult = Matrix.ldiv( M, b );
-console.log( xResult.toJSON() );
+let xResult = Matrix.ldiv( M, b );
+console.log( 'vector x result: ', [ ... xResult ] ); // result is the same as ubique
 
-// const dims = Math.sqrt( data.M.length );
-// const M = _.Matrix({
-//   buffer : data.M,
-//   dims : [ dims, dims ],
-//   inputRowMajor : 0,
-// })
+console.log( 'is equal: ', _.equivalent( [ ... xResult ], x ) ); // false ?
 
-// const x = _.Matrix.Make([ data.x.length, 1 ]).copy(data.x);
-// const b = _.Matrix.Make([ data.b.length, 1 ]).copy(data.b);
-// console.log(M, x, b);
+function createMatrix( arr )
+{
+  'use strict';
 
-// const result = _.Matrix.Mul( null, [ M, x ] );
-// console.log(_.equivalent( result, b ));
+  const rowLength = Math.sqrt( arr.length );
+  const matrix = [];
+
+  for( let i = 0; i < arr.length; i += rowLength )
+  {
+    matrix.push( arr.slice( i, i + rowLength ) )
+  }
+
+  return matrix;
+}

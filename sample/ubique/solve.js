@@ -15,10 +15,11 @@ const M = createMatrix( data.M );
 const x = data.x;
 console.log( 'vector x: ', x );
 let b = data.b;
-console.log( 'vector b: ', b );
+// console.log( 'vector b: ', b );
 
-const xResult = ubique.linsolve( M, transp( b ) );
-console.log( 'vector x result: ', xResult );
+let xResult = ubique.linsolve( M, transp( b ) );
+xResult = xResult.map( ( arr ) => arr[ 0 ] );
+console.log( 'vector x result: ', xResult ); // result is the same as t-matrix
 
 console.log( 'is equal: ', _.equivalent( xResult, x ) ); // false ?
 

@@ -13,7 +13,7 @@ const M = createMatrix( data.M );
 const x = data.x;
 console.log( 'vector x: ', x );
 let b = data.b;
-console.log( 'vector b: ', b );
+// console.log( 'vector b: ', b );
 
 const xResult = tdma.solver( M, b );
 console.log( 'vector x result: ', xResult );
