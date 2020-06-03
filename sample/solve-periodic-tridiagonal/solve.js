@@ -1,7 +1,24 @@
-var spt = require( 'solve-periodic-tridiagonal' )
+var spt = require( 'solve-periodic-tridiagonal' );
+const _ = require( 'wTools' );
 
-var d = [ 32, 25, 3, 41 ]
+let b = [];
+const diagonalMain = [];
+const diagonalUnder = [];
+const diagonalAbove = [];
 
-spt( 4, [ 7, -1, 2, 1 ], [ 2, 7, -3, 8 ], [ 1, 4, 2, 6 ], d, [] )
-// => d = [ 1, 2, 3, 4 ]
-console.log( d );
+for( let i = 0; i < 100; i++ )
+{
+  b.push( _.intRandom( [ -100, 100 ] ) );
+  diagonalMain.push( _.intRandom( [ -100, 100 ] ) );
+  diagonalUnder.push( _.intRandom( [ -100, 100 ] ) );
+  diagonalAbove.push( _.intRandom( [ -100, 100 ] ) );
+
+  if( i === 0 )
+  diagonalUnder[ 0 ] = 0;
+
+  if( i === 99 )
+  diagonalAbove[ 100 ] = 0;
+}
+
+console.log( spt( 100, diagonalUnder, diagonalMain, diagonalAbove, b, [] ) );
+console.log( b );
