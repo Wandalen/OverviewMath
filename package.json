@@ -35,6 +35,7 @@
   "dependencies": {
     "ndarray": "1.0.19",
     "ndarray-linear-solve": "3.0.0",
+    "solve-banded": "1.0.4",
     "t-matrix": "1.0.6",
     "tdma": "1.0.1",
     "ubique": "0.5.1",
