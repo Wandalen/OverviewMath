@@ -17,7 +17,7 @@ console.log( 'vector x: ', x );
 let b = ndarray( data.b );
 // console.log( 'vector b: ', b.data );
 
-let xResult = ndarray( new Array( 100 ) ); // result is the same as data x array
+let xResult = ndarray( new Array( 100 ) );
 var r = solve( xResult, M, b );
 
 if( r )
@@ -25,4 +25,4 @@ console.log( 'vector x result: ', xResult.data );
 else
 console.log( 'matrix is singular' );
 
-console.log( 'is equal: ', _.equivalent( xResult.data.map( ( num ) => Math.round( num ) ), x ) ); // true
+console.log( 'is equal: ', _.equivalent( xResult.data, x, { accuracy : 0.001 } ) ); // true
