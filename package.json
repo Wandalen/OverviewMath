@@ -33,6 +33,8 @@
     "url": "https://github.com/Artem-Bohush/AwesomeMath/issues"
   },
   "dependencies": {
+    "ndarray": "1.0.19",
+    "ndarray-linear-solve": "3.0.0",
     "t-matrix": "1.0.6",
     "tdma": "1.0.1",
     "ubique": "0.5.1",
