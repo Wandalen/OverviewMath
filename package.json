@@ -34,7 +34,9 @@
   },
   "dependencies": {
     "@tensorflow/tfjs-node": "2.0.0",
+    "blasjs": "1.0.13",
     "mathjs": "7.0.1",
+    "nd4js": "1.2.0",
     "ndarray": "1.0.19",
     "ndarray-linear-solve": "3.0.0",
     "solve-banded": "1.0.4",
@@ -42,6 +44,7 @@
     "t-matrix": "1.0.6",
     "tdma": "1.0.1",
     "ubique": "0.5.1",
+    "vectorious": "6.0.0-beta.11",
     "wFiles": "alpha",
     "wTools": "alpha",
     "warraysorted": "alpha",
