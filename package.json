@@ -1,7 +1,7 @@
 {
   "name": "AwesomeMath",
   "version": "1.0.0",
-  "engine": "node >= 8.0.0",
+  "engine": "node >= 10.0.0",
   "enabled": 1,
   "description": "Review of open source math modules of different kind",
   "license": "MIT",
