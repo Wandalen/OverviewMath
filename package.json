@@ -36,7 +36,6 @@
     "@tensorflow/tfjs-node": "2.0.0",
     "blasjs": "1.0.13",
     "mathjs": "7.0.1",
-    "nblas": "2.1.9",
     "nd4js": "1.2.0",
     "ndarray": "1.0.19",
     "ndarray-linear-solve": "3.0.0",
