@@ -12,15 +12,15 @@
   dependants: 4
   supportsNodejs: true
   supportsBrowser: false
-- npmName: '@mapequation/infomap'
-  repoUri: 'https://github.com/mapequation/infomap'
+- npmName: alga-ts
+  repoUri: 'https://github.com/algebraic-graphs/typescript'
   binding: true
   solvesSLE: false
   dependants: 0
   supportsNodejs: true
   supportsBrowser: true
-- npmName: alga-ts
-  repoUri: 'https://github.com/algebraic-graphs/typescript'
+- npmName: '@mapequation/infomap'
+  repoUri: 'https://github.com/mapequation/infomap'
   binding: true
   solvesSLE: false
   dependants: 0
@@ -33,8 +33,8 @@
   dependants: 2
   supportsNodejs: true
   supportsBrowser: true
-- npmName: tdma
-  repoUri: 'https://github.com/armancodv/tdma'
+- npmName: solve-periodic-tridiagonal
+  repoUri: 'https://github.com/scijs/solve-periodic-tridiagonal'
   binding: false
   solvesSLE: true
   dependants: 0
@@ -47,15 +47,8 @@
   dependants: 0
   supportsNodejs: true
   supportsBrowser: true
-- npmName: solve-tridiagonal
-  repoUri: 'https://github.com/scijs/solve-tridiagonal'
-  binding: false
-  solvesSLE: true
-  dependants: 0
-  supportsNodejs: true
-  supportsBrowser: true
-- npmName: solve-periodic-tridiagonal
-  repoUri: 'https://github.com/scijs/solve-periodic-tridiagonal'
+- npmName: tdma
+  repoUri: 'https://github.com/armancodv/tdma'
   binding: false
   solvesSLE: true
   dependants: 0
@@ -152,15 +145,15 @@
   dependants: 7
   supportsNodejs: true
   supportsBrowser: true
-- npmName: nsolvejs
-  repoUri: 'https://github.com/weasysolutions/Nsolvejs'
+- npmName: kinematics
+  repoUri: 'https://github.com/glumb/kinematics'
   binding: false
   solvesSLE: false
   dependants: 0
   supportsNodejs: true
   supportsBrowser: true
-- npmName: kinematics
-  repoUri: 'https://github.com/glumb/kinematics'
+- npmName: nsolvejs
+  repoUri: 'https://github.com/weasysolutions/Nsolvejs'
   binding: false
   solvesSLE: false
   dependants: 0

@@ -33,13 +33,6 @@
   dependants: 13
   supportsNodejs: true
   supportsBrowser: true
-- npmName: nerdamer
-  repoUri: 'https://github.com/jiggzson/nerdamer'
-  binding: false
-  solvesSLE: false
-  dependants: 6
-  supportsNodejs: true
-  supportsBrowser: true
 - npmName: algebrite
   repoUri: 'https://github.com/davidedc/Algebrite'
   binding: false
@@ -47,11 +40,11 @@
   dependants: 6
   supportsNodejs: true
   supportsBrowser: true
-- npmName: theorem.js
-  repoUri: 'https://github.com/arguiot/TheoremJS'
+- npmName: nerdamer
+  repoUri: 'https://github.com/jiggzson/nerdamer'
   binding: false
   solvesSLE: false
-  dependants: 1
+  dependants: 6
   supportsNodejs: true
   supportsBrowser: true
 - npmName: coffeequate
@@ -61,15 +54,22 @@
   dependants: 1
   supportsNodejs: true
   supportsBrowser: true
-- npmName: newtonmath.js
-  repoUri: 'https://github.com/benpryke/NewtonMath.js'
+- npmName: theorem.js
+  repoUri: 'https://github.com/arguiot/TheoremJS'
+  binding: false
+  solvesSLE: false
+  dependants: 1
+  supportsNodejs: true
+  supportsBrowser: true
+- npmName: metadelta
+  repoUri: 'https://github.com/metadelta/metadelta'
   binding: false
   solvesSLE: false
   dependants: 0
   supportsNodejs: true
   supportsBrowser: true
-- npmName: metadelta
-  repoUri: 'https://github.com/metadelta/metadelta'
+- npmName: newtonmath.js
+  repoUri: 'https://github.com/benpryke/NewtonMath.js'
   binding: false
   solvesSLE: false
   dependants: 0

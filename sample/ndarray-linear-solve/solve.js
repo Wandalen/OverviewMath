@@ -1,33 +1,28 @@
 const solve = require( 'ndarray-linear-solve' );
-const show = require( 'ndarray-show' );
 const ndarray = require( 'ndarray' );
 const _ = require( 'wTools' );
-require( 'wmathmatrix' );
 require( 'wFiles' );
 require( 'wequaler' );
 
-var data = _.fileProvider.fileRead( {
- filePath : `${__dirname}/../../data/System1000.json`,
- encoding : 'json',
+var data = _.fileProvider.fileRead
+( {
+  filePath : `${__dirname}/../../data/System100.json`,
+  encoding : 'json',
 } );
 
-const M = ndarray( data.M, [ 100, 100 ] );
-// console.log( M );
+var M = ndarray( data.M, [ 100, 100 ] );
+// console.log( 'vector M: ', M.data );
 const x = data.x;
-console.log( x );
+console.log( 'vector x: ', x );
 let b = ndarray( data.b );
-// console.log( b );
+// console.log( 'vector b: ', b.data );
 
+let xResult = ndarray( new Array( 100 ) );
+var r = solve( xResult, M, b );
 
-debugger;
-const xResult = ndarray( new Float64Array( 100 ) );
-const r = solve( xResult, M, b );
-
-if ( r )
-{
- console.log( 'solution:\n' + show( xResult ) );
-}
+if( r )
+console.log( 'vector x result: ', xResult.data );
 else
-{
- console.log( 'matrix is singular' )
-}
+console.log( 'matrix is singular' );
+
+console.log( 'is equal: ', _.equivalent( xResult.data, x, { accuracy : 0.001 } ) ); // true
